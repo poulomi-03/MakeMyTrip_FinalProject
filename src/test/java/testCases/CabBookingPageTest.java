@@ -5,19 +5,15 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.TimeoutException;
  
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.*;
  
 
 import base.BaseTest;
-import pages.CabBookingPage;
  
 public class CabBookingPageTest extends BaseTest{
 	
@@ -223,7 +219,7 @@ public class CabBookingPageTest extends BaseTest{
 		act.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).perform();
 	}
  
-	@Test(dataProvider = "testData", priority = 9)
+	@Test(dataProvider = "testData", priority = -1)
 	public void verifyDisabledPreviousDepartureDate(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.clickdeparture();
@@ -309,7 +305,7 @@ public class CabBookingPageTest extends BaseTest{
 		Assert.assertTrue(!cabBookingPage.getSearchResult().isEmpty());
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = -1)
 	public void TC_OCB_14() {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();

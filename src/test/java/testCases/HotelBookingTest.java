@@ -1,25 +1,17 @@
 package testCases;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import org.testng.Assert;
 
 import java.util.stream.IntStream;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
-import pages.HotelBookingPage;
-
 
 public class HotelBookingTest extends BaseTest{
-	HotelBookingPage hotelObj;
 	@Test(priority = 1)
 	public void TC_HB_01() {
-		hotelObj = new HotelBookingPage(driver);
-//		hotelObj.disableLoginPopUp();
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		hotelObj.clickOnAdultsDropdown();
@@ -34,14 +26,12 @@ public class HotelBookingTest extends BaseTest{
 			}
 			i++;
 		}
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ESCAPE).perform();
-		assertTrue(correctCount, "Incorrect count of numbers in dropdown");
+		action.clickEsc();
+		Assert.assertTrue(correctCount, "Incorrect count of numbers in dropdown");
 	}
 	
 	@Test(priority = 2)
 	public void TC_HB_02() {
-		hotelObj = new HotelBookingPage(driver);
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		
@@ -66,9 +56,8 @@ public class HotelBookingTest extends BaseTest{
 				clicked = false;
 			}
 		}
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ESCAPE).perform();
-		assertTrue(clicked);
+		action.clickEsc();
+		Assert.assertTrue(clicked);
 	}
 	
 	@Test(priority = 3)
@@ -76,9 +65,8 @@ public class HotelBookingTest extends BaseTest{
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ESCAPE).perform();
-		assertTrue(hotelObj.isRoomsAndGuestsSelectorEnabled(), "RoomsAndGuests selector option is not present");
+		action.clickEsc();
+		Assert.assertTrue(hotelObj.isRoomsAndGuestsSelectorEnabled(), "RoomsAndGuests selector option is not present");
 	}
 	
 	@Test(priority = 4)
@@ -86,9 +74,8 @@ public class HotelBookingTest extends BaseTest{
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		String value = hotelObj.getDefaultValueOfAdultDropdown();
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ESCAPE).perform();
-		assertEquals(value, "2");
+		action.clickEsc();
+		Assert.assertEquals(value, "2");
 	}
 	
 	@Test(priority = 5)
@@ -105,6 +92,8 @@ public class HotelBookingTest extends BaseTest{
 			}
 		}
 		hotelObj.clickApplyButton();
-		assertEquals(hotelObj.getRoomsAndGuestsDispalyedText(), "1 Rooms 4Adults");
+		String text = hotelObj.getRoomsAndGuestsDispalyedText();
+		action.clickEsc();
+		Assert.assertEquals(text, "1 Rooms 4Adults");
 	}
 }
