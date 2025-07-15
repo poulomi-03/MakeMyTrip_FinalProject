@@ -3,20 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.CabBookingPageTest">
+      <class name="testCases.HotelBookingTest">
         <methods>
-          <include name="verifyDisabledDepartureDateBeyondLimit"/>
           <include name="tearDown"/>
           <include name="DriverSetup"/>
-          <include name="TC_OCB_13"/>
-          <include name="TC_OCB_15"/>
-          <include name="TC_OCB_14"/>
+          <include name="TC_HB_03"/>
+          <include name="TC_HB_04"/>
+          <include name="TC_HB_05"/>
           <include name="closingTestCase"/>
-          <include name="TC_OCB_12"/>
+          <include name="TC_HB_02"/>
           <include name="goToHomePage"/>
-          <include name="verifyDisabledPreviousDepartureDate" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testCases.CabBookingPageTest -->
+      </class> <!-- testCases.HotelBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
