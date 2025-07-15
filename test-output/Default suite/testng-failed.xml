@@ -10,6 +10,7 @@
           <include name="TC_HB_03"/>
           <include name="TC_HB_04"/>
           <include name="TC_HB_05"/>
+          <include name="TC_HB_01"/>
           <include name="closingTestCase"/>
           <include name="TC_HB_02"/>
           <include name="goToHomePage"/>
