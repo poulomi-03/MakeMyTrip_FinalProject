@@ -1,421 +1,579 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="1" failed="0" skipped="4">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T12:36:20 IST" name="Default suite" finished-at="2025-07-15T12:36:32 IST" duration-ms="11775">
+  <suite started-at="2025-07-15T14:38:50 IST" name="Default suite" finished-at="2025-07-15T14:43:12 IST" duration-ms="262227">
     <groups>
     </groups>
-    <test started-at="2025-07-15T12:36:20 IST" name="Default test" finished-at="2025-07-15T12:36:32 IST" duration-ms="11775">
-      <class name="testCases.HotelBookingTest">
-        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:20 IST" name="DriverSetup" finished-at="2025-07-15T12:36:28 IST" duration-ms="8255" status="PASS">
+    <test started-at="2025-07-15T14:38:50 IST" name="Default test" finished-at="2025-07-15T14:43:12 IST" duration-ms="262227">
+      <class name="testCases.CabBookingPageTest">
+        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:38:50 IST" name="DriverSetup" finished-at="2025-07-15T14:39:02 IST" duration-ms="12259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:28 IST" name="goToHomePage" finished-at="2025-07-15T12:36:29 IST" duration-ms="1000" status="PASS">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:02 IST" name="goToHomePage" finished-at="2025-07-15T14:39:02 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_01()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:29 IST" name="TC_HB_01" finished-at="2025-07-15T12:36:30 IST" duration-ms="1399" status="PASS">
+        <test-method signature="TC_OCB_14()[pri:-1, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:02 IST" name="TC_OCB_14" finished-at="2025-07-15T14:39:34 IST" duration-ms="31583" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_01 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:30 IST" name="closingTestCase" finished-at="2025-07-15T12:36:30 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_OCB_14 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:34 IST" name="closingTestCase" finished-at="2025-07-15T14:39:36 IST" duration-ms="1901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:30 IST" name="goToHomePage" finished-at="2025-07-15T12:36:31 IST" duration-ms="1047" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BaseTest.goToHomePage(BaseTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:36 IST" name="goToHomePage" finished-at="2025-07-15T14:39:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_02()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:31 IST" name="TC_HB_02" finished-at="2025-07-15T12:36:31 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BaseTest.goToHomePage(BaseTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyDisabledPreviousDepartureDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:-1, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:36 IST" name="verifyDisabledPreviousDepartureDate" data-provider="testData" finished-at="2025-07-15T14:39:39 IST" duration-ms="2698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_02 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:31 IST" name="closingTestCase" finished-at="2025-07-15T12:36:31 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyDisabledPreviousDepartureDate -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:39 IST" name="closingTestCase" finished-at="2025-07-15T14:39:40 IST" duration-ms="1299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="goToHomePage" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:40 IST" name="goToHomePage" finished-at="2025-07-15T14:39:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_03()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="TC_HB_03" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BaseTest.goToHomePage(BaseTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="oneWayCabSearch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:40 IST" name="oneWayCabSearch" data-provider="testData" finished-at="2025-07-15T14:39:53 IST" duration-ms="13452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_03 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="closingTestCase" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- oneWayCabSearch -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:53 IST" name="closingTestCase" finished-at="2025-07-15T14:39:55 IST" duration-ms="1571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="goToHomePage" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:55 IST" name="goToHomePage" finished-at="2025-07-15T14:39:55 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_04()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="TC_HB_04" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BaseTest.goToHomePage(BaseTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyFromLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:39:55 IST" name="verifyFromLocationInResults" data-provider="testData" finished-at="2025-07-15T14:40:20 IST" duration-ms="24737" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_04 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="closingTestCase" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyFromLocationInResults -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:20 IST" name="closingTestCase" finished-at="2025-07-15T14:40:21 IST" duration-ms="1617" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method signature="TC_HB_05()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="TC_HB_05" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-cy="mmtLogo" class="mmtLogo makeFlex">...</a> is not clickable at point (93, 26). Other element would receive the click: <div data-cy="HotelSearchWidget_314" class="hsBackDrop"></div>
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4e3d4e0cf1d575358e0d8a51d97672d, clickElement {id=f.E424A100CD71E8B58D174F6A198136CA.d.F201109AEEBBFC36CDF943FD5D7D9517.e.196}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2407390\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54645/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b4e3d4e0cf1d575358e0d8a51d97672d)] -> xpath: //a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]]
-Session ID: b4e3d4e0cf1d575358e0d8a51d97672d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BaseTest.goToHomePage(BaseTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyToLocationInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:21 IST" name="verifyToLocationInResults" data-provider="testData" finished-at="2025-07-15T14:40:39 IST" duration-ms="18049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_05 -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="goToHomePage" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyToLocationInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:21 IST" name="goToHomePage" finished-at="2025-07-15T14:40:21 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="closingTestCase" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:39 IST" name="closingTestCase" finished-at="2025-07-15T14:40:41 IST" duration-ms="1584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T12:36:32 IST" name="tearDown" finished-at="2025-07-15T12:36:32 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:41 IST" name="goToHomePage" finished-at="2025-07-15T14:40:41 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyDepartureDateInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:41 IST" name="verifyDepartureDateInResults" data-provider="testData" finished-at="2025-07-15T14:40:59 IST" duration-ms="17845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDepartureDateInResults -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:40:59 IST" name="closingTestCase" finished-at="2025-07-15T14:41:00 IST" duration-ms="1405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="verifyPickUpTimeInResults(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:00 IST" name="verifyPickUpTimeInResults" data-provider="testData" finished-at="2025-07-15T14:41:18 IST" duration-ms="17533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPickUpTimeInResults -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:00 IST" name="goToHomePage" finished-at="2025-07-15T14:41:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:18 IST" name="closingTestCase" finished-at="2025-07-15T14:41:20 IST" duration-ms="2578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:20 IST" name="goToHomePage" finished-at="2025-07-15T14:41:20 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyCabTypeInResult(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:20 IST" name="verifyCabTypeInResult" data-provider="testData" finished-at="2025-07-15T14:41:39 IST" duration-ms="18740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCabTypeInResult -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:39 IST" name="closingTestCase" finished-at="2025-07-15T14:41:40 IST" duration-ms="1387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:40 IST" name="goToHomePage" finished-at="2025-07-15T14:41:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyClearAllFilterFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:40 IST" name="verifyClearAllFilterFunctionality" data-provider="testData" finished-at="2025-07-15T14:41:58 IST" duration-ms="17665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyClearAllFilterFunctionality -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:41:58 IST" name="closingTestCase" finished-at="2025-07-15T14:42:00 IST" duration-ms="1528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:00 IST" name="goToHomePage" finished-at="2025-07-15T14:42:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyDisabledDepartureDateBeyondLimit(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:00 IST" name="verifyDisabledDepartureDateBeyondLimit" data-provider="testData" finished-at="2025-07-15T14:42:03 IST" duration-ms="2877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDisabledDepartureDateBeyondLimit -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:03 IST" name="closingTestCase" finished-at="2025-07-15T14:42:04 IST" duration-ms="1253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:04 IST" name="goToHomePage" finished-at="2025-07-15T14:42:04 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyMessageForUnserviceableFromLocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:04 IST" name="verifyMessageForUnserviceableFromLocation" data-provider="testData" finished-at="2025-07-15T14:42:11 IST" duration-ms="7443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMessageForUnserviceableFromLocation -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:11 IST" name="closingTestCase" finished-at="2025-07-15T14:42:13 IST" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:13 IST" name="goToHomePage" finished-at="2025-07-15T14:42:13 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="verifyMessageForUnserviceableToLocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:13 IST" name="verifyMessageForUnserviceableToLocation" data-provider="testData" finished-at="2025-07-15T14:42:20 IST" duration-ms="7428" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMessageForUnserviceableToLocation -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:20 IST" name="closingTestCase" finished-at="2025-07-15T14:42:21 IST" duration-ms="1365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:21 IST" name="goToHomePage" finished-at="2025-07-15T14:42:21 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_12(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:21 IST" name="TC_OCB_12" data-provider="testData" finished-at="2025-07-15T14:42:39 IST" duration-ms="17984" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_12 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:39 IST" name="closingTestCase" finished-at="2025-07-15T14:42:41 IST" duration-ms="1510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="TC_OCB_13(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:41 IST" name="TC_OCB_13" data-provider="testData" finished-at="2025-07-15T14:42:58 IST" duration-ms="17561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_13 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:41 IST" name="goToHomePage" finished-at="2025-07-15T14:42:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:42:58 IST" name="closingTestCase" finished-at="2025-07-15T14:43:00 IST" duration-ms="1648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:43:00 IST" name="goToHomePage" finished-at="2025-07-15T14:43:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_15(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:14, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:43:00 IST" name="TC_OCB_15" data-provider="testData" finished-at="2025-07-15T14:43:04 IST" duration-ms="4357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_15 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:43:04 IST" name="closingTestCase" finished-at="2025-07-15T14:43:06 IST" duration-ms="1470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@24269709]" started-at="2025-07-15T14:43:06 IST" name="tearDown" finished-at="2025-07-15T14:43:12 IST" duration-ms="6350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.HotelBookingTest -->
+      </class> <!-- testCases.CabBookingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
