@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
  
 import pages.CabBookingPage;
+import pages.HotelBookingPage;
+import utils.ActionUtil;
  
 public class BaseTest {
 	public static WebDriver driver;
@@ -17,6 +19,8 @@ public class BaseTest {
 	public static JavascriptExecutor js;
 	public static Actions act;
 	public static CabBookingPage cabBookingPage;
+	public HotelBookingPage hotelObj;
+	public ActionUtil action;
 	@BeforeClass
 	public void DriverSetup() {
 		driver = WebDriverSetUp.setupDriver("chrome");
@@ -26,6 +30,8 @@ public class BaseTest {
         js = (JavascriptExecutor) driver;
 		act = new Actions(driver);
         cabBookingPage = new CabBookingPage(driver);
+        hotelObj = new HotelBookingPage(driver);
+        action = new ActionUtil(driver);
         // Go to MakeMyTrip Home Page
 		String baseUrl = "https://www.makemytrip.com/";
 		driver.get(baseUrl); // Open MakemyTrip Home page.
@@ -44,11 +50,13 @@ public class BaseTest {
 	public void goToHomePage() {
 		System.out.println("---------------------------------------------------------------------------");
 	}
+	
 	@AfterMethod
 	public void closingTestCase() {
 		System.out.println("---------------------------------------------------------------------------");
 		driver.findElement(By.xpath("//a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]")).click();
 	}
+	
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
