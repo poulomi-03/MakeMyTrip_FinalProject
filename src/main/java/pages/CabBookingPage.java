@@ -1,5 +1,5 @@
 package pages;
- 
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
- 
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -17,9 +17,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
- 
-import base.BaseTest;
 
+import base.BaseTest;
  
 public class CabBookingPage extends BaseTest {
 	WebDriver driver;
@@ -70,7 +69,7 @@ public class CabBookingPage extends BaseTest {
 	public void disableLoginPopUp() {
 		scrollClick(closePopUpBtn);
 	}
- 
+
 	public void selectSection() {
 		cabsSection.click();		
 	}
@@ -82,12 +81,12 @@ public class CabBookingPage extends BaseTest {
 	public void clickFromField() {
         fromCityField.click();
 	}
- 
+
 	public void enterFromLocation(String location) {
 		fromLocationInput.sendKeys(location);
 		waitForSuggestionToLoad(location);
 	}
- 
+
 	public void selectCityToPopularSuggestion(String city) {
 		wait.until(ExpectedConditions.visibilityOfAllElements(listOfPopularCitiesFromSuggestions));
         for(WebElement citySuggestion:listOfPopularCitiesFromSuggestions) {
@@ -164,7 +163,7 @@ public class CabBookingPage extends BaseTest {
         // close popup
         try {
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Close']"))).click();
-        }
+        } 
         catch (Exception e) {
             System.out.println("No popup detected or popup's close button not clickable within timeout. Proceeding...");
         }	
@@ -175,12 +174,12 @@ public class CabBookingPage extends BaseTest {
         driver.findElement(By.xpath("//div[@role='checkbox']//span[text()='"+carType+"']")).click();
         wait.until(ExpectedConditions.elementToBeClickable(clearAllButton));	
 	}
- 
+
 	public void clearAll() {
 		clearAllButton.click();
 	}
 	
- 
+
 	public boolean isSUVFilterpresent() {
 		if(SUVCheckbox.isDisplayed()) {
 			return true;
@@ -193,7 +192,7 @@ public class CabBookingPage extends BaseTest {
 		return searchResultCards;
 	}
 	
- 
+
 	public String getErrorMessageForSameOrigin() {
 		WebElement errorMsg = wait.until(ExpectedConditions.presenceOfElementLocated(errorMessageSameOrigin));
 		return errorMsg.getText();
@@ -208,7 +207,7 @@ public class CabBookingPage extends BaseTest {
             ele.click();
         }
     }
- 
+
     public void datePicker(String date){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         while(true){
@@ -227,7 +226,7 @@ public class CabBookingPage extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     
- 
+
 	public void selectDepartureDate(String departDate) {
 		clickdeparture();
 		
@@ -239,7 +238,8 @@ public class CabBookingPage extends BaseTest {
 					if(date.getAttribute("aria-label").contains(departDate)) {
 						try {
 							if(!date.isSelected()) {
-								date.click();
+//								date.click();
+								scrollClick(date);
 								dateSelected = true;
 								break;
 							}else {
@@ -256,7 +256,7 @@ public class CabBookingPage extends BaseTest {
 			}
 		}
 	}
- 
+
     public void timePicker(String timeString){
     	timeString = timeString.replace(":", " ");
         String time [] = timeString.split(" ");
@@ -272,11 +272,11 @@ public class CabBookingPage extends BaseTest {
         else{
             scrollClick(hrDropdown.get(hr));
         }
- 
+
         // We have time only in multiples of 5, [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
         min = min/5; // we find index by dividing min/5, for e.g. 33/5 = 6 so element at 6th index is 30
         scrollClick(minDropdown.get(min));
- 
+
         // If meridian is 'am' then click 0th element which is 'AM'
         if(mer.equalsIgnoreCase("am")){
             scrollClick(meridianDropdown.get(0));
@@ -285,11 +285,11 @@ public class CabBookingPage extends BaseTest {
         else if (mer.equalsIgnoreCase("pm")) {
             scrollClick(meridianDropdown.get(1));
         }
- 
+
         //click apply
         applyTimeButton.click();
     }
- 
+
     public WebElement findLowestCharges(){
         int min = Integer.MAX_VALUE;
         int idx = -1;
@@ -307,47 +307,26 @@ public class CabBookingPage extends BaseTest {
         }
         return cabs.get(idx);
     }
-    
-    public void someMethod(String dateString) {
-        // Define the formatter to match the input format
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE MMM dd yyyy", Locale.ENGLISH);
- 
-        // Parse the string to LocalDate
-        LocalDate date = LocalDate.parse(dateString, formatter);
- 
-        // Subtract one day
-        LocalDate newDate = date.minusDays(1);
- 
-        // Format the result back to the same string format
-        String result = newDate.format(formatter);
- 
-        System.out.println("Original date: " + dateString);
-        System.out.println("Date - 1 day: " + result);
-        
-    }
-    
- 
- 
+
     public void takeElementScreenshot(WebElement ele, String screenshotFileName) {
         File sourceFile = ele.getScreenshotAs(OutputType.FILE);
         File targetFile = new File("screenshots/" + screenshotFileName); // Use a variable for filename
- 
+
         try {
             // Ensure the directory exists
 //            if (!targetFile.getParentFile().exists()) {
 //                targetFile.getParentFile().mkdirs(); // Creates "screenshots" directory if it doesn't exist
 //            }
- 
+
             // Using Apache Commons IO:
             FileUtils.copyFile(sourceFile, targetFile);
             System.out.println("Screenshot saved to: " + targetFile.getAbsolutePath());
- 
+
         } catch (IOException e) {
             System.err.println("Failed to save screenshot: " + e.getMessage());
             e.printStackTrace();
         }
     }
 }
- 
  
  

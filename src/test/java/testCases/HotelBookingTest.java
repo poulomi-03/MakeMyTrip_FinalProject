@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 
 public class HotelBookingTest extends BaseTest{
+	
 	@Test(priority = 1)
 	public void TC_HB_01() {
 		hotelObj.clickOnHotelsTab();

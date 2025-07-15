@@ -46,15 +46,17 @@ public class BaseTest {
         driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click(); // Close popup
 	}
  
-	@AfterMethod
+	@BeforeMethod
 	public void goToHomePage() {
+		System.out.println("---------------------------------------------------------------------------");
+	}
+	
+	@AfterMethod
+	public void closingTestCase() {
 		System.out.println("---------------------------------------------------------------------------");
 		driver.findElement(By.xpath("//a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]")).click();
 	}
-//	@AfterMethod
-//	public void closingTestCase() {
-//		System.out.println("---------------------------------------------------------------------------");
-//	}
+	
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
