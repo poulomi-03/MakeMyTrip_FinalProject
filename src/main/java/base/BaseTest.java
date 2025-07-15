@@ -43,11 +43,11 @@ public class BaseTest {
 	@BeforeMethod
 	public void goToHomePage() {
 		System.out.println("---------------------------------------------------------------------------");
-		driver.findElement(By.xpath("//a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]")).click();
 	}
 	@AfterMethod
 	public void closingTestCase() {
 		System.out.println("---------------------------------------------------------------------------");
+		driver.findElement(By.xpath("//a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]")).click();
 	}
 	@AfterClass
 	public void tearDown() {
