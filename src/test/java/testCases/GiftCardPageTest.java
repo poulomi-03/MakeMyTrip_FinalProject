@@ -3,6 +3,7 @@ package testCases;
 import base.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.GiftCardPage;
@@ -11,7 +12,7 @@ public class GiftCardPageTest extends BaseTest {
     private static final Logger logger = LogManager.getLogger(GiftCardPageTest.class);
     private GiftCardPage giftCardPage;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void initGiftCardPage() {
         logger.info("Initializing GiftCardPage object.");
         giftCardPage = new GiftCardPage(driver);
@@ -21,6 +22,12 @@ public class GiftCardPageTest extends BaseTest {
     public void navigateToGiftCardPage() {
         logger.info("Navigating to Gift Card page.");
         driver.get("https://www.makemytrip.com/gift-cards/");
+        try {
+            driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
+            logger.info("Modal closed successfully.");
+        } catch (Exception e) {
+            logger.warn("Modal not present or already closed.");
+        }
         giftCardPage.openBestWishesGiftCardInNewTab();
         logger.debug("Opened Best Wishes Gift Card in a new tab.");
     }
@@ -49,17 +56,11 @@ public class GiftCardPageTest extends BaseTest {
 
         giftCardPage.fillRecipientDetails(1, "Recipient1", "1234567890", "r1gmail.com");
         giftCardPage.fillRecipientDetails(2, "Recipient2", "2345678901", "R2#gmail.com");
-        giftCardPage.fillRecipientDetails(3, "abhinav", "9502377742", "abhinav@gm.com");
+        giftCardPage.fillRecipientDetails(3, "Abhinav", "9502377742", "abhinav@gm.com");
 
         giftCardPage.clickSubmit();
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
-        if (formStillVisible) {
-            logger.warn("Form submission blocked due to multiple recipient error.");
-        } else {
-            logger.info("Form submitted successfully.");
-        }
-
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid/multiple recipient details.");
         logger.info("TC_GC_02 completed.");
     }
@@ -74,19 +75,13 @@ public class GiftCardPageTest extends BaseTest {
         giftCardPage.clickSubmit();
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
-        if (formStillVisible) {
-            logger.warn("Form submission blocked due to recipient form invalid email error.");
-        } else {
-            logger.info("Form submitted successfully.");
-        }
-
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid recipient form.");
         logger.info("TC_GC_03 completed.");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDownTest() {
         logger.info("Tearing down test.");
-        tearDown();
+        tearDown(); 
     }
 }
