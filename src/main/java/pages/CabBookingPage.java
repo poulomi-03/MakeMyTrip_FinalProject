@@ -74,7 +74,6 @@ public class CabBookingPage extends BaseTest {
 	}
  
 	public void selectSection() {
-		System.out.println(cabsSection.isDisplayed());
 		cabsSection.click();		
 	}
 	

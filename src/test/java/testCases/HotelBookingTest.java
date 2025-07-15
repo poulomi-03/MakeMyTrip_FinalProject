@@ -5,7 +5,9 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.stream.IntStream;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -14,7 +16,7 @@ import pages.HotelBookingPage;
 
 public class HotelBookingTest extends BaseTest{
 	HotelBookingPage hotelObj;
-	@Test
+	@Test(priority = 1)
 	public void TC_HB_01() {
 		hotelObj = new HotelBookingPage(driver);
 //		hotelObj.disableLoginPopUp();
@@ -32,12 +34,14 @@ public class HotelBookingTest extends BaseTest{
 			}
 			i++;
 		}
-		
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ESCAPE).perform();
 		assertTrue(correctCount, "Incorrect count of numbers in dropdown");
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void TC_HB_02() {
+		hotelObj = new HotelBookingPage(driver);
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		
@@ -62,25 +66,32 @@ public class HotelBookingTest extends BaseTest{
 				clicked = false;
 			}
 		}
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ESCAPE).perform();
 		assertTrue(clicked);
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void TC_HB_03() {
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
 		
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ESCAPE).perform();
 		assertTrue(hotelObj.isRoomsAndGuestsSelectorEnabled(), "RoomsAndGuests selector option is not present");
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void TC_HB_04() {
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
-		assertEquals(hotelObj.getDefaultValueOfAdultDropdown(), "2");
+		String value = hotelObj.getDefaultValueOfAdultDropdown();
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ESCAPE).perform();
+		assertEquals(value, "2");
 	}
 	
-	@Test
+	@Test(priority = 5)
 	public void TC_HB_05() {
 		hotelObj.clickOnHotelsTab();
 		hotelObj.clickOnRoomsAndGuestsOption();
