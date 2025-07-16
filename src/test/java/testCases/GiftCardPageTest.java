@@ -45,7 +45,7 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid/multiple recipient details.");
-        logger.info("TC_GC_02 completed.");
+//        logger.info("TC_GC_02 completed.");
     }
 
     @Test(priority = 2, description = "TestCase 3: Fill recipient form and capture error")
@@ -61,6 +61,6 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid recipient form.");
-        logger.info("TC_GC_03 completed.");
+//        logger.info("TC_GC_03 completed.");
     }
 }
