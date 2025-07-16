@@ -1,511 +1,579 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T23:41:01 IST" name="Default suite" finished-at="2025-07-15T23:41:10 IST" duration-ms="8322">
+  <suite started-at="2025-07-16T11:35:29 IST" name="Default suite" finished-at="2025-07-16T11:39:01 IST" duration-ms="211602">
     <groups>
     </groups>
-    <test started-at="2025-07-15T23:41:01 IST" name="Default test" finished-at="2025-07-15T23:41:10 IST" duration-ms="8322">
-      <class name="testCases.HotelBookingTest">
-        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:01 IST" name="DriverSetup" finished-at="2025-07-15T23:41:09 IST" duration-ms="8088" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+    <test started-at="2025-07-16T11:35:29 IST" name="Default test" finished-at="2025-07-16T11:39:01 IST" duration-ms="211602">
+      <class name="testCases.CabBookingPageTest">
+        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:29 IST" name="DriverSetup" finished-at="2025-07-16T11:35:36 IST" duration-ms="7302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:09 IST" name="goToHomePage" finished-at="2025-07-15T23:41:09 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:36 IST" name="goToHomePage" finished-at="2025-07-16T11:35:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_01()[pri:1, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="TC_HB_01" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="TC_OCB_10(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:-1, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:36 IST" name="TC_OCB_10" description="To verify that previous dates are disabled in the departure date picker." data-provider="testData" finished-at="2025-07-16T11:35:37 IST" duration-ms="1125" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_01 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="closingTestCase" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- TC_OCB_10 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:37 IST" name="closingTestCase" finished-at="2025-07-16T11:35:38 IST" duration-ms="911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="goToHomePage" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method signature="TC_OCB_14()[pri:-1, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:38 IST" name="TC_OCB_14" description="To verify behavior when no cabs are available for the selected criteria." finished-at="2025-07-16T11:36:07 IST" duration-ms="29089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_14 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:35:38 IST" name="goToHomePage" finished-at="2025-07-16T11:35:38 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_02()[pri:2, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="TC_HB_02" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_HB_02 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="closingTestCase" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:07 IST" name="closingTestCase" finished-at="2025-07-16T11:36:09 IST" duration-ms="1358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="goToHomePage" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method signature="TC_OCB_01(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:09 IST" name="TC_OCB_01" description="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time." data-provider="testData" finished-at="2025-07-16T11:36:18 IST" duration-ms="9043" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_01 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:09 IST" name="goToHomePage" finished-at="2025-07-16T11:36:09 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_03()[pri:3, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="TC_HB_03" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_HB_03 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="closingTestCase" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:18 IST" name="closingTestCase" finished-at="2025-07-16T11:36:20 IST" duration-ms="2451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="goToHomePage" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method signature="TC_OCB_02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:20 IST" name="TC_OCB_02" description="To verify that only SUV cab type filter is applied and results are displayed accordingly." data-provider="testData" finished-at="2025-07-16T11:36:37 IST" duration-ms="16567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_02 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:20 IST" name="goToHomePage" finished-at="2025-07-16T11:36:20 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_04()[pri:4, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="TC_HB_04" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_HB_04 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="closingTestCase" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:37 IST" name="closingTestCase" finished-at="2025-07-16T11:36:38 IST" duration-ms="879" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="goToHomePage" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:38 IST" name="goToHomePage" finished-at="2025-07-16T11:36:38 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_HB_05()[pri:5, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="TC_HB_05" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=137.0.7151.69)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48b9f65847ecce089cca2c85f3e3d2b1, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2406654\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51912/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48b9f65847ecce089cca2c85f3e3d2b1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:324)
-at base.BaseTest.DriverSetup(BaseTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="TC_OCB_03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:38 IST" name="TC_OCB_03" description="To verify that the selected &quot;From&quot; location is reflected in search results." data-provider="testData" finished-at="2025-07-16T11:36:53 IST" duration-ms="15303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_HB_05 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="closingTestCase" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- TC_OCB_03 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:53 IST" name="closingTestCase" finished-at="2025-07-16T11:36:55 IST" duration-ms="1470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelBookingTest@185a6e9]" started-at="2025-07-15T23:41:10 IST" name="tearDown" finished-at="2025-07-15T23:41:10 IST" duration-ms="0" status="SKIP">
-=======
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-07-16T09:18:42 IST" name="Default suite" finished-at="2025-07-16T09:19:36 IST" duration-ms="54701">
-    <groups>
-    </groups>
-    <test started-at="2025-07-16T09:18:42 IST" name="Default test" finished-at="2025-07-16T09:19:36 IST" duration-ms="54701">
-      <class name="testCases.GiftCardPageTest">
-        <test-method is-config="true" signature="DriverSetup()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:18:42 IST" name="DriverSetup" finished-at="2025-07-16T09:18:57 IST" duration-ms="14910" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DriverSetup -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:18:57 IST" name="goToHomePage" finished-at="2025-07-16T09:18:57 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:55 IST" name="goToHomePage" finished-at="2025-07-16T11:36:55 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_GC_02()[pri:1, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:18:57 IST" name="TC_GC_02" description="TestCase 2: Fill multiple recipients and capture error" finished-at="2025-07-16T09:19:09 IST" duration-ms="12306" status="PASS">
+        <test-method signature="TC_OCB_04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:36:55 IST" name="TC_OCB_04" description="To verify that the selected &quot;To&quot; location is reflected in search results." data-provider="testData" finished-at="2025-07-16T11:37:10 IST" duration-ms="15205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_GC_02 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:09 IST" name="closingTestCase" finished-at="2025-07-16T09:19:10 IST" duration-ms="1397" status="PASS">
+        </test-method> <!-- TC_OCB_04 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:10 IST" name="closingTestCase" finished-at="2025-07-16T11:37:12 IST" duration-ms="1846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:10 IST" name="goToHomePage" finished-at="2025-07-16T09:19:10 IST" duration-ms="1" status="PASS">
+        <test-method signature="TC_OCB_05(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:12 IST" name="TC_OCB_05" description="To verify that the selected &quot;Departure Date&quot; is reflected in search results." data-provider="testData" finished-at="2025-07-16T11:37:26 IST" duration-ms="14760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_05 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:12 IST" name="goToHomePage" finished-at="2025-07-16T11:37:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_GC_03()[pri:2, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:10 IST" name="TC_GC_03" description="TestCase 3: Fill recipient form and capture error" finished-at="2025-07-16T09:19:21 IST" duration-ms="10439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_GC_03 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:21 IST" name="closingTestCase" finished-at="2025-07-16T09:19:22 IST" duration-ms="1579" status="PASS">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:26 IST" name="closingTestCase" finished-at="2025-07-16T11:37:27 IST" duration-ms="880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:22 IST" name="goToHomePage" finished-at="2025-07-16T09:19:22 IST" duration-ms="1" status="PASS">
+        <test-method signature="TC_OCB_06(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:27 IST" name="TC_OCB_06" description="To verify that the selected &quot;Pickup Time&quot; is reflected in search results." data-provider="testData" finished-at="2025-07-16T11:37:42 IST" duration-ms="14723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_06 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:27 IST" name="goToHomePage" finished-at="2025-07-16T11:37:27 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
-        <test-method signature="TC_GC_01()[pri:3, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:22 IST" name="TC_GC_01" description="TestCase 1: Invalid sender email" finished-at="2025-07-16T09:19:29 IST" duration-ms="6287" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_GC_01 -->
-        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:29 IST" name="closingTestCase" finished-at="2025-07-16T09:19:30 IST" duration-ms="1066" status="PASS">
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:42 IST" name="closingTestCase" finished-at="2025-07-16T11:37:43 IST" duration-ms="1405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.GiftCardPageTest@62e7f11d]" started-at="2025-07-16T09:19:30 IST" name="tearDown" finished-at="2025-07-16T09:19:36 IST" duration-ms="6551" status="PASS">
->>>>>>> main
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:43 IST" name="goToHomePage" finished-at="2025-07-16T11:37:43 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_07(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:43 IST" name="TC_OCB_07" description="To verify Clear All functionality of filters." data-provider="testData" finished-at="2025-07-16T11:37:59 IST" duration-ms="15179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_07 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:37:59 IST" name="closingTestCase" finished-at="2025-07-16T11:38:00 IST" duration-ms="967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="TC_OCB_08(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:00 IST" name="TC_OCB_08" description="To verify Suggestion when an invalid/unserviceable &quot;From&quot; location is entered." data-provider="testData" finished-at="2025-07-16T11:38:06 IST" duration-ms="6862" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_08 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:00 IST" name="goToHomePage" finished-at="2025-07-16T11:38:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:06 IST" name="closingTestCase" finished-at="2025-07-16T11:38:07 IST" duration-ms="807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:07 IST" name="goToHomePage" finished-at="2025-07-16T11:38:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_09(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:07 IST" name="TC_OCB_09" description="To verify Suggestion when an invalid/unserviceable &quot;To&quot; location is entered." data-provider="testData" finished-at="2025-07-16T11:38:14 IST" duration-ms="6744" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_09 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:14 IST" name="closingTestCase" finished-at="2025-07-16T11:38:15 IST" duration-ms="1208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:15 IST" name="goToHomePage" finished-at="2025-07-16T11:38:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_11(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:15 IST" name="TC_OCB_11" description="To verify that dates beyond  limit in the future are disabled in the departure date picker." data-provider="testData" finished-at="2025-07-16T11:38:17 IST" duration-ms="1384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_11 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:17 IST" name="closingTestCase" finished-at="2025-07-16T11:38:17 IST" duration-ms="904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="TC_OCB_12(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:17 IST" name="TC_OCB_12" description="To verify the presence of SUV filter." data-provider="testData" finished-at="2025-07-16T11:38:33 IST" duration-ms="15398" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_12 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:17 IST" name="goToHomePage" finished-at="2025-07-16T11:38:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:33 IST" name="closingTestCase" finished-at="2025-07-16T11:38:34 IST" duration-ms="980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="TC_OCB_13(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:34 IST" name="TC_OCB_13" description="To verify that search results are displayed even if &quot;SUV&quot; filter is not applied initially." data-provider="testData" finished-at="2025-07-16T11:38:49 IST" duration-ms="15370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_13 -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:34 IST" name="goToHomePage" finished-at="2025-07-16T11:38:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:49 IST" name="closingTestCase" finished-at="2025-07-16T11:38:50 IST" duration-ms="943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:50 IST" name="goToHomePage" finished-at="2025-07-16T11:38:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_15(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:15, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:50 IST" name="TC_OCB_15" description="To verify behavior with same &quot;From&quot; and &quot;To&quot; locations." data-provider="testData" finished-at="2025-07-16T11:38:53 IST" duration-ms="2887" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manali, Himachal Pradesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aug 09 2025]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12:40 PM]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_15 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:53 IST" name="closingTestCase" finished-at="2025-07-16T11:38:54 IST" duration-ms="1262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@49438269]" started-at="2025-07-16T11:38:54 IST" name="tearDown" finished-at="2025-07-16T11:39:01 IST" duration-ms="6259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.GiftCardPageTest -->
+      </class> <!-- testCases.CabBookingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

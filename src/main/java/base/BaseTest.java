@@ -16,34 +16,42 @@ import pages.CabBookingPage;
 import pages.GiftCardPage;
 import pages.HotelBookingPage;
 import utils.ActionUtil;
+import utils.ConfigReader;
  
 public class BaseTest {
-	public static WebDriver driver;
+	public WebDriver driver;
+	public String baseUrl;
+	
 	public static WebDriverWait wait;
 	public static JavascriptExecutor js;
 	public static Actions act;
-	public static CabBookingPage cabBookingPage;
-	public static GiftCardPage giftCardPage;
+	public static ActionUtil action;
+	
+	public CabBookingPage cabBookingPage;
+	public GiftCardPage giftCardPage;
 	public HotelBookingPage hotelObj;
-	public ActionUtil action;
 
 	@BeforeClass
 	public void DriverSetup() {
-		driver = WebDriverSetUp.setupDriver("chrome");
+		String browser = ConfigReader.get("browser");
+		driver = WebDriverSetUp.setupDriver(browser);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         js = (JavascriptExecutor) driver;
 		act = new Actions(driver);
+		
         cabBookingPage = new CabBookingPage(driver);
         giftCardPage = new GiftCardPage(driver);
         hotelObj = new HotelBookingPage(driver);
         action = new ActionUtil(driver);
 
         // Go to MakeMyTrip Home Page
-		String baseUrl = "https://www.makemytrip.com/";
+		baseUrl = ConfigReader.get("baseUrl");
 		driver.get(baseUrl); // Open MakemyTrip Home page.
         String currentUrl = driver.getCurrentUrl();
+        
         // Validate
         if (!currentUrl.equals(baseUrl)) {
             System.out.println("Remarks: Failed to navigate to "+baseUrl+"Current URL is: "+currentUrl);
@@ -62,7 +70,7 @@ public class BaseTest {
 	@AfterMethod
 	public void closingTestCase() {
 		System.out.println("---------------------------------------------------------------------------");
-		driver.get("https://www.makemytrip.com/");
+		driver.get(baseUrl);
 	}
 	
 	@AfterClass

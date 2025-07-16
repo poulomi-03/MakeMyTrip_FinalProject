@@ -23,8 +23,8 @@ public class CabBookingPageTest extends BaseTest{
 		return arr;
 	}
 	
-	@Test(dataProvider = "testData", priority = 1)
-	public void oneWayCabSearch(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 1, description ="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.")
+	public void TC_OCB_01(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -42,9 +42,36 @@ public class CabBookingPageTest extends BaseTest{
         WebElement cab = cabBookingPage.findLowestCharges();
         cabBookingPage.takeElementScreenshot(cab, "cab.png");
 	}
+
+	@Test(dataProvider = "testData", priority = 2, description ="To verify that only SUV cab type filter is applied and results are displayed accordingly.")
+	public void TC_OCB_02(String fromLocation, String toLocation, String date, String time, String carType) {
+		cabBookingPage.selectSection();
+		cabBookingPage.selectTripType();
+		cabBookingPage.clickFromField();
+		cabBookingPage.selectLocationFromSuggestions(fromLocation);
+		cabBookingPage.clickToField();
+		cabBookingPage.enterToLocation(toLocation);
+		cabBookingPage.selectDestinationFromSuggestion(toLocation);
+		cabBookingPage.clickdeparture();
+		cabBookingPage.datePicker(date);
+        cabBookingPage.clickPickupTime();
+        cabBookingPage.timePicker(time);
+        cabBookingPage.search();
+        cabBookingPage.closePackagesPopup();
+        cabBookingPage.selectCarType(carType);
+        
+        // To verify the Car Type with help of number of seats (SUV has 6 seats)
+        List<WebElement> cabs = driver.findElements(By.xpath("//div[contains(@class, 'cabDetailsCard_utilitiesInfo')]"));
+        for(WebElement cab : cabs) {
+        	String expectedNumberOfSeats = "6 Seats";
+        	String actualNumberOfSeats = cab.findElement(By.tagName("span")).getText();
+        	System.out.println(expectedNumberOfSeats +" - "+actualNumberOfSeats +" - "+ expectedNumberOfSeats.equalsIgnoreCase(actualNumberOfSeats));
+        	Assert.assertEquals(expectedNumberOfSeats, actualNumberOfSeats);
+        }
+	}
  
-	@Test(dataProvider = "testData", priority = 2)
-	public void verifyFromLocationInResults(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 3, description ="To verify that the selected \"From\" location is reflected in search results.")
+	public void TC_OCB_03(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -65,8 +92,8 @@ public class CabBookingPageTest extends BaseTest{
     	Assert.assertTrue(actualFromLocation.contains(expectedFromLocation));
 	}
  
-	@Test(dataProvider = "testData", priority = 3)
-	public void verifyToLocationInResults(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 4, description ="To verify that the selected \"To\" location is reflected in search results.")
+	public void TC_OCB_04(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -87,8 +114,8 @@ public class CabBookingPageTest extends BaseTest{
     	Assert.assertTrue(actualToLocation.contains(actualToLocation));
 	}
  
-	@Test(dataProvider = "testData", priority = 4)
-	public void verifyDepartureDateInResults(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 5, description ="To verify that the selected \"Departure Date\" is reflected in search results.")
+	public void TC_OCB_05(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -116,8 +143,8 @@ public class CabBookingPageTest extends BaseTest{
     	Assert.assertTrue(date1.equals(date2));
 	}
  
-	@Test(dataProvider = "testData", priority = 5)
-	public void verifyPickUpTimeInResults(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 6, description ="To verify that the selected \"Pickup Time\" is reflected in search results.")
+	public void TC_OCB_06(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -138,35 +165,8 @@ public class CabBookingPageTest extends BaseTest{
     	Assert.assertEquals(expectedPickUpTime, actualPickUpTime);
 	}
  
-	@Test(dataProvider = "testData", priority = 6)
-	public void verifyCabTypeInResult(String fromLocation, String toLocation, String date, String time, String carType) {
-		cabBookingPage.selectSection();
-		cabBookingPage.selectTripType();
-		cabBookingPage.clickFromField();
-		cabBookingPage.selectLocationFromSuggestions(fromLocation);
-		cabBookingPage.clickToField();
-		cabBookingPage.enterToLocation(toLocation);
-		cabBookingPage.selectDestinationFromSuggestion(toLocation);
-		cabBookingPage.clickdeparture();
-		cabBookingPage.datePicker(date);
-        cabBookingPage.clickPickupTime();
-        cabBookingPage.timePicker(time);
-        cabBookingPage.search();
-        cabBookingPage.closePackagesPopup();
-        cabBookingPage.selectCarType(carType);
-        
-        // To verify the Car Type with help of number of seats (SUV has 6 seats)
-        List<WebElement> cabs = driver.findElements(By.xpath("//div[contains(@class, 'cabDetailsCard_utilitiesInfo')]"));
-        for(WebElement cab : cabs) {
-        	String expectedNumberOfSeats = "6 Seats";
-        	String actualNumberOfSeats = cab.findElement(By.tagName("span")).getText();
-        	System.out.println(expectedNumberOfSeats +" - "+actualNumberOfSeats +" - "+ expectedNumberOfSeats.equalsIgnoreCase(actualNumberOfSeats));
-        	Assert.assertEquals(expectedNumberOfSeats, actualNumberOfSeats);
-        }
-	}
- 
-	@Test(dataProvider = "testData", priority = 7)
-	public void verifyClearAllFilterFunctionality(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 7, description ="To verify Clear All functionality of filters.")
+	public void TC_OCB_07(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
@@ -190,8 +190,38 @@ public class CabBookingPageTest extends BaseTest{
         	System.out.println("Cleared all filters");
         }   
 	}
-	@Test(dataProvider = "testData", priority = -1)
-	public void verifyDisabledPreviousDepartureDate(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 8, description ="To verify Suggestion when an invalid/unserviceable \"From\" location is entered.")
+	public void TC_OCB_08(String fromLocation, String toLocation, String date, String time, String carType) {
+		cabBookingPage.selectSection();
+		cabBookingPage.selectTripType();
+		cabBookingPage.clickFromField();
+		cabBookingPage.enterFromLocation("qwertyuiop");
+		
+        String expectedSuggestion = "No Data Found";
+        String actualSuggestion = cabBookingPage.getSuggestion();
+    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
+    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
+
+		action.clickEsc();
+	}
+ 
+	@Test(dataProvider = "testData", priority = 9, description ="To verify Suggestion when an invalid/unserviceable \"To\" location is entered.")
+	public void TC_OCB_09(String fromLocation, String toLocation, String date, String time, String carType) {
+		cabBookingPage.selectSection();
+		cabBookingPage.selectTripType();
+		cabBookingPage.clickToField();
+		cabBookingPage.enterToLocation("qwertyuiop");
+		
+        String expectedSuggestion = "No Data Found";
+        String actualSuggestion = cabBookingPage.getSuggestion();
+    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
+    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
+
+		action.clickEsc();
+	}
+
+	@Test(dataProvider = "testData", priority = -1, description ="To verify that previous dates are disabled in the departure date picker.")
+	public void TC_OCB_10(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.clickdeparture();
 		
@@ -201,12 +231,12 @@ public class CabBookingPageTest extends BaseTest{
 			Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true");
 			
 		}
-		act.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).perform();
+		action.clickEsc();
 		System.out.println("Done");
 	}
 	
-	@Test(dataProvider = "testData", priority = 8)
-	public void verifyDisabledDepartureDateBeyondLimit(String fromLocation, String toLocation, String date, String time, String carType) {
+	@Test(dataProvider = "testData", priority = 11, description ="To verify that dates beyond  limit in the future are disabled in the departure date picker.")
+	public void TC_OCB_11(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.clickdeparture();
  
@@ -225,42 +255,13 @@ public class CabBookingPageTest extends BaseTest{
 		int disabledDate = Integer.parseInt(disabledDateString);
 		List<WebElement> dates = secondMonth.findElements(By.xpath(".//div[@role='gridcell']"));
 		for(int i = disabledDate-1; i < dates.size(); i++ ) {
-//			System.out.println(dates.get(i).getText()+" "+dates.get(i).getAttribute("class")+" "+dates.get(i).toString());
 			Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true");
 		}
- 
-		act.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).perform();
-		
+
+		action.clickEsc();
 	}
-	@Test(dataProvider = "testData", priority = 9)
-	public void verifyMessageForUnserviceableFromLocation(String fromLocation, String toLocation, String date, String time, String carType) {
-		cabBookingPage.selectSection();
-		cabBookingPage.selectTripType();
-		cabBookingPage.clickFromField();
-		cabBookingPage.enterFromLocation("qwertyuiop");
-		
-        String expectedSuggestion = "No Data Found";
-        String actualSuggestion = cabBookingPage.getSuggestion();
-    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
-    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
-		act.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).perform();
-	}
- 
-	@Test(dataProvider = "testData", priority = 10)
-	public void verifyMessageForUnserviceableToLocation(String fromLocation, String toLocation, String date, String time, String carType) {
-		cabBookingPage.selectSection();
-		cabBookingPage.selectTripType();
-		cabBookingPage.clickToField();
-		cabBookingPage.enterToLocation("qwertyuiop");
-		
-        String expectedSuggestion = "No Data Found";
-        String actualSuggestion = cabBookingPage.getSuggestion();
-    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
-    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
-		act.keyDown(Keys.ESCAPE).keyUp(Keys.ESCAPE).perform();
-	}
- 
-	@Test(dataProvider = "testData", priority = 11)
+	
+	@Test(dataProvider = "testData", priority = 12, description ="To verify the presence of SUV filter.")
 	public void TC_OCB_12(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
@@ -273,10 +274,6 @@ public class CabBookingPageTest extends BaseTest{
 		cabBookingPage.datePicker(date);
         cabBookingPage.clickPickupTime();
         cabBookingPage.timePicker(time);
-//		cabBookingPage.selectCityFromPopularSuggestion(fromLocation);
-//		cabBookingPage.selectCityToFieldSuggestion(toLocation);
-//		cabBookingPage.selectDepartureDate(date);
-//		cabBookingPage.selectPickupTime(time);
 		cabBookingPage.search();
 		cabBookingPage.closePackagesPopup();
 		boolean isPresent = cabBookingPage.isSUVFilterpresent();
@@ -284,7 +281,7 @@ public class CabBookingPageTest extends BaseTest{
 		Assert.assertTrue(isPresent);
 	}
 	
-	@Test(dataProvider = "testData", priority = 12)
+	@Test(dataProvider = "testData", priority = 13, description ="To verify that search results are displayed even if \"SUV\" filter is not applied initially.")
 	public void TC_OCB_13(String fromLocation, String toLocation, String date, String time, String carType) throws Exception {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
@@ -297,17 +294,13 @@ public class CabBookingPageTest extends BaseTest{
 		cabBookingPage.datePicker(date);
         cabBookingPage.clickPickupTime();
         cabBookingPage.timePicker(time);
-//		cabBookingPage.selectCityFromPopularSuggestion(fromLocation);
-//		cabBookingPage.selectCityToFieldSuggestion(toLocation);
-//		cabBookingPage.selectDepartureDate(date);
-//		cabBookingPage.selectPickupTime(time);
 		cabBookingPage.search();
 		cabBookingPage.closePackagesPopup();
 		
 		Assert.assertTrue(!cabBookingPage.getSearchResult().isEmpty());
 	}
 	
-	@Test(priority = -1)
+	@Test(priority = -1, description ="To verify behavior when no cabs are available for the selected criteria.")
 	public void TC_OCB_14() {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
@@ -320,25 +313,19 @@ public class CabBookingPageTest extends BaseTest{
 		cabBookingPage.selectDepartureDate("Jul 25 2025");
         cabBookingPage.clickPickupTime();
         cabBookingPage.timePicker("10:00 AM");
-//		cabBookingPage.selectCityFromFieldSuggestion("Leh");
-//		cabBookingPage.selectCityToFieldSuggestion("Kargil");
-//		cabBookingPage.selectPickupTime("10 00 AM");
 		cabBookingPage.search();
 		cabBookingPage.closePackagesPopup();
 		
 		Assert.assertTrue(cabBookingPage.getSearchResult().isEmpty());
 	}
 	
-	@Test(dataProvider = "testData", priority = 14)
+	@Test(dataProvider = "testData", priority = 15, description ="To verify behavior with same \"From\" and \"To\" locations.")
 	public void TC_OCB_15(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
 		cabBookingPage.selectLocationFromSuggestions(fromLocation);
 		cabBookingPage.clickToField();
-//		cabBookingPage.enterToLocation(fromLocation);
-//		cabBookingPage.selectDestinationFromSuggestion(fromLocation);
-//		cabBookingPage.selectCityFromPopularSuggestion(fromLocation);
 		cabBookingPage.selectCityToPopularSuggestion(fromLocation);
 		
 		String msg = "The Origin City & Destination City cannot be the same.";
