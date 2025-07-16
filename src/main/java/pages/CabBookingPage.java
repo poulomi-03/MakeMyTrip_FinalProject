@@ -162,7 +162,7 @@ public class CabBookingPage extends BaseTest {
 	public void closePackagesPopup() {
         // close popup
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Close']"))).click();
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='Close']"))).click();
         } 
         catch (Exception e) {
             System.out.println("No popup detected or popup's close button not clickable within timeout. Proceeding...");

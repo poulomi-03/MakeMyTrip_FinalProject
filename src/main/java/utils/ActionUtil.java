@@ -11,7 +11,7 @@ public class ActionUtil {
 		act = new Actions(driver);
 	}
 		
-	public void clickEsc() {		
+	public void clickEsc() {
 		act.sendKeys(Keys.ESCAPE).perform();
 	}
 }
