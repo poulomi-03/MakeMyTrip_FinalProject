@@ -190,7 +190,6 @@ public class CabBookingPageTest extends BaseTest{
         	System.out.println("Cleared all filters");
         }   
 	}
-
 	@Test(dataProvider = "testData", priority = -1)
 	public void verifyDisabledPreviousDepartureDate(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();

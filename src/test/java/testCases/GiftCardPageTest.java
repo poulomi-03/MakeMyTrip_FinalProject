@@ -1,5 +1,5 @@
 package testCases;
- 
+
 import base.BaseTest;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +15,6 @@ public class GiftCardPageTest extends BaseTest {
         logger.info("Executing TC_GC_01: Invalid sender email test.");
         driver.get("https://www.makemytrip.com/gift-cards/");
         giftCardPage.openBestWishesGiftCardInNewTab();
-
         giftCardPage.scrollDown();
         giftCardPage.fillSenderDetails("Sender Name", "9876543210", "invalid-email");
         giftCardPage.clickSubmit();
@@ -32,6 +31,7 @@ public class GiftCardPageTest extends BaseTest {
         logger.info("Executing TC_GC_02: Multiple recipients error test.");
         driver.get("https://www.makemytrip.com/gift-cards/");
         giftCardPage.openBestWishesGiftCardInNewTab();
+
         giftCardPage.selectEmailDelivery();
         giftCardPage.clickCountryCodeSelector();
         giftCardPage.toggleSwitch();
@@ -45,7 +45,6 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid/multiple recipient details.");
-        
         logger.info("TC_GC_02 completed.");
     }
 
@@ -62,8 +61,6 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid recipient form.");
-        
         logger.info("TC_GC_03 completed.");
     }
 }
- 
