@@ -3,10 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.HotelBookingTest">
+      <class name="testCases.GiftCardPageTest">
         <methods>
           <include name="tearDown"/>
           <include name="DriverSetup"/>
+<<<<<<< HEAD
+          <include name="closingTestCase"/>
+=======
 <<<<<<< HEAD
           <include name="TC_HB_01"/>
 =======
@@ -17,9 +20,11 @@
           <include name="closingTestCase"/>
           <include name="TC_HB_02"/>
 >>>>>>> main
+>>>>>>> main
           <include name="goToHomePage"/>
+          <include name="TC_GC_01"/>
         </methods>
-      </class> <!-- testCases.HotelBookingTest -->
+      </class> <!-- testCases.GiftCardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,15 +1,19 @@
 package base;
  
 import java.time.Duration;
- 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
- 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
 import pages.CabBookingPage;
+import pages.GiftCardPage;
 import pages.HotelBookingPage;
 import utils.ActionUtil;
  
@@ -19,8 +23,10 @@ public class BaseTest {
 	public static JavascriptExecutor js;
 	public static Actions act;
 	public static CabBookingPage cabBookingPage;
+	public static GiftCardPage giftCardPage;
 	public HotelBookingPage hotelObj;
 	public ActionUtil action;
+
 	@BeforeClass
 	public void DriverSetup() {
 		driver = WebDriverSetUp.setupDriver("chrome");
@@ -30,8 +36,10 @@ public class BaseTest {
         js = (JavascriptExecutor) driver;
 		act = new Actions(driver);
         cabBookingPage = new CabBookingPage(driver);
+        giftCardPage = new GiftCardPage(driver);
         hotelObj = new HotelBookingPage(driver);
         action = new ActionUtil(driver);
+
         // Go to MakeMyTrip Home Page
 		String baseUrl = "https://www.makemytrip.com/";
 		driver.get(baseUrl); // Open MakemyTrip Home page.
@@ -54,7 +62,7 @@ public class BaseTest {
 	@AfterMethod
 	public void closingTestCase() {
 		System.out.println("---------------------------------------------------------------------------");
-		driver.findElement(By.xpath("//a[contains(@class,'mmtLogo') or contains(@class,'chMmtLogo')]")).click();
+		driver.get("https://www.makemytrip.com/");
 	}
 	
 	@AfterClass

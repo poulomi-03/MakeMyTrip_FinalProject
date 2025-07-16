@@ -59,7 +59,7 @@ public class GiftCardPage extends BaseTest{
     @FindBy(xpath = "//button[contains(@class,'prime__btn')]")
     private WebElement submitButton;
  
-    @FindBy(xpath = "//div[contains(@class, 'error')]")
+    @FindBy(xpath = "//p[normalize-space()='Please enter a valid Email id.']")
     private WebElement errorMessage;
  
     public GiftCardPage(WebDriver driver) {
@@ -68,7 +68,7 @@ public class GiftCardPage extends BaseTest{
         PageFactory.initElements(driver, this);
     }
  
-    private void scrollToElement(WebElement element) {
+    public void scrollToElement(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
  
@@ -95,12 +95,12 @@ public class GiftCardPage extends BaseTest{
  
     public void openBestWishesGiftCardInNewTab() {
         String bestWishesUrl = "https://www.makemytrip.com/gift-cards/details/?gcid=41&productId=44";
-        ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", bestWishesUrl);
- 
-        for (String handle : driver.getWindowHandles()) {
-            driver.switchTo().window(handle);
-        }
- 
+        driver.get(bestWishesUrl);
+//        ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", bestWishesUrl);
+// 
+//        for (String handle : driver.getWindowHandles()) {
+//            driver.switchTo().window(handle);
+//        }
         wait.until(ExpectedConditions.urlContains("gcid=41&productId=44"));
     }
  
