@@ -6,8 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
-import pages.GiftCardPage;
  
 public class GiftCardPageTest extends BaseTest {
     private static final Logger logger = LogManager.getLogger(GiftCardPageTest.class);
