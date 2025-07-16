@@ -9,46 +9,46 @@ import org.testng.annotations.*;
 import pages.GiftCardPage;
 
 public class GiftCardPageTest extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(GiftCardPageTest.class);
+//    private static final Logger logger = LogManager.getLogger(GiftCardPageTest.class);
     private GiftCardPage giftCardPage;
 
     @BeforeClass(alwaysRun = true)
     public void initGiftCardPage() {
-        logger.info("Initializing GiftCardPage object.");
+//        logger.info("Initializing GiftCardPage object.");
         giftCardPage = new GiftCardPage(driver);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void navigateToGiftCardPage() {
-        logger.info("Navigating to Gift Card page.");
+//        logger.info("Navigating to Gift Card page.");
         driver.get("https://www.makemytrip.com/gift-cards/");
         try {
             driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
-            logger.info("Modal closed successfully.");
+//            logger.info("Modal closed successfully.");
         } catch (Exception e) {
-            logger.warn("Modal not present or already closed.");
+//            logger.warn("Modal not present or already closed.");
         }
         giftCardPage.openBestWishesGiftCardInNewTab();
-        logger.debug("Opened Best Wishes Gift Card in a new tab.");
+//        logger.debug("Opened Best Wishes Gift Card in a new tab.");
     }
 
     @Test(priority = 3, description = "TestCase 1: Invalid sender email")
     public void TC_GC_01() {
-        logger.info("Executing TC_GC_01: Invalid sender email test.");
+//        logger.info("Executing TC_GC_01: Invalid sender email test.");
         giftCardPage.scrollDown();
         giftCardPage.fillSenderDetails("Sender Name", "9876543210", "invalid-email");
         giftCardPage.clickSubmit();
 
         String error = giftCardPage.getErrorMessage();
-        logger.error("Sender Email Error: {}", error);
+//        logger.error("Sender Email Error: {}", error);
 
         Assert.assertEquals(error.trim(), "SENDER'S E-MAIL ID", "Expected sender email error not shown.");
-        logger.info("TC_GC_01 completed.");
+//        logger.info("TC_GC_01 completed.");
     }
 
     @Test(priority = 1, description = "TestCase 2: Fill multiple recipients and capture error")
     public void TC_GC_02() {
-        logger.info("Executing TC_GC_02: Multiple recipients error test.");
+//        logger.info("Executing TC_GC_02: Multiple recipients error test.");
         giftCardPage.selectEmailDelivery();
         giftCardPage.clickCountryCodeSelector();
         giftCardPage.toggleSwitch();
@@ -62,12 +62,12 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid/multiple recipient details.");
-        logger.info("TC_GC_02 completed.");
+//        logger.info("TC_GC_02 completed.");
     }
 
     @Test(priority = 2, description = "TestCase 3: Fill recipient form and capture error")
     public void TC_GC_03() {
-        logger.info("Executing TC_GC_03: Recipient form error test.");
+//        logger.info("Executing TC_GC_03: Recipient form error test.");
         giftCardPage.selectEmailDelivery();
         giftCardPage.clickCountryCodeSelector();
         giftCardPage.scrollDown();
@@ -76,12 +76,12 @@ public class GiftCardPageTest extends BaseTest {
 
         boolean formStillVisible = giftCardPage.isSenderFormVisible();
         Assert.assertTrue(formStillVisible, "Form should not submit with invalid recipient form.");
-        logger.info("TC_GC_03 completed.");
+//        logger.info("TC_GC_03 completed.");
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDownTest() {
-        logger.info("Tearing down test.");
+//        logger.info("Tearing down test.");
         tearDown(); 
     }
 }

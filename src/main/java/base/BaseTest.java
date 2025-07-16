@@ -21,6 +21,7 @@ public class BaseTest {
 	public static CabBookingPage cabBookingPage;
 	public HotelBookingPage hotelObj;
 	public ActionUtil action;
+	
 	@BeforeClass
 	public void DriverSetup() {
 		driver = WebDriverSetUp.setupDriver("chrome");
