@@ -5,6 +5,7 @@
     <classes>
       <class name="testCases.GiftCardPageTest">
         <methods>
+          <include name="TC_GC_03"/>
           <include name="tearDown"/>
           <include name="DriverSetup"/>
           <include name="closingTestCase"/>
