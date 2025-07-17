@@ -13,7 +13,7 @@ public class GiftCardPage extends BaseTest{
     private WebDriver driver;
     private WebDriverWait wait;
  
-    // Locators
+    /* Locators */
     @FindBy(xpath = "//span[normalize-space()='Gift Cards']")
     private WebElement giftCardsLink;
  
@@ -68,13 +68,11 @@ public class GiftCardPage extends BaseTest{
         PageFactory.initElements(driver, this);
     }
  
-    public void scrollToElement(WebElement element) {
-        js.executeScript("arguments[0].scrollIntoView();", element);
-    }
+    /* Actions */
  
     private void safeClick(WebElement element) {
         try {
-            scrollToElement(element);
+        	jsUtil.scrollToElement(element);
             wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         } catch (ElementClickInterceptedException e) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
@@ -96,11 +94,6 @@ public class GiftCardPage extends BaseTest{
     public void openBestWishesGiftCardInNewTab() {
         String bestWishesUrl = "https://www.makemytrip.com/gift-cards/details/?gcid=41&productId=44";
         driver.get(bestWishesUrl);
-//        ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", bestWishesUrl);
-// 
-//        for (String handle : driver.getWindowHandles()) {
-//            driver.switchTo().window(handle);
-//        }
         wait.until(ExpectedConditions.urlContains("gcid=41&productId=44"));
     }
  
@@ -134,7 +127,7 @@ public void toggleSwitch() {
  
  
     public void fillSenderDetails(String name, String mobile, String email) {
-        scrollToElement(senderName);
+    	jsUtil.scrollToElement(senderName);
         senderName.clear();
         senderName.sendKeys(name);
         senderMobileNo.clear();
@@ -169,14 +162,14 @@ public void toggleSwitch() {
                 throw new IllegalArgumentException("Invalid recipient number: " + recipientNumber);
         }
  
-        scrollToElement(recipientField);
+        jsUtil.scrollToElement(recipientField);
         wait.until(ExpectedConditions.visibilityOf(recipientField));
         recipientField.clear();
         recipientField.sendKeys(name + " " + mobile + " " + email);
     }
  
     public void fillRecipientForm(String name, String mobile, String email, String message) {
-        scrollToElement(recipientName);
+    	jsUtil.scrollToElement(recipientName);
         recipientName.clear();
         recipientName.sendKeys(name);
         recipientMobileNo.clear();
@@ -190,7 +183,7 @@ public void toggleSwitch() {
     public void fillSenderAndRecipientDetails(String senderNameVal, String senderMobileVal, String senderEmailVal,
                                               String recipientNameVal, String recipientMobileVal, String recipientEmailVal,
                                               String message) {
-        scrollDown();
+    	jsUtil.scrollBy(500);
         fillSenderDetails(senderNameVal, senderMobileVal, senderEmailVal);
         fillRecipientForm(recipientNameVal, recipientMobileVal, recipientEmailVal, message);
     }
@@ -198,20 +191,12 @@ public void toggleSwitch() {
     public void clickSubmit() {
         safeClick(submitButton);
     }
- 
+    
     public String getErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(errorMessage));
         return errorMessage.getText();
     }
- 
-    public void scrollDown() {
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
-    }
- 
-    public void scrollUp() {
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -500);");
-    }
- 
+  
     public boolean isSenderFormVisible() {
     try {
 	  return senderEmailId.isDisplayed();

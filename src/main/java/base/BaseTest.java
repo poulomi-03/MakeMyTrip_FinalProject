@@ -2,22 +2,19 @@ package base;
  
 import java.time.Duration;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 
 import pages.CabBookingPage;
 import pages.GiftCardPage;
@@ -25,22 +22,20 @@ import pages.HotelBookingPage;
 import utils.ActionUtil;
 import utils.ConfigReader;
 import utils.ExtentManager;
+import utils.JavascriptExecutorUtil;
  
 public class BaseTest {
 	public WebDriver driver;
 	public String baseUrl;
 	
 	public static WebDriverWait wait;
-	public static JavascriptExecutor js;
-	public static Actions act;
 	public static ActionUtil action;
 	
 	public CabBookingPage cabBookingPage;
 	public GiftCardPage giftCardPage;
 	public HotelBookingPage hotelObj;
-	
     public ExtentReports extent;
-
+	public static JavascriptExecutorUtil jsUtil;
 	@BeforeClass
 	@Parameters({"browser"} )
 	public void DriverSetup(@Optional("chrome") String browser) {
@@ -49,11 +44,10 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-        js = (JavascriptExecutor) driver;
-		act = new Actions(driver);
 		
         action = new ActionUtil(driver);
         extent = ExtentManager.getInstance();
+        jsUtil = new JavascriptExecutorUtil(driver);
 
         // Go to MakeMyTrip Home Page
 		baseUrl = ConfigReader.get("baseUrl");
@@ -91,4 +85,9 @@ public class BaseTest {
     public void flushExtentReport() {
         extent.flush();
     }
+
+	public String randomString(){
+		String generatedString=RandomStringUtils.randomAlphabetic(6);
+		return generatedString;
+	}
 }

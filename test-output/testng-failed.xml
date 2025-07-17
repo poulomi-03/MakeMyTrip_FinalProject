@@ -6,15 +6,24 @@
     <classes>
       <class name="testCases.GiftCardPageTest">
         <methods>
+<<<<<<< HEAD
           <include name="TC_GC_03"/>
+=======
+          <include name="TC_GC_03" invocation-numbers="0"/>
+>>>>>>> main
           <include name="tearDown"/>
           <include name="DriverSetup"/>
           <include name="flushExtentReport"/>
           <include name="closingTestCase"/>
           <include name="setupExtentReport"/>
           <include name="goToHomePage"/>
+<<<<<<< HEAD
           <include name="TC_GC_02"/>
           <include name="TC_GC_01"/>
+=======
+          <include name="TC_GC_02" invocation-numbers="0"/>
+          <include name="TC_GC_01" invocation-numbers="0"/>
+>>>>>>> main
         </methods>
       </class> <!-- testCases.GiftCardPageTest -->
     </classes>
