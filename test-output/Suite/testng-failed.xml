@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="classes" name="Test(failed)">
+<suite thread-count="3" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="classes" name="ParallelTests(failed)">
     <classes>
+      <class name="testCases.HotelBookingTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="DriverSetup"/>
+          <include name="TC_HB_03"/>
+          <include name="TC_HB_04"/>
+          <include name="TC_HB_05"/>
+          <include name="flushExtentReport"/>
+          <include name="setupExtentReport"/>
+          <include name="TC_HB_01"/>
+          <include name="closingTestCase"/>
+          <include name="TC_HB_02"/>
+          <include name="goToHomePage"/>
+        </methods>
+      </class> <!-- testCases.HotelBookingTest -->
       <class name="testCases.CabBookingPageTest">
         <methods>
           <include name="DriverSetup"/>
           <include name="TC_OCB_09" invocation-numbers="0"/>
+          <include name="flushExtentReport"/>
           <include name="TC_OCB_08" invocation-numbers="0"/>
           <include name="TC_OCB_07" invocation-numbers="0"/>
           <include name="TC_OCB_05" invocation-numbers="0"/>
@@ -23,8 +39,22 @@
           <include name="tearDown"/>
           <include name="TC_OCB_13" invocation-numbers="0"/>
           <include name="TC_OCB_02" invocation-numbers="0"/>
+          <include name="setupExtentReport"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
+      <class name="testCases.GiftCardPageTest">
+        <methods>
+          <include name="TC_GC_03"/>
+          <include name="tearDown"/>
+          <include name="DriverSetup"/>
+          <include name="flushExtentReport"/>
+          <include name="closingTestCase"/>
+          <include name="setupExtentReport"/>
+          <include name="goToHomePage"/>
+          <include name="TC_GC_02"/>
+          <include name="TC_GC_01"/>
+        </methods>
+      </class> <!-- testCases.GiftCardPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ParallelTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->
