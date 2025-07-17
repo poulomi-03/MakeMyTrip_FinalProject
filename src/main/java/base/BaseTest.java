@@ -87,7 +87,7 @@ public class BaseTest {
     }
 
 	public String randomString(){
-		String generatedString=RandomStringUtils.randomAlphabetic(6);
+		String generatedString=RandomStringUtils.randomAlphabetic(10);
 		return generatedString;
 	}
 }

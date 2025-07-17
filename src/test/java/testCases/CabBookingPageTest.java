@@ -206,14 +206,11 @@ public class CabBookingPageTest extends BaseTest{
         
         String expectedPickUpTime = time;
         String actualPickUpTime = cabBookingPage.getPickupTimeResult();
-    	System.out.println(expectedPickUpTime +" - "+actualPickUpTime +" - "+ expectedPickUpTime.equalsIgnoreCase(actualPickUpTime));
-    	Assert.assertEquals(expectedPickUpTime, actualPickUpTime);
+    	Assert.assertTrue(compareTimes(actualPickUpTime, expectedPickUpTime));
  
 	    test.pass("The displayed pickup time for the cabs is matching with the selected time.");
 	    logger.info("TC_OCB_06 completed.");
 	}
-
-//    	Assert.assertTrue(compareTimes(actualPickUpTime, time));
 
  
 	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 7, description ="To verify Clear All functionality of filters.")
@@ -397,7 +394,7 @@ public class CabBookingPageTest extends BaseTest{
 		cabBookingPage.clickToField();
 		cabBookingPage.enterToLocation(toLocation);
 		cabBookingPage.selectDestinationFromSuggestion(toLocation);
-		cabBookingPage.selectDepartureDate(date);
+		cabBookingPage.datePicker(date);
         cabBookingPage.clickPickupTime();
         cabBookingPage.timePicker(time);
 		cabBookingPage.search();
