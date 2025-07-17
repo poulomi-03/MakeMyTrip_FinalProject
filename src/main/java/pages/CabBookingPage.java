@@ -246,6 +246,7 @@ public class CabBookingPage extends BaseTest {
     }
 
     public void datePicker(String date){
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         while(true){
             try{
                 driver.findElement(By.xpath("//div[contains(@aria-label, '"+date+"')]")).click();
@@ -259,6 +260,7 @@ public class CabBookingPage extends BaseTest {
                 }
             }
         }
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     
 
