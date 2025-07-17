@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import base.BaseTest;
  
@@ -35,7 +36,6 @@ public class CabBookingPage extends BaseTest {
 	@FindBy(xpath="//input[@placeholder='From']") WebElement fromLocationInput;
 	@FindBy(xpath="//ul[@role='listbox']/li[@role='option']") List<WebElement> suggestions;
 	@FindBy(xpath="//ul[@role='listbox']/li[@role='option']") WebElement suggestion;
-//	@FindBy(xpath="//span[text()='Delhi']") WebElement fromCitySuggestion;
 	@FindBy(xpath="//label[@for='toCity']") WebElement toCityField;
 	@FindBy(xpath="//input[@placeholder='To']") WebElement toLocationInput;
 	@FindBy(xpath="//label[@for='departure']") WebElement departureDateField;
@@ -56,6 +56,12 @@ public class CabBookingPage extends BaseTest {
 	@FindBy(xpath = "//div[@id='react-autowhatever-1']/div//li//span") List<WebElement> listOfPopularCitiesFromSuggestions;
 	@FindBy(xpath = "//div[@class='DayPicker-Caption']/div") WebElement monthYearElement;		//Added
 	@FindBy(xpath = "//div[@class='DayPicker-Day']") List<WebElement> datesListElements;
+	@FindBy(xpath="//div[contains(@class, 'cabDetailsCard_utilitiesInfo')]") List<WebElement> listOfCabs;
+	@FindBy(id="from_location") WebElement fromLocationResult;
+	@FindBy(id="to_location") WebElement toLocationResult;
+	@FindBy(id="pickup_date") WebElement pickupDateResult;
+	@FindBy(id="pickup_time") WebElement pickupTimeResult;
+	@FindBy(xpath="//div[@role='gridcell']") List<WebElement> dates;
 	
 	By errorMessageSameOrigin = By.xpath("//span[@class='redText errorMsgText']");
 	
@@ -145,6 +151,14 @@ public class CabBookingPage extends BaseTest {
         scrollClick(departureDateField);;
 	}
 	
+	public List<WebElement> getDates(){
+		return dates;
+	}
+	
+	public void clickNextMonth() {
+		nextMonthButton.click();
+	}
+	
 	public void clickPickupTime() {
         // click pickUp-Time
         pickUpTimeField.click();	
@@ -158,7 +172,8 @@ public class CabBookingPage extends BaseTest {
 	public void closePackagesPopup() {
         // close popup
         try {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='Close']"))).click();
+//            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='Close']"))).click();
+        	driver.findElement(By.xpath("//img[@alt='Close']")).click();
         } 
         catch (Exception e) {
             System.out.println("No popup detected or popup's close button not clickable within timeout. Proceeding...");
@@ -171,8 +186,22 @@ public class CabBookingPage extends BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(clearAllButton));	
 	}
 
+	public List<WebElement> getListOfCabs(){
+		return listOfCabs;
+	}
+	
 	public void clearAll() {
 		clearAllButton.click();
+	}
+	
+	public boolean checkClearAllFilters() {
+        try {
+        	driver.findElement(By.xpath("//div[contains(@class,'checkbox_checked')]"));
+        	return false;
+        } catch(Exception e) {
+        	System.out.println("Cleared all filters");
+        	return true;
+        }
 	}
 	
 
@@ -184,7 +213,22 @@ public class CabBookingPage extends BaseTest {
 		return searchResultCards;
 	}
 	
-
+	public String getFromLocationResult() {
+		return fromLocationResult.getAttribute("value");
+	}
+	
+	public String getToLocationResult() {
+		return toLocationResult.getAttribute("value");
+	}
+	
+	public String getPickupDateResult() {
+		return pickupDateResult.getAttribute("value");
+	}
+	
+	public String getPickupTimeResult() {
+		return pickupTimeResult.getAttribute("value");
+	}
+	
 	public String getErrorMessageForSameOrigin() {
 		WebElement errorMsg = wait.until(ExpectedConditions.presenceOfElementLocated(errorMessageSameOrigin));
 		return errorMsg.getText();
@@ -202,21 +246,19 @@ public class CabBookingPage extends BaseTest {
     }
 
     public void datePicker(String date){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         while(true){
             try{
                 driver.findElement(By.xpath("//div[contains(@aria-label, '"+date+"')]")).click();
                 break;
             } catch (Exception e) {
                 try{
-                nextMonthButton.click();
+                clickNextMonth();
                 } catch (Exception ex) {
                     System.out.println("Reached end of booking availability. Cannot book for " + date);
                     break;
                 }
             }
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     
 
@@ -231,7 +273,6 @@ public class CabBookingPage extends BaseTest {
 					if(date.getAttribute("aria-label").contains(departDate)) {
 						try {
 							if(!date.isSelected()) {
-//								date.click();
 								scrollClick(date);
 								dateSelected = true;
 								break;
@@ -243,7 +284,7 @@ public class CabBookingPage extends BaseTest {
 				}
 			}else {
 				try {
-					nextMonthButton.click();
+					clickNextMonth();;
 				}catch (Exception e) {
 				}
 			}
@@ -306,12 +347,6 @@ public class CabBookingPage extends BaseTest {
         File targetFile = new File("screenshots/" + screenshotFileName); // Use a variable for filename
 
         try {
-            // Ensure the directory exists
-//            if (!targetFile.getParentFile().exists()) {
-//                targetFile.getParentFile().mkdirs(); // Creates "screenshots" directory if it doesn't exist
-//            }
-
-            // Using Apache Commons IO:
             FileUtils.copyFile(sourceFile, targetFile);
             System.out.println("Screenshot saved to: " + targetFile.getAbsolutePath());
 
