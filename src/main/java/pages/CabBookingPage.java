@@ -14,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import base.BaseTest;
  
@@ -246,6 +245,7 @@ public class CabBookingPage extends BaseTest {
     }
 
     public void datePicker(String date){
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         while(true){
             try{
                 driver.findElement(By.xpath("//div[contains(@aria-label, '"+date+"')]")).click();
@@ -259,6 +259,7 @@ public class CabBookingPage extends BaseTest {
                 }
             }
         }
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
     
 

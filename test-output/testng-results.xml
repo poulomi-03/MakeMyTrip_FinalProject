@@ -2,12 +2,21 @@
 <testng-results ignored="0" total="23" passed="23" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-07-17T16:12:39 IST" name="Suite" finished-at="2025-07-17T16:17:25 IST" duration-ms="285776">
     <groups>
     </groups>
     <test started-at="2025-07-17T16:12:39 IST" name="Test" finished-at="2025-07-17T16:17:25 IST" duration-ms="285776">
       <class name="testCases.GiftCardPageTest">
         <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:13:31 IST" name="DriverSetup" finished-at="2025-07-17T16:13:39 IST" duration-ms="8439" status="PASS">
+=======
+  <suite started-at="2025-07-17T16:33:45 IST" name="Suite" finished-at="2025-07-17T16:36:54 IST" duration-ms="188873">
+    <groups>
+    </groups>
+    <test started-at="2025-07-17T16:33:45 IST" name="TestChrome" finished-at="2025-07-17T16:36:54 IST" duration-ms="188873">
+      <class name="testCases.GiftCardPageTest">
+        <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:23 IST" name="DriverSetup" finished-at="2025-07-17T16:36:28 IST" duration-ms="5205" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -18,11 +27,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:13:43 IST" name="goToHomePage" finished-at="2025-07-17T16:13:43 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_GC_02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:13:43 IST" name="TC_GC_02" description="TestCase 2: Fill multiple recipients and capture error" data-provider="GiftCardTest2" finished-at="2025-07-17T16:13:58 IST" duration-ms="15368" status="PASS">
+=======
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:28 IST" name="goToHomePage" finished-at="2025-07-17T16:36:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_GC_02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:28 IST" name="TC_GC_02" description="TestCase 2: Fill multiple recipients and capture error" data-provider="GiftCardTest2" finished-at="2025-07-17T16:36:37 IST" duration-ms="8499" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -73,6 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_GC_02 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:13:58 IST" name="closingTestCase" finished-at="2025-07-17T16:13:59 IST" duration-ms="1100" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -82,6 +100,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_GC_03(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:14:00 IST" name="TC_GC_03" description="TestCase 3: Fill recipient form and capture error" data-provider="GiftCardTest3" finished-at="2025-07-17T16:14:07 IST" duration-ms="7406" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:37 IST" name="closingTestCase" finished-at="2025-07-17T16:36:38 IST" duration-ms="1064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:38 IST" name="goToHomePage" finished-at="2025-07-17T16:36:38 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_GC_03(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:38 IST" name="TC_GC_03" description="TestCase 3: Fill recipient form and capture error" data-provider="GiftCardTest3" finished-at="2025-07-17T16:36:45 IST" duration-ms="6544" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -107,6 +136,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_GC_03 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:14:07 IST" name="closingTestCase" finished-at="2025-07-17T16:14:08 IST" duration-ms="1192" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -116,6 +146,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_GC_01(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:14:09 IST" name="TC_GC_01" description="TestCase 1: Invalid sender email" data-provider="GiftCardTest1" finished-at="2025-07-17T16:14:13 IST" duration-ms="4675" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:45 IST" name="closingTestCase" finished-at="2025-07-17T16:36:45 IST" duration-ms="733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:46 IST" name="goToHomePage" finished-at="2025-07-17T16:36:46 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_GC_01(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:46 IST" name="TC_GC_01" description="TestCase 1: Invalid sender email" data-provider="GiftCardTest1" finished-at="2025-07-17T16:36:49 IST" duration-ms="3867" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -136,17 +177,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_GC_01 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:14:13 IST" name="closingTestCase" finished-at="2025-07-17T16:14:14 IST" duration-ms="1063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingTestCase -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.GiftCardPageTest@29e495ff]" started-at="2025-07-17T16:14:14 IST" name="tearDown" finished-at="2025-07-17T16:14:19 IST" duration-ms="4383" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:49 IST" name="closingTestCase" finished-at="2025-07-17T16:36:50 IST" duration-ms="818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.GiftCardPageTest@289710d9]" started-at="2025-07-17T16:36:50 IST" name="tearDown" finished-at="2025-07-17T16:36:54 IST" duration-ms="4033" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.GiftCardPageTest -->
       <class name="testCases.HotelBookingTest">
+<<<<<<< HEAD
         <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.HotelBookingTest@1eb5174b]" started-at="2025-07-17T16:12:39 IST" name="DriverSetup" finished-at="2025-07-17T16:12:53 IST" duration-ms="14256" status="PASS">
+=======
+        <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:35:58 IST" name="DriverSetup" finished-at="2025-07-17T16:36:03 IST" duration-ms="5516" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -157,6 +210,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@1eb5174b]" started-at="2025-07-17T16:12:53 IST" name="goToHomePage" finished-at="2025-07-17T16:12:53 IST" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -218,6 +272,69 @@
           </reporter-output>
         </test-method> <!-- closingTestCase -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelBookingTest@1eb5174b]" started-at="2025-07-17T16:13:28 IST" name="tearDown" finished-at="2025-07-17T16:13:31 IST" duration-ms="3211" status="PASS">
+=======
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:03 IST" name="goToHomePage" finished-at="2025-07-17T16:36:03 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_HB_01()[pri:1, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:03 IST" name="TC_HB_01" finished-at="2025-07-17T16:36:05 IST" duration-ms="1524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HB_01 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:05 IST" name="closingTestCase" finished-at="2025-07-17T16:36:06 IST" duration-ms="926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:06 IST" name="goToHomePage" finished-at="2025-07-17T16:36:06 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_HB_02()[pri:2, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:06 IST" name="TC_HB_02" finished-at="2025-07-17T16:36:10 IST" duration-ms="4797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HB_02 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:10 IST" name="closingTestCase" finished-at="2025-07-17T16:36:11 IST" duration-ms="879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:11 IST" name="goToHomePage" finished-at="2025-07-17T16:36:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_HB_03()[pri:3, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:11 IST" name="TC_HB_03" finished-at="2025-07-17T16:36:12 IST" duration-ms="844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HB_03 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:12 IST" name="closingTestCase" finished-at="2025-07-17T16:36:14 IST" duration-ms="2254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:14 IST" name="goToHomePage" finished-at="2025-07-17T16:36:14 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_HB_04()[pri:4, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:14 IST" name="TC_HB_04" finished-at="2025-07-17T16:36:16 IST" duration-ms="1570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HB_04 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:16 IST" name="closingTestCase" finished-at="2025-07-17T16:36:17 IST" duration-ms="938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:17 IST" name="goToHomePage" finished-at="2025-07-17T16:36:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_HB_05()[pri:5, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:17 IST" name="TC_HB_05" finished-at="2025-07-17T16:36:18 IST" duration-ms="1252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HB_05 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:18 IST" name="closingTestCase" finished-at="2025-07-17T16:36:19 IST" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelBookingTest@7ac0e420]" started-at="2025-07-17T16:36:19 IST" name="tearDown" finished-at="2025-07-17T16:36:23 IST" duration-ms="4001" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
@@ -227,7 +344,11 @@
         </test-method> <!-- flushExtentReport -->
       </class> <!-- testCases.HotelBookingTest -->
       <class name="testCases.CabBookingPageTest">
+<<<<<<< HEAD
         <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:14:19 IST" name="DriverSetup" finished-at="2025-07-17T16:14:27 IST" duration-ms="7816" status="PASS">
+=======
+        <test-method is-config="true" signature="DriverSetup(java.lang.String)[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:45 IST" name="DriverSetup" finished-at="2025-07-17T16:33:52 IST" duration-ms="6129" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -238,6 +359,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetup -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:14:27 IST" name="goToHomePage" finished-at="2025-07-17T16:14:27 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -255,6 +377,25 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_14(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:-1, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:14:29 IST" name="TC_OCB_14" description="To verify behavior when no cabs are available for the selected criteria." data-provider="NoCabsData" finished-at="2025-07-17T16:14:51 IST" duration-ms="21514" status="PASS">
+=======
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:52 IST" name="goToHomePage" finished-at="2025-07-17T16:33:52 IST" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_10()[pri:-1, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:52 IST" name="TC_OCB_10" description="To verify that previous dates are disabled in the departure date picker." finished-at="2025-07-17T16:33:53 IST" duration-ms="1237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_10 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:53 IST" name="closingTestCase" finished-at="2025-07-17T16:33:54 IST" duration-ms="864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:55 IST" name="goToHomePage" finished-at="2025-07-17T16:33:55 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_14(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:-1, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:33:55 IST" name="TC_OCB_14" description="To verify behavior when no cabs are available for the selected criteria." data-provider="NoCabsData" finished-at="2025-07-17T16:34:09 IST" duration-ms="13784" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -273,13 +414,14 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[10:00 am]]>
+                <![CDATA[10:00 AM]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_14 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:14:51 IST" name="closingTestCase" finished-at="2025-07-17T16:14:54 IST" duration-ms="3522" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -289,6 +431,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_01(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:14:54 IST" name="TC_OCB_01" description="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time." data-provider="CabBookingValidData" finished-at="2025-07-17T16:15:19 IST" duration-ms="24314" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:09 IST" name="closingTestCase" finished-at="2025-07-17T16:34:09 IST" duration-ms="885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:10 IST" name="goToHomePage" finished-at="2025-07-17T16:34:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_01(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:10 IST" name="TC_OCB_01" description="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time." data-provider="CabBookingValidData" finished-at="2025-07-17T16:34:26 IST" duration-ms="16402" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -307,7 +460,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -319,6 +472,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_01 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:19 IST" name="closingTestCase" finished-at="2025-07-17T16:15:20 IST" duration-ms="1251" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -328,6 +482,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:20 IST" name="TC_OCB_02" description="To verify that only SUV cab type filter is applied and results are displayed accordingly." data-provider="CabBookingValidData" finished-at="2025-07-17T16:15:30 IST" duration-ms="9543" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:26 IST" name="closingTestCase" finished-at="2025-07-17T16:34:27 IST" duration-ms="973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:27 IST" name="goToHomePage" finished-at="2025-07-17T16:34:27 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_02(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:27 IST" name="TC_OCB_02" description="To verify that only SUV cab type filter is applied and results are displayed accordingly." data-provider="CabBookingValidData" finished-at="2025-07-17T16:34:35 IST" duration-ms="7571" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -346,7 +511,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -358,6 +523,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_02 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:30 IST" name="closingTestCase" finished-at="2025-07-17T16:15:31 IST" duration-ms="880" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -367,6 +533,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:31 IST" name="TC_OCB_03" description="To verify that the selected &quot;From&quot; location is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:15:40 IST" duration-ms="9217" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:35 IST" name="closingTestCase" finished-at="2025-07-17T16:34:36 IST" duration-ms="867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:36 IST" name="goToHomePage" finished-at="2025-07-17T16:34:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_03(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:36 IST" name="TC_OCB_03" description="To verify that the selected &quot;From&quot; location is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:34:43 IST" duration-ms="7256" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -385,7 +562,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -397,6 +574,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_03 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:40 IST" name="closingTestCase" finished-at="2025-07-17T16:15:41 IST" duration-ms="811" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -406,6 +584,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:41 IST" name="TC_OCB_04" description="To verify that the selected &quot;To&quot; location is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:15:50 IST" duration-ms="8427" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:43 IST" name="closingTestCase" finished-at="2025-07-17T16:34:44 IST" duration-ms="813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:44 IST" name="goToHomePage" finished-at="2025-07-17T16:34:44 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_04(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:44 IST" name="TC_OCB_04" description="To verify that the selected &quot;To&quot; location is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:34:52 IST" duration-ms="7677" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -424,7 +613,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -436,6 +625,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_04 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:50 IST" name="closingTestCase" finished-at="2025-07-17T16:15:51 IST" duration-ms="1033" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -445,6 +635,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_05(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:51 IST" name="TC_OCB_05" description="To verify that the selected &quot;Departure Date&quot; is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:15:59 IST" duration-ms="8169" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:52 IST" name="closingTestCase" finished-at="2025-07-17T16:34:53 IST" duration-ms="761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:53 IST" name="goToHomePage" finished-at="2025-07-17T16:34:53 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_05(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:34:53 IST" name="TC_OCB_05" description="To verify that the selected &quot;Departure Date&quot; is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:00 IST" duration-ms="7349" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -463,7 +664,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -475,6 +676,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_05 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:15:59 IST" name="closingTestCase" finished-at="2025-07-17T16:16:00 IST" duration-ms="1027" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -484,6 +686,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_06(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:00 IST" name="TC_OCB_06" description="To verify that the selected &quot;Pickup Time&quot; is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:16:14 IST" duration-ms="14235" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:00 IST" name="closingTestCase" finished-at="2025-07-17T16:35:01 IST" duration-ms="783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:01 IST" name="goToHomePage" finished-at="2025-07-17T16:35:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_06(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:01 IST" name="TC_OCB_06" description="To verify that the selected &quot;Pickup Time&quot; is reflected in search results." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:08 IST" duration-ms="7399" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -502,7 +715,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -514,6 +727,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_06 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:14 IST" name="closingTestCase" finished-at="2025-07-17T16:16:15 IST" duration-ms="799" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -523,6 +737,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_07(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:15 IST" name="TC_OCB_07" description="To verify Clear All functionality of filters." data-provider="CabBookingValidData" finished-at="2025-07-17T16:16:27 IST" duration-ms="11998" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:08 IST" name="closingTestCase" finished-at="2025-07-17T16:35:09 IST" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:09 IST" name="goToHomePage" finished-at="2025-07-17T16:35:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_07(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:09 IST" name="TC_OCB_07" description="To verify Clear All functionality of filters." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:22 IST" duration-ms="12422" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -541,7 +766,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -553,6 +778,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_07 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:27 IST" name="closingTestCase" finished-at="2025-07-17T16:16:28 IST" duration-ms="862" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -598,6 +824,53 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_12(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:41 IST" name="TC_OCB_12" description="To verify the presence of SUV filter." data-provider="CabBookingValidData" finished-at="2025-07-17T16:16:56 IST" duration-ms="15509" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:22 IST" name="closingTestCase" finished-at="2025-07-17T16:35:23 IST" duration-ms="848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:23 IST" name="goToHomePage" finished-at="2025-07-17T16:35:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_08()[pri:8, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:23 IST" name="TC_OCB_08" description="To verify Suggestion when an invalid/unserviceable &quot;From&quot; location is entered." finished-at="2025-07-17T16:35:26 IST" duration-ms="3470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_08 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:26 IST" name="closingTestCase" finished-at="2025-07-17T16:35:27 IST" duration-ms="752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:27 IST" name="goToHomePage" finished-at="2025-07-17T16:35:27 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_09()[pri:9, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:27 IST" name="TC_OCB_09" description="To verify Suggestion when an invalid/unserviceable &quot;To&quot; location is entered." finished-at="2025-07-17T16:35:30 IST" duration-ms="3498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_09 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:30 IST" name="closingTestCase" finished-at="2025-07-17T16:35:31 IST" duration-ms="861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:31 IST" name="goToHomePage" finished-at="2025-07-17T16:35:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_11()[pri:11, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:31 IST" name="TC_OCB_11" description="To verify that dates beyond  limit in the future are disabled in the departure date picker." finished-at="2025-07-17T16:35:32 IST" duration-ms="1009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OCB_11 -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:32 IST" name="closingTestCase" finished-at="2025-07-17T16:35:34 IST" duration-ms="1311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:34 IST" name="goToHomePage" finished-at="2025-07-17T16:35:34 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_12(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:34 IST" name="TC_OCB_12" description="To verify the presence of SUV filter." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:41 IST" duration-ms="7353" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -616,7 +889,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -628,6 +901,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_12 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:56 IST" name="closingTestCase" finished-at="2025-07-17T16:16:57 IST" duration-ms="921" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -637,6 +911,17 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_13(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:16:57 IST" name="TC_OCB_13" description="To verify that search results are displayed even if &quot;SUV&quot; filter is not applied initially." data-provider="CabBookingValidData" finished-at="2025-07-17T16:17:13 IST" duration-ms="15308" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:41 IST" name="closingTestCase" finished-at="2025-07-17T16:35:42 IST" duration-ms="839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:42 IST" name="goToHomePage" finished-at="2025-07-17T16:35:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="TC_OCB_13(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:42 IST" name="TC_OCB_13" description="To verify that search results are displayed even if &quot;SUV&quot; filter is not applied initially." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:49 IST" duration-ms="7166" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -655,7 +940,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -667,6 +952,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_13 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:17:13 IST" name="closingTestCase" finished-at="2025-07-17T16:17:14 IST" duration-ms="1116" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -676,6 +962,13 @@
           </reporter-output>
         </test-method> <!-- goToHomePage -->
         <test-method signature="TC_OCB_15(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:15, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:17:14 IST" name="TC_OCB_15" description="To verify behavior with same &quot;From&quot; and &quot;To&quot; locations." data-provider="CabBookingValidData" finished-at="2025-07-17T16:17:17 IST" duration-ms="3445" status="PASS">
+=======
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:49 IST" name="closingTestCase" finished-at="2025-07-17T16:35:50 IST" duration-ms="877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method signature="TC_OCB_15(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:15, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:50 IST" name="TC_OCB_15" description="To verify behavior with same &quot;From&quot; and &quot;To&quot; locations." data-provider="CabBookingValidData" finished-at="2025-07-17T16:35:53 IST" duration-ms="2540" status="PASS">
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
           <params>
             <param index="0">
               <value>
@@ -694,7 +987,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8:30 am]]>
+                <![CDATA[8:30 AM]]>
               </value>
             </param>
             <param index="4">
@@ -706,6 +999,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OCB_15 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@41e1e210]" started-at="2025-07-17T16:17:17 IST" name="closingTestCase" finished-at="2025-07-17T16:17:19 IST" duration-ms="1241" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -716,5 +1010,25 @@
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.CabBookingPageTest -->
     </test> <!-- Test -->
+=======
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:50 IST" name="goToHomePage" finished-at="2025-07-17T16:35:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method is-config="true" signature="closingTestCase()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:53 IST" name="closingTestCase" finished-at="2025-07-17T16:35:54 IST" duration-ms="857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:35:54 IST" name="tearDown" finished-at="2025-07-17T16:35:58 IST" duration-ms="4105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushExtentReport()[pri:0, instance:testCases.CabBookingPageTest@6436a7db]" started-at="2025-07-17T16:36:54 IST" name="flushExtentReport" finished-at="2025-07-17T16:36:54 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtentReport -->
+      </class> <!-- testCases.CabBookingPageTest -->
+    </test> <!-- TestChrome -->
+>>>>>>> eab064a095bfd09a2a3f325e993c6e1ea26c8d42
   </suite> <!-- Suite -->
 </testng-results>
