@@ -10,91 +10,129 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 
 public class HotelBookingTest extends BaseTest{
-	
+	/*
+	 * To check "Adult" dropdown from the "Rooms and Guests" field contains list of numbers.
+	 */
 	@Test(priority = 1)
 	public void TC_HB_01() {
-		hotelObj.clickOnHotelsTab();
-		hotelObj.clickOnRoomsAndGuestsOption();
-		hotelObj.clickOnAdultsDropdown();
-		
-		int[] countsArr = IntStream.rangeClosed(1,40).toArray();
-		
-		int i=0;
-		boolean correctCount = true;
-		for(int num : hotelObj.getListOfCountsInAdultDropdown()) {
-			if(num != countsArr[i]) {
-				correctCount = false;
+		try {
+			hotelObj.clickOnHotelsTab();
+			hotelObj.clickOnRoomsAndGuestsOption();
+			hotelObj.clickOnAdultsDropdown();
+			
+			int[] countsArr = IntStream.rangeClosed(1,40).toArray();
+			
+			int i=0;
+			boolean correctCount = true;
+			for(int num : hotelObj.getListOfCountsInAdultDropdown()) {
+				if(num != countsArr[i]) {
+					correctCount = false;
+				}
+				i++;
 			}
-			i++;
+			action.clickEsc();
+			Assert.assertTrue(correctCount, "Incorrect count of numbers in dropdown");
+		}catch(Exception e) {
+			Assert.fail(e.getMessage());
 		}
-		action.clickEsc();
-		Assert.assertTrue(correctCount, "Incorrect count of numbers in dropdown");
 	}
 	
+	/*
+	 * To check the ability to select different adult numbers from the dropdown.
+	 */
 	@Test(priority = 2)
 	public void TC_HB_02() {
-		hotelObj.clickOnHotelsTab();
-		hotelObj.clickOnRoomsAndGuestsOption();
-		
-		WebElement count = null;
-		boolean clicked = true;
-		for(int i = 0; i < 3; i++) {
-			hotelObj.clickOnAdultsDropdown();
-			for(WebElement countEle : hotelObj.getListOfCountElement()) {
-				String text = countEle.getText().trim();
-				if(text.equals("03")) {
-					count=countEle;
-				}else if(countEle.getText().equals("05")) {
-					count=countEle;
-				}else if(countEle.getText().equals("40")) {
-					count=countEle;
+		try {
+			hotelObj.clickOnHotelsTab();
+			hotelObj.clickOnRoomsAndGuestsOption();
+			
+			WebElement count = null;
+			boolean clicked = true;
+			for(int i = 0; i < 3; i++) {
+				hotelObj.clickOnAdultsDropdown();
+				for(WebElement countEle : hotelObj.getListOfCountElement()) {
+					String text = countEle.getText().trim();
+					if(text.equals("03")) {
+						count=countEle;
+					}else if(countEle.getText().equals("05")) {
+						count=countEle;
+					}else if(countEle.getText().equals("40")) {
+						count=countEle;
+					}
+				}
+				try {
+					count.click();
+				}catch(Exception e) {
+					e.printStackTrace();
+					clicked = false;
 				}
 			}
-			try {
-				count.click();
-			}catch(Exception e) {
-				e.printStackTrace();
-				clicked = false;
-			}
+			action.clickEsc();
+			Assert.assertTrue(clicked);
+		}catch(Exception e) {
+			Assert.fail(e.getMessage());
 		}
-		action.clickEsc();
-		Assert.assertTrue(clicked);
+		
 	}
 	
+	/*
+	 * To check that "Rooms and Guests" selector is present on the Hotel booking page.
+	 */
 	@Test(priority = 3)
 	public void TC_HB_03() {
-		hotelObj.clickOnHotelsTab();
-		hotelObj.clickOnRoomsAndGuestsOption();
-		
-		action.clickEsc();
-		Assert.assertTrue(hotelObj.isRoomsAndGuestsSelectorEnabled(), "RoomsAndGuests selector option is not present");
+		try {
+			hotelObj.clickOnHotelsTab();
+			hotelObj.clickOnRoomsAndGuestsOption();
+			boolean isPresent = false;
+			if(hotelObj.getRoomsAndGuestsSelector().isEnabled()) {
+				isPresent = true;
+			}
+			action.clickEsc();
+			Assert.assertTrue(isPresent, "RoomsAndGuests selector option is not present");
+		}catch(Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
+	/*
+	 * To verify initial default value of adult numbers in the dropdown.
+	 */
 	@Test(priority = 4)
 	public void TC_HB_04() {
-		hotelObj.clickOnHotelsTab();
-		hotelObj.clickOnRoomsAndGuestsOption();
-		String value = hotelObj.getDefaultValueOfAdultDropdown();
-		action.clickEsc();
-		Assert.assertEquals(value, "2");
+		try {
+			hotelObj.clickOnHotelsTab();
+			hotelObj.clickOnRoomsAndGuestsOption();
+			String value = hotelObj.getDefaultValueOfAdultDropdown();
+			action.clickEsc();
+			Assert.assertEquals(value, "2");
+		}catch(Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
+	/*
+	 * To check that the selected number of Adults are displayed in the "Rooms and Guests" selector field.
+	 */
 	@Test(priority = 5)
 	public void TC_HB_05() {
-		hotelObj.clickOnHotelsTab();
-		hotelObj.clickOnRoomsAndGuestsOption();
-		hotelObj.clickOnAdultsDropdown();
-		
-		for(WebElement countEle:hotelObj.getListOfCountElement()) {
-			String text = countEle.getText();
-			if(text.equals("04")) {
-				countEle.click();
-				break;
+		try {
+			hotelObj.clickOnHotelsTab();
+			hotelObj.clickOnRoomsAndGuestsOption();
+			hotelObj.clickOnAdultsDropdown();
+			
+			for(WebElement countEle:hotelObj.getListOfCountElement()) {
+				String text = countEle.getText();
+				if(text.equals("04")) {
+					countEle.click();
+					break;
+				}
 			}
+			hotelObj.clickApplyButton();
+			String text = hotelObj.getRoomsAndGuestsDispalyedText();
+			action.clickEsc();
+			Assert.assertEquals(text, "1 Rooms 4Adults");
+		}catch(Exception e) {
+			Assert.fail(e.getMessage());
 		}
-		hotelObj.clickApplyButton();
-		String text = hotelObj.getRoomsAndGuestsDispalyedText();
-		action.clickEsc();
-		Assert.assertEquals(text, "1 Rooms 4Adults");
 	}
 }

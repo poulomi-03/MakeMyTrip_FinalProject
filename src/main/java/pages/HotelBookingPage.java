@@ -39,12 +39,8 @@ public class HotelBookingPage {
 		hotelsTabSelector.click();
 	}
 	
-	public boolean isRoomsAndGuestsSelectorEnabled() {
-		if(roomsAndGuestsOptionSelector.isEnabled()) {
-			return true;
-		}else {
-			return false;
-		}
+	public WebElement getRoomsAndGuestsSelector() {
+		return roomsAndGuestsOptionSelector;
 	}
 	public void clickOnRoomsAndGuestsOption() {
 		roomsAndGuestsOptionSelector.click();

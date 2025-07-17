@@ -3,10 +3,7 @@ package pages;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Locale;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -59,7 +56,6 @@ public class CabBookingPage extends BaseTest {
 	@FindBy(xpath = "//div[@id='react-autowhatever-1']/div//li//span") List<WebElement> listOfPopularCitiesFromSuggestions;
 	@FindBy(xpath = "//div[@class='DayPicker-Caption']/div") WebElement monthYearElement;		//Added
 	@FindBy(xpath = "//div[@class='DayPicker-Day']") List<WebElement> datesListElements;
-//	@FindBy(xpath="") WebElement ;
 	
 	By errorMessageSameOrigin = By.xpath("//span[@class='redText errorMsgText']");
 	
@@ -180,12 +176,8 @@ public class CabBookingPage extends BaseTest {
 	}
 	
 
-	public boolean isSUVFilterpresent() {
-		if(SUVCheckbox.isDisplayed()) {
-			return true;
-		}
-		
-		return false;
+	public WebElement getSUVFilter() {
+		return SUVCheckbox;
 	}
 	
 	public List<WebElement> getSearchResult(){
@@ -203,7 +195,8 @@ public class CabBookingPage extends BaseTest {
             ele.click();
         } catch (ElementClickInterceptedException e){
             // sometimes the element is out of view, so scroll till the element and click
-            js.executeScript("arguments[0].scrollIntoView()", ele);
+//            js.executeScript("arguments[0].scrollIntoView()", ele);
+        	jsUtil.scrollToElement(ele);
             ele.click();
         }
     }

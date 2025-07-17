@@ -2,10 +2,9 @@ package base;
  
 import java.time.Duration;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -17,19 +16,19 @@ import pages.GiftCardPage;
 import pages.HotelBookingPage;
 import utils.ActionUtil;
 import utils.ConfigReader;
+import utils.JavascriptExecutorUtil;
  
 public class BaseTest {
 	public WebDriver driver;
 	public String baseUrl;
 	
 	public static WebDriverWait wait;
-	public static JavascriptExecutor js;
-	public static Actions act;
 	public static ActionUtil action;
 	
 	public CabBookingPage cabBookingPage;
 	public GiftCardPage giftCardPage;
 	public HotelBookingPage hotelObj;
+	public static JavascriptExecutorUtil jsUtil;
 
 	@BeforeClass
 	public void DriverSetup() {
@@ -39,13 +38,12 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        js = (JavascriptExecutor) driver;
-		act = new Actions(driver);
 		
         cabBookingPage = new CabBookingPage(driver);
         giftCardPage = new GiftCardPage(driver);
         hotelObj = new HotelBookingPage(driver);
         action = new ActionUtil(driver);
+        jsUtil = new JavascriptExecutorUtil(driver);
 
         // Go to MakeMyTrip Home Page
 		baseUrl = ConfigReader.get("baseUrl");
@@ -76,5 +74,10 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
+	}
+	
+	public String randomString(){
+		String generatedString=RandomStringUtils.randomAlphabetic(6);
+		return generatedString;
 	}
 }

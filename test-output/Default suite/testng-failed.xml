@@ -5,12 +5,13 @@
     <classes>
       <class name="testCases.GiftCardPageTest">
         <methods>
-          <include name="TC_GC_03"/>
+          <include name="TC_GC_03" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="DriverSetup"/>
           <include name="closingTestCase"/>
           <include name="goToHomePage"/>
-          <include name="TC_GC_01"/>
+          <include name="TC_GC_02" invocation-numbers="0"/>
+          <include name="TC_GC_01" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.GiftCardPageTest -->
     </classes>

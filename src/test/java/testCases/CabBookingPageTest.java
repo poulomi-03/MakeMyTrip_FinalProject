@@ -17,13 +17,7 @@ import base.BaseTest;
 import utils.DataProviders;
  
 public class CabBookingPageTest extends BaseTest{
-	
-//	@DataProvider(name = "testData")
-//	public String[][] loginData(){
-//		String[][] arr = {{"Delhi", "Manali, Himachal Pradesh", "Aug 09 2025", "12:40 PM", "SUV"}};
-//		return arr;
-//	}
-	
+		
 	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 1, description ="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.")
 	public void TC_OCB_01(String fromLocation, String toLocation, String date, String time, String carType) {
 		cabBookingPage.selectSection();
@@ -204,12 +198,13 @@ public class CabBookingPageTest extends BaseTest{
         	System.out.println("Cleared all filters");
         }   
 	}
+	
 	@Test(priority = 8, description ="To verify Suggestion when an invalid/unserviceable \"From\" location is entered.")
 	public void TC_OCB_08() {
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickFromField();
-		cabBookingPage.enterFromLocation("qwertyuiop");
+		cabBookingPage.enterFromLocation(randomString());
 		
         String expectedSuggestion = "No Data Found";
         String actualSuggestion = cabBookingPage.getSuggestion();
@@ -224,7 +219,7 @@ public class CabBookingPageTest extends BaseTest{
 		cabBookingPage.selectSection();
 		cabBookingPage.selectTripType();
 		cabBookingPage.clickToField();
-		cabBookingPage.enterToLocation("qwertyuiop");
+		cabBookingPage.enterToLocation(randomString());
 		
         String expectedSuggestion = "No Data Found";
         String actualSuggestion = cabBookingPage.getSuggestion();
@@ -290,7 +285,10 @@ public class CabBookingPageTest extends BaseTest{
         cabBookingPage.timePicker(time);
 		cabBookingPage.search();
 		cabBookingPage.closePackagesPopup();
-		boolean isPresent = cabBookingPage.isSUVFilterpresent();
+		boolean isPresent = false;
+		if(cabBookingPage.getSUVFilter().isDisplayed()) {
+			isPresent = true;
+		}
 		
 		Assert.assertTrue(isPresent);
 	}
