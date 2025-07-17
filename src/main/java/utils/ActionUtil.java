@@ -10,7 +10,10 @@ public class ActionUtil {
 	public ActionUtil(WebDriver driver) {
 		act = new Actions(driver);
 	}
-		
+	
+	/*
+	 * Click Esc button
+	 */
 	public void clickEsc() {
 		act.sendKeys(Keys.ESCAPE).perform();
 	}

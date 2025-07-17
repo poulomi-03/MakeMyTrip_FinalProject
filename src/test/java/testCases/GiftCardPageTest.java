@@ -16,7 +16,7 @@ public class GiftCardPageTest extends BaseTest {
         logger.info("Executing TC_GC_01: Invalid sender email test.");
         driver.get("https://www.makemytrip.com/gift-cards/");
         giftCardPage.openBestWishesGiftCardInNewTab();
-        giftCardPage.scrollDown();
+        jsUtil.scrollBy(500);
         giftCardPage.fillSenderDetails(senderName, mobile, email);
         giftCardPage.clickSubmit();
 
@@ -36,7 +36,7 @@ public class GiftCardPageTest extends BaseTest {
         giftCardPage.selectEmailDelivery();
         giftCardPage.clickCountryCodeSelector();
         giftCardPage.toggleSwitch();
-        giftCardPage.scrollDown();
+        jsUtil.scrollBy(500);
 
         giftCardPage.fillRecipientDetails(1, sender1, mob1, email1);
         giftCardPage.fillRecipientDetails(2, sender2, mob2, email2);
@@ -55,7 +55,7 @@ public class GiftCardPageTest extends BaseTest {
         giftCardPage.openBestWishesGiftCardInNewTab();
         giftCardPage.selectEmailDelivery();
         giftCardPage.clickCountryCodeSelector();
-        giftCardPage.scrollDown();
+        jsUtil.scrollBy(500);
         giftCardPage.fillRecipientForm(sender, mob, email, msg);
         giftCardPage.clickSubmit();
 
