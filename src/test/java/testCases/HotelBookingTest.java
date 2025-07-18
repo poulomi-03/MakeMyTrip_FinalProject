@@ -41,6 +41,7 @@ public class HotelBookingTest extends BaseTest{
 			Assert.fail(e.getMessage());
 	        test.fail("Adult dropdown does not contain correct range from 1 to 40.");
 		}
+		logger.info("TC_HB_01 Completed");
 	}
 	
 	/*
@@ -83,7 +84,7 @@ public class HotelBookingTest extends BaseTest{
 			Assert.fail(e.getMessage());
 	        test.fail("Can't click on adult counts: 03, 05, 40.");
 		}
-		
+		logger.info("TC_HB_02 Completed");
 	}
 	
 	/*
@@ -108,6 +109,7 @@ public class HotelBookingTest extends BaseTest{
 			Assert.fail(e.getMessage());
 	        test.fail("RoomsAndGuests selector is dissabled and not visible.");
 		}
+		logger.info("TC_HB_03 Completed");
 	}
 	
 	/*
@@ -129,6 +131,7 @@ public class HotelBookingTest extends BaseTest{
 			Assert.fail(e.getMessage());
 	        test.fail("Default value of adult dropdown is not 2.");
 		}
+		logger.info("TC_HB_04 Completed");
 	}
 	
 	/*
@@ -160,6 +163,7 @@ public class HotelBookingTest extends BaseTest{
 			Assert.fail(e.getMessage());
 	        test.fail("Displayed text after selection is incorrect.");
 		}
+		logger.info("TC_HB_05 Completed");
 	}
 }
  

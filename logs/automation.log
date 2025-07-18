@@ -124,6 +124,179 @@
 2025-07-18 00:26:59 INFO  CabBookingPageTest:363 - Executing TC_OCB_13
 2025-07-18 00:27:01 INFO  CabBookingPageTest:411 - Executing TC_OCB_15
 2025-07-18 00:27:03 INFO  CabBookingPageTest:411 - Executing TC_OCB_15
+<<<<<<< HEAD
+2025-07-18 09:39:55 INFO  CabBookingPageTest:281 - Executing TC_OCB_10
+2025-07-18 09:39:58 INFO  CabBookingPageTest:281 - Executing TC_OCB_10
+2025-07-18 09:40:01 INFO  CabBookingPageTest:294 - TC_OCB_10 completed.
+2025-07-18 09:40:05 INFO  CabBookingPageTest:384 - Executing TC_OCB_14
+2025-07-18 09:40:05 INFO  CabBookingPageTest:384 - Executing TC_OCB_14
+2025-07-18 09:40:22 INFO  CabBookingPageTest:402 - TC_OCB_14 completed.
+2025-07-18 09:40:26 INFO  GiftCardPageTest:34 - Executing TC_GC_02: Multiple recipients error test.
+2025-07-18 09:40:39 INFO  GiftCardPageTest:34 - Executing TC_GC_02: Multiple recipients error test.
+2025-07-18 09:40:57 INFO  HotelBookingTest:20 - Executing TC_HB_01
+2025-07-18 09:41:02 INFO  CabBookingPageTest:27 - Executing TC_OCB_01
+2025-07-18 09:41:15 INFO  HotelBookingTest:20 - Executing TC_HB_01
+2025-07-18 09:41:18 INFO  GiftCardPageTest:56 - Executing TC_GC_03: Recipient form error test.
+2025-07-18 09:41:28 INFO  CabBookingPageTest:27 - Executing TC_OCB_01
+2025-07-18 09:41:37 INFO  HotelBookingTest:52 - Executing TC_HB_02
+2025-07-18 09:41:41 INFO  GiftCardPageTest:56 - Executing TC_GC_03: Recipient form error test.
+2025-07-18 09:41:48 INFO  HotelBookingTest:52 - Executing TC_HB_02
+2025-07-18 09:41:55 INFO  CabBookingPageTest:54 - Executing TC_OCB_02
+2025-07-18 09:41:55 INFO  CabBookingPageTest:54 - Executing TC_OCB_02
+2025-07-18 09:42:00 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
+2025-07-18 09:42:01 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
+2025-07-18 09:42:15 INFO  HotelBookingTest:95 - Executing TC_HB_03
+2025-07-18 09:42:15 INFO  HotelBookingTest:95 - Executing TC_HB_03
+2025-07-18 09:42:18 INFO  CabBookingPageTest:86 - Executing TC_OCB_03
+2025-07-18 09:42:19 INFO  CabBookingPageTest:86 - Executing TC_OCB_03
+2025-07-18 09:42:21 INFO  HotelBookingTest:119 - Executing TC_HB_04
+2025-07-18 09:42:23 INFO  HotelBookingTest:119 - Executing TC_HB_04
+2025-07-18 09:42:26 INFO  CabBookingPageTest:113 - Executing TC_OCB_04
+2025-07-18 09:42:27 INFO  CabBookingPageTest:113 - Executing TC_OCB_04
+2025-07-18 09:42:30 INFO  HotelBookingTest:140 - Executing TC_HB_05
+2025-07-18 09:42:32 INFO  HotelBookingTest:140 - Executing TC_HB_05
+2025-07-18 09:42:43 INFO  CabBookingPageTest:140 - Executing TC_OCB_05
+2025-07-18 09:42:43 INFO  CabBookingPageTest:140 - Executing TC_OCB_05
+2025-07-18 09:42:49 INFO  CabBookingPageTest:189 - Executing TC_OCB_06
+2025-07-18 09:42:49 INFO  CabBookingPageTest:189 - Executing TC_OCB_06
+2025-07-18 09:42:55 INFO  CabBookingPageTest:215 - Executing TC_OCB_07
+2025-07-18 09:42:55 INFO  CabBookingPageTest:215 - Executing TC_OCB_07
+2025-07-18 09:43:01 INFO  CabBookingPageTest:241 - Executing TC_OCB_08
+2025-07-18 09:43:01 INFO  CabBookingPageTest:241 - Executing TC_OCB_08
+2025-07-18 09:43:06 INFO  CabBookingPageTest:261 - Executing TC_OCB_09
+2025-07-18 09:43:07 INFO  CabBookingPageTest:261 - Executing TC_OCB_09
+2025-07-18 09:43:11 INFO  CabBookingPageTest:300 - Executing TC_OCB_11
+2025-07-18 09:43:12 INFO  CabBookingPageTest:300 - Executing TC_OCB_11
+2025-07-18 09:43:17 INFO  CabBookingPageTest:331 - Executing TC_OCB_12
+2025-07-18 09:43:21 INFO  CabBookingPageTest:331 - Executing TC_OCB_12
+2025-07-18 09:43:24 INFO  CabBookingPageTest:360 - Executing TC_OCB_13
+2025-07-18 09:43:30 INFO  CabBookingPageTest:360 - Executing TC_OCB_13
+2025-07-18 09:43:34 INFO  CabBookingPageTest:408 - Executing TC_OCB_15
+2025-07-18 09:43:36 INFO  CabBookingPageTest:408 - Executing TC_OCB_15
+2025-07-18 09:44:28 INFO  CabBookingPageTest:281 - Executing TC_OCB_10
+2025-07-18 09:44:31 INFO  CabBookingPageTest:294 - TC_OCB_10 completed.
+2025-07-18 09:44:34 INFO  CabBookingPageTest:384 - Executing TC_OCB_14
+2025-07-18 09:44:49 INFO  CabBookingPageTest:402 - TC_OCB_14 completed.
+2025-07-18 09:44:51 INFO  CabBookingPageTest:27 - Executing TC_OCB_01
+2025-07-18 09:45:07 INFO  CabBookingPageTest:48 - TC_OCB_01 completed.
+2025-07-18 09:45:14 INFO  CabBookingPageTest:54 - Executing TC_OCB_02
+2025-07-18 09:45:23 INFO  CabBookingPageTest:80 - TC_OCB_02 completed.
+2025-07-18 09:45:24 INFO  CabBookingPageTest:86 - Executing TC_OCB_03
+2025-07-18 09:45:32 INFO  CabBookingPageTest:107 - TC_OCB_03 completed.
+2025-07-18 09:45:33 INFO  CabBookingPageTest:113 - Executing TC_OCB_04
+2025-07-18 09:45:42 INFO  CabBookingPageTest:134 - TC_OCB_04 completed.
+2025-07-18 09:45:43 INFO  CabBookingPageTest:140 - Executing TC_OCB_05
+2025-07-18 09:45:51 INFO  CabBookingPageTest:168 - TC_OCB_05 completed.
+2025-07-18 09:45:52 INFO  CabBookingPageTest:189 - Executing TC_OCB_06
+2025-07-18 09:46:00 INFO  CabBookingPageTest:209 - TC_OCB_06 completed.
+2025-07-18 09:46:02 INFO  CabBookingPageTest:215 - Executing TC_OCB_07
+2025-07-18 09:46:18 INFO  CabBookingPageTest:235 - TC_OCB_07 completed.
+2025-07-18 09:46:19 INFO  CabBookingPageTest:241 - Executing TC_OCB_08
+2025-07-18 09:46:23 INFO  CabBookingPageTest:255 - TC_OCB_08 completed.
+2025-07-18 09:46:23 INFO  CabBookingPageTest:261 - Executing TC_OCB_09
+2025-07-18 09:46:27 INFO  CabBookingPageTest:275 - TC_OCB_09 completed.
+2025-07-18 09:46:28 INFO  CabBookingPageTest:300 - Executing TC_OCB_11
+2025-07-18 09:46:29 INFO  CabBookingPageTest:325 - TC_OCB_11 completed.
+2025-07-18 09:46:30 INFO  CabBookingPageTest:331 - Executing TC_OCB_12
+2025-07-18 09:46:38 INFO  CabBookingPageTest:354 - TC_OCB_12 completed.
+2025-07-18 09:46:39 INFO  CabBookingPageTest:360 - Executing TC_OCB_13
+2025-07-18 09:46:51 INFO  CabBookingPageTest:378 - TC_OCB_13 completed.
+2025-07-18 09:46:53 INFO  CabBookingPageTest:408 - Executing TC_OCB_15
+2025-07-18 09:46:55 INFO  CabBookingPageTest:421 - TC_OCB_15 completed.
+2025-07-18 09:47:08 INFO  HotelBookingTest:20 - Executing TC_HB_01
+2025-07-18 09:47:11 INFO  HotelBookingTest:52 - Executing TC_HB_02
+2025-07-18 09:47:19 INFO  HotelBookingTest:95 - Executing TC_HB_03
+2025-07-18 09:47:23 INFO  HotelBookingTest:119 - Executing TC_HB_04
+2025-07-18 09:47:25 INFO  HotelBookingTest:140 - Executing TC_HB_05
+2025-07-18 09:47:38 INFO  GiftCardPageTest:34 - Executing TC_GC_02: Multiple recipients error test.
+2025-07-18 09:47:53 INFO  GiftCardPageTest:56 - Executing TC_GC_03: Recipient form error test.
+2025-07-18 09:48:02 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
+2025-07-18 09:48:06 ERROR GiftCardPageTest:24 - Sender Email Error: Please enter a valid Email id.
+2025-07-18 09:48:18 INFO  CabBookingPageTest:281 - Executing TC_OCB_10
+2025-07-18 09:48:19 INFO  CabBookingPageTest:294 - TC_OCB_10 completed.
+2025-07-18 09:48:21 INFO  CabBookingPageTest:384 - Executing TC_OCB_14
+2025-07-18 09:48:35 INFO  CabBookingPageTest:402 - TC_OCB_14 completed.
+2025-07-18 09:48:36 INFO  CabBookingPageTest:27 - Executing TC_OCB_01
+2025-07-18 09:48:45 INFO  CabBookingPageTest:48 - TC_OCB_01 completed.
+2025-07-18 09:48:46 INFO  CabBookingPageTest:54 - Executing TC_OCB_02
+2025-07-18 09:48:55 INFO  CabBookingPageTest:80 - TC_OCB_02 completed.
+2025-07-18 09:48:56 INFO  CabBookingPageTest:86 - Executing TC_OCB_03
+2025-07-18 09:49:03 INFO  CabBookingPageTest:107 - TC_OCB_03 completed.
+2025-07-18 09:49:22 INFO  CabBookingPageTest:113 - Executing TC_OCB_04
+2025-07-18 09:49:30 INFO  CabBookingPageTest:134 - TC_OCB_04 completed.
+2025-07-18 09:49:31 INFO  CabBookingPageTest:140 - Executing TC_OCB_05
+2025-07-18 09:49:38 INFO  CabBookingPageTest:168 - TC_OCB_05 completed.
+2025-07-18 09:49:39 INFO  CabBookingPageTest:189 - Executing TC_OCB_06
+2025-07-18 09:49:47 INFO  CabBookingPageTest:209 - TC_OCB_06 completed.
+2025-07-18 09:49:49 INFO  CabBookingPageTest:215 - Executing TC_OCB_07
+2025-07-18 09:50:00 INFO  CabBookingPageTest:235 - TC_OCB_07 completed.
+2025-07-18 09:50:02 INFO  CabBookingPageTest:241 - Executing TC_OCB_08
+2025-07-18 09:50:06 INFO  CabBookingPageTest:255 - TC_OCB_08 completed.
+2025-07-18 09:50:06 INFO  CabBookingPageTest:261 - Executing TC_OCB_09
+2025-07-18 09:50:10 INFO  CabBookingPageTest:275 - TC_OCB_09 completed.
+2025-07-18 09:50:11 INFO  CabBookingPageTest:300 - Executing TC_OCB_11
+2025-07-18 09:50:12 INFO  CabBookingPageTest:325 - TC_OCB_11 completed.
+2025-07-18 09:50:13 INFO  CabBookingPageTest:331 - Executing TC_OCB_12
+2025-07-18 09:50:22 INFO  CabBookingPageTest:354 - TC_OCB_12 completed.
+2025-07-18 09:50:23 INFO  CabBookingPageTest:360 - Executing TC_OCB_13
+2025-07-18 09:50:31 INFO  CabBookingPageTest:378 - TC_OCB_13 completed.
+2025-07-18 09:50:32 INFO  CabBookingPageTest:408 - Executing TC_OCB_15
+2025-07-18 09:50:35 INFO  CabBookingPageTest:421 - TC_OCB_15 completed.
+2025-07-18 09:50:47 INFO  HotelBookingTest:20 - Executing TC_HB_01
+2025-07-18 09:50:50 INFO  HotelBookingTest:52 - Executing TC_HB_02
+2025-07-18 09:51:00 INFO  HotelBookingTest:95 - Executing TC_HB_03
+2025-07-18 09:51:02 INFO  HotelBookingTest:119 - Executing TC_HB_04
+2025-07-18 09:51:04 INFO  HotelBookingTest:140 - Executing TC_HB_05
+2025-07-18 09:51:34 INFO  GiftCardPageTest:34 - Executing TC_GC_02: Multiple recipients error test.
+2025-07-18 09:51:57 INFO  GiftCardPageTest:56 - Executing TC_GC_03: Recipient form error test.
+2025-07-18 09:52:18 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
+2025-07-18 09:52:24 ERROR GiftCardPageTest:24 - Sender Email Error: Please enter a valid Email id.
+2025-07-18 10:08:42 INFO  CabBookingPageTest:28 - Executing TC_OCB_01
+2025-07-18 10:08:58 INFO  CabBookingPageTest:51 - TC_OCB_01 passed
+2025-07-18 10:13:32 INFO  CabBookingPageTest:28 - Executing TC_OCB_01
+2025-07-18 10:13:42 INFO  CabBookingPageTest:51 - TC_OCB_01 passed
+2025-07-18 10:49:47 INFO  CabBookingPageTest:334 - Executing TC_OCB_10
+2025-07-18 10:49:49 INFO  CabBookingPageTest:353 - TC_OCB_10 completed.
+2025-07-18 10:49:52 INFO  CabBookingPageTest:459 - Executing TC_OCB_14
+2025-07-18 10:50:05 INFO  CabBookingPageTest:483 - TC_OCB_14 completed.
+2025-07-18 10:50:06 INFO  CabBookingPageTest:28 - Executing TC_OCB_01
+2025-07-18 10:50:18 INFO  CabBookingPageTest:56 - TC_OCB_01 completed
+2025-07-18 10:50:19 INFO  CabBookingPageTest:62 - Executing TC_OCB_02
+2025-07-18 10:50:30 INFO  CabBookingPageTest:95 - TC_OCB_02 completed.
+2025-07-18 10:50:31 INFO  CabBookingPageTest:101 - Executing TC_OCB_03
+2025-07-18 10:50:39 INFO  CabBookingPageTest:127 - TC_OCB_03 completed.
+2025-07-18 10:50:40 INFO  CabBookingPageTest:133 - Executing TC_OCB_04
+2025-07-18 10:50:48 INFO  CabBookingPageTest:159 - TC_OCB_04 completed.
+2025-07-18 10:50:49 INFO  CabBookingPageTest:165 - Executing TC_OCB_05
+2025-07-18 10:50:58 INFO  CabBookingPageTest:198 - TC_OCB_05 completed.
+2025-07-18 10:51:00 INFO  CabBookingPageTest:219 - Executing TC_OCB_06
+2025-07-18 10:51:08 INFO  CabBookingPageTest:244 - TC_OCB_06 completed.
+2025-07-18 10:51:09 INFO  CabBookingPageTest:250 - Executing TC_OCB_07
+2025-07-18 10:51:21 INFO  CabBookingPageTest:276 - TC_OCB_07 completed.
+2025-07-18 10:51:21 INFO  CabBookingPageTest:282 - Executing TC_OCB_08
+2025-07-18 10:51:25 INFO  CabBookingPageTest:302 - TC_OCB_08 completed.
+2025-07-18 10:51:26 INFO  CabBookingPageTest:308 - Executing TC_OCB_09
+2025-07-18 10:51:30 INFO  CabBookingPageTest:328 - TC_OCB_09 completed.
+2025-07-18 10:51:32 INFO  CabBookingPageTest:359 - Executing TC_OCB_11
+2025-07-18 10:51:36 INFO  CabBookingPageTest:389 - TC_OCB_11 completed.
+2025-07-18 10:51:37 INFO  CabBookingPageTest:395 - Executing TC_OCB_12
+2025-07-18 10:51:45 INFO  CabBookingPageTest:423 - TC_OCB_12 completed.
+2025-07-18 10:51:46 INFO  CabBookingPageTest:429 - Executing TC_OCB_13
+2025-07-18 10:51:54 INFO  CabBookingPageTest:453 - TC_OCB_13 completed.
+2025-07-18 10:51:55 INFO  CabBookingPageTest:489 - Executing TC_OCB_15
+2025-07-18 10:51:57 INFO  CabBookingPageTest:507 - TC_OCB_15 completed.
+2025-07-18 10:52:08 INFO  HotelBookingTest:20 - Executing TC_HB_01
+2025-07-18 10:52:11 INFO  HotelBookingTest:52 - Executing TC_HB_02
+2025-07-18 10:52:17 INFO  HotelBookingTest:95 - Executing TC_HB_03
+2025-07-18 10:52:19 INFO  HotelBookingTest:119 - Executing TC_HB_04
+2025-07-18 10:52:21 INFO  HotelBookingTest:140 - Executing TC_HB_05
+2025-07-18 10:52:32 INFO  GiftCardPageTest:40 - Executing TC_GC_02: Multiple recipients error test.
+2025-07-18 10:52:43 INFO  GiftCardPageTest:62 - Executing TC_GC_02 completed.
+2025-07-18 10:52:44 INFO  GiftCardPageTest:68 - Executing TC_GC_03: Recipient form error test.
+2025-07-18 10:52:53 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
+2025-07-18 10:53:00 ERROR GiftCardPageTest:25 - Sender Email Error: Please enter a valid Email id.
+2025-07-18 10:53:00 INFO  GiftCardPageTest:34 - Executing TC_GC_01 completed.
+=======
 2025-07-18 09:42:10 INFO  CabBookingPageTest:281 - Executing TC_OCB_10
 2025-07-18 09:42:13 INFO  CabBookingPageTest:294 - TC_OCB_10 completed.
 2025-07-18 09:42:18 INFO  CabBookingPageTest:384 - Executing TC_OCB_14
@@ -326,3 +499,4 @@
 2025-07-18 12:18:17 INFO  GiftCardPageTest:56 - Executing TC_GC_03: Recipient form error test.
 2025-07-18 12:18:27 INFO  GiftCardPageTest:16 - Executing TC_GC_01: Invalid sender email test.
 2025-07-18 12:18:32 ERROR GiftCardPageTest:24 - Sender Email Error: Please enter a valid Email id.
+>>>>>>> main
