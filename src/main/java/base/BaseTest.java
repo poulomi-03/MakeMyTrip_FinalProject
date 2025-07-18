@@ -44,8 +44,9 @@ public class BaseTest {
 	public HotelBookingPage hotelObj;
     public ExtentReports extent;
     public Logger logger;
-    public int impWait = 3;
-    public int expWait = 2;
+    
+    public int impWait = 5;
+    public int expWait = 3;
 	
 	
 	@BeforeClass

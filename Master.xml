@@ -11,7 +11,7 @@
     </classes>
   </test> <!-- Test -->
   
-  <!--  <test thread-count="2" name="TestEdge">
+<test thread-count="2" name="TestEdge">
   	<parameter name="os" value="windows"/>
 	<parameter name="browser" value="edge"/>
     <classes>
@@ -19,6 +19,6 @@
        <class name="testCases.HotelBookingTest"/>
       <class name="testCases.GiftCardPageTest"/>
     </classes>
-  </test> --><!-- Test -->
+  </test><!-- Test -->
   
 </suite> <!-- Suite -->

@@ -7,11 +7,11 @@
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="TC_OCB_13" invocation-numbers="0"/>
           <include name="flushExtentReport"/>
+          <include name="TC_OCB_15" invocation-numbers="0"/>
           <include name="closingTestCase"/>
-          <include name="TC_OCB_01"/>
           <include name="goToHomePage"/>
-          <include name="TC_OCB_06" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
     </classes>

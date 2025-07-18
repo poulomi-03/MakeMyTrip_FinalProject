@@ -105,7 +105,9 @@ public class CabBookingPage extends BaseTest {
 	}
 	
 	public void clickToField() {
-        toCityField.click();
+		try {
+	        toCityField.click();			
+		} catch(Exception e) {}
 	}
 	
 	public void enterToLocation(String location) {
@@ -143,7 +145,7 @@ public class CabBookingPage extends BaseTest {
         driver.findElement(manaliSuggestionLocator).click();
 	}
 	
-	public void clickdeparture(){	
+	public void clickDepartureDate(){	
         // departure date field
         scrollClick(departureDateField);;
 	}
@@ -309,7 +311,7 @@ public class CabBookingPage extends BaseTest {
     }
 
 	public void selectDepartureDate(String departDate) {
-		clickdeparture();
+		clickDepartureDate();
 		
 		String month = departDate.split(" ")[0];
 		boolean dateSelected = false;

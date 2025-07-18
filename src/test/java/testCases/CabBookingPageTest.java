@@ -35,7 +35,7 @@ public class CabBookingPageTest extends BaseTest{
 		    cabBookingPage.clickToField();
 		    cabBookingPage.enterToLocation(toLocation);
 		    cabBookingPage.selectDestinationFromSuggestion(toLocation);
-		    cabBookingPage.clickdeparture();
+		    cabBookingPage.clickDepartureDate();
 		    cabBookingPage.datePicker(date);
 		    cabBookingPage.clickPickupTime();
 		    cabBookingPage.timePicker(time);
@@ -68,7 +68,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -107,7 +107,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -139,7 +139,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -171,7 +171,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -210,7 +210,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 			cabBookingPage.clickPickupTime();
 			cabBookingPage.timePicker(time);
@@ -241,7 +241,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -317,7 +317,7 @@ public class CabBookingPageTest extends BaseTest{
 	    logger.info("Executing TC_OCB_10");
 	    try {
 	    	cabBookingPage.selectSection();
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			
 	    	int today = LocalDate.now().getDayOfMonth();
 			List<WebElement> dates = cabBookingPage.getDates();
@@ -342,7 +342,7 @@ public class CabBookingPageTest extends BaseTest{
 	    logger.info("Executing TC_OCB_11");
 	    try {
 	    	cabBookingPage.selectSection();
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 	 
 			while(true){
 				try {
@@ -383,7 +383,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -417,7 +417,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
-			cabBookingPage.clickdeparture();
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
@@ -448,6 +448,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
+			cabBookingPage.clickDepartureDate();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);
