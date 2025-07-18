@@ -197,22 +197,7 @@ public class CabBookingPageTest extends BaseTest{
 	    }
 	    logger.info("TC_OCB_05 completed.");
 	}
-	
-	public boolean compareTimes(String uiTime, String excelTime) {
-	    DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("h:mm a");
-	    DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("hh:mm a");
-
-	    try {
-	        LocalTime timeFromExcel = LocalTime.parse(excelTime.trim(), inputFormat);
-	        String formattedExcelTime = timeFromExcel.format(outputFormat);
-
-	        return formattedExcelTime.equalsIgnoreCase(uiTime.trim());
-	    } catch (DateTimeParseException e) {
-	        System.out.println("Invalid time format: " + e.getMessage());
-	        return false;
-	    }
-	}
- 
+	 
 	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 6, description ="To verify that the selected \"Pickup Time\" is reflected in search results.")
 	public void TC_OCB_06(String fromLocation, String toLocation, String date, String time, String carType) {
 	    test = extent.createTest("TC_OCB_06: To verify that the selected \"Pickup Time\" is reflected in search results.");
@@ -234,7 +219,7 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedPickUpTime = time;
 	        String actualPickUpTime = cabBookingPage.getPickupTimeResult();
-	    	Assert.assertTrue(compareTimes(actualPickUpTime, expectedPickUpTime));
+	        Assert.assertTrue(cabBookingPage.compareTime(actualPickUpTime, "hh:mm a", expectedPickUpTime, "h:mm a"));
 	 
 		    test.pass("The displayed pickup time for the cabs is matching with the selected time.");
 	    }catch(Exception e) {
@@ -288,7 +273,6 @@ public class CabBookingPageTest extends BaseTest{
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();
-	    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
 	    	action.clickEsc();
 	    	
 	    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
@@ -314,7 +298,6 @@ public class CabBookingPageTest extends BaseTest{
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();
-	    	System.out.println(expectedSuggestion +" - "+actualSuggestion +" - "+ actualSuggestion.contains(expectedSuggestion));
 	    	action.clickEsc();
 	    	
 	    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
@@ -368,7 +351,6 @@ public class CabBookingPageTest extends BaseTest{
 					break;
 				}
 			}
-//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 			WebElement secondMonth = driver.findElement(By.xpath("//div[@class='DayPicker-Month'][2]"));
 			String disabledDateString = secondMonth.findElement(By.xpath("//div[contains(@class,'DayPicker-Day--disabled')]")).getText();

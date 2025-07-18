@@ -44,11 +44,13 @@ public class BaseTest {
 	public HotelBookingPage hotelObj;
     public ExtentReports extent;
     public Logger logger;
+    public int impWait = 3;
+    public int expWait = 2;
 	
 	
 	@BeforeClass
 	@Parameters({"os","browser"})
-	public void setup(@Optional("windows") String os,@Optional("chrome") String br) throws IOException {
+	public void setup(@Optional("windows") String os, @Optional("chrome") String br) throws IOException {
 		
 		logger = LogManager.getLogger(this.getClass());
 		
@@ -83,9 +85,8 @@ public class BaseTest {
 		
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-		
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(expWait));
 		
         action = new ActionUtil(driver);
         extent = ExtentManager.getInstance();

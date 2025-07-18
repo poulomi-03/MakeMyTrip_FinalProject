@@ -1,48 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="tests" name="TestEdge(failed)">
+=======
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestChrome(failed)">
+>>>>>>> main
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="edge"/>
     <classes>
       <class name="testCases.CabBookingPageTest">
         <methods>
           <include name="setup"/>
+          <include name="tearDown"/>
           <include name="TC_OCB_09"/>
           <include name="flushExtentReport"/>
           <include name="TC_OCB_08"/>
-          <include name="TC_OCB_07" invocation-numbers="0"/>
-          <include name="TC_OCB_05" invocation-numbers="0"/>
           <include name="TC_OCB_15" invocation-numbers="0"/>
-          <include name="TC_OCB_04" invocation-numbers="0"/>
-          <include name="TC_OCB_03" invocation-numbers="0"/>
-          <include name="TC_OCB_14" invocation-numbers="0"/>
           <include name="closingTestCase"/>
-          <include name="TC_OCB_12" invocation-numbers="0"/>
-          <include name="TC_OCB_01" invocation-numbers="0"/>
-          <include name="TC_OCB_11"/>
+          <include name="TC_OCB_03" invocation-numbers="0"/>
           <include name="goToHomePage"/>
           <include name="TC_OCB_06" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="TC_OCB_13" invocation-numbers="0"/>
-          <include name="TC_OCB_02" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
       <class name="testCases.GiftCardPageTest">
         <methods>
           <include name="setup"/>
-          <include name="TC_GC_03" invocation-numbers="0"/>
+          <include name="TC_GC_03"/>
           <include name="tearDown"/>
           <include name="flushExtentReport"/>
           <include name="closingTestCase"/>
+<<<<<<< HEAD
           <include name="TC_GC_02" invocation-numbers="0"/>
           <include name="goToHomePage"/>
           <include name="TC_GC_01" invocation-numbers="0"/>
+=======
+          <include name="goToHomePage"/>
+          <include name="TC_GC_02"/>
+          <include name="TC_GC_01"/>
+>>>>>>> main
         </methods>
       </class> <!-- testCases.GiftCardPageTest -->
+      <class name="testCases.HotelBookingTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="TC_HB_03"/>
+          <include name="flushExtentReport"/>
+          <include name="TC_HB_04"/>
+          <include name="TC_HB_05"/>
+          <include name="TC_HB_01"/>
+          <include name="TC_HB_02"/>
+          <include name="closingTestCase"/>
+          <include name="goToHomePage"/>
+        </methods>
+      </class> <!-- testCases.HotelBookingTest -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- TestEdge(failed) -->
   <test thread-count="5" parallel="tests" name="TestChrome(failed)">
+=======
+  </test> <!-- TestChrome(failed) -->
+  <test thread-count="5" name="TestEdge(failed)">
+>>>>>>> main
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
@@ -52,33 +73,38 @@
           <include name="TC_OCB_09"/>
           <include name="flushExtentReport"/>
           <include name="TC_OCB_08"/>
-          <include name="TC_OCB_07" invocation-numbers="0"/>
-          <include name="TC_OCB_05" invocation-numbers="0"/>
-          <include name="TC_OCB_15" invocation-numbers="0"/>
-          <include name="TC_OCB_04" invocation-numbers="0"/>
-          <include name="TC_OCB_03" invocation-numbers="0"/>
+          <include name="TC_OCB_07"/>
+          <include name="TC_OCB_05"/>
+          <include name="TC_OCB_15"/>
+          <include name="TC_OCB_04"/>
           <include name="closingTestCase"/>
-          <include name="TC_OCB_12" invocation-numbers="0"/>
-          <include name="TC_OCB_01" invocation-numbers="0"/>
-          <include name="TC_OCB_11"/>
+          <include name="TC_OCB_03"/>
+          <include name="TC_OCB_14"/>
+          <include name="TC_OCB_12"/>
+          <include name="TC_OCB_01"/>
           <include name="goToHomePage"/>
+          <include name="TC_OCB_11"/>
           <include name="TC_OCB_10"/>
-          <include name="TC_OCB_06" invocation-numbers="0"/>
+          <include name="TC_OCB_06"/>
           <include name="tearDown"/>
-          <include name="TC_OCB_13" invocation-numbers="0"/>
-          <include name="TC_OCB_02" invocation-numbers="0"/>
+          <include name="TC_OCB_13"/>
+          <include name="TC_OCB_02"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
       <class name="testCases.GiftCardPageTest">
         <methods>
           <include name="setup"/>
-          <include name="TC_GC_03" invocation-numbers="0"/>
+          <include name="TC_GC_03"/>
           <include name="tearDown"/>
           <include name="flushExtentReport"/>
           <include name="closingTestCase"/>
           <include name="goToHomePage"/>
+<<<<<<< HEAD
           <include name="TC_GC_02" invocation-numbers="0"/>
           <include name="TC_GC_01" invocation-numbers="0"/>
+=======
+          <include name="TC_GC_01"/>
+>>>>>>> main
         </methods>
       </class> <!-- testCases.GiftCardPageTest -->
       <class name="testCases.HotelBookingTest">
@@ -86,7 +112,13 @@
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="TC_HB_03"/>
+<<<<<<< HEAD
+=======
+          <include name="TC_HB_04"/>
+>>>>>>> main
           <include name="flushExtentReport"/>
+          <include name="TC_HB_05"/>
+          <include name="TC_HB_01"/>
           <include name="closingTestCase"/>
           <include name="TC_HB_02"/>
           <include name="goToHomePage"/>
