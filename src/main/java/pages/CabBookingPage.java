@@ -93,21 +93,14 @@ public class CabBookingPage extends BaseTest {
         for(WebElement citySuggestion:listOfPopularCitiesFromSuggestions) {
         	String text = citySuggestion.getText();
         	if(text.equalsIgnoreCase(city)) {
-        		try {
-        			citySuggestion.click();
-        		}catch(Exception e) {
-        			e.printStackTrace();
-        		}
+        		citySuggestion.click();
         		break;
         	}
         }
 	}
 	
 	public void clickToField() {
-        try{
-        	toCityField.click();
-        } catch (Exception e) {
-        }
+        toCityField.click();
 	}
 	
 	public void enterToLocation(String location) {
@@ -237,8 +230,6 @@ public class CabBookingPage extends BaseTest {
         try{
             ele.click();
         } catch (ElementClickInterceptedException e){
-            // sometimes the element is out of view, so scroll till the element and click
-//            js.executeScript("arguments[0].scrollIntoView()", ele);
         	jsUtil.scrollToElement(ele);
             ele.click();
         }

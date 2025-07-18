@@ -22,6 +22,7 @@
     </Appenders>
 
     <Loggers>
+    	<Logger name="org.testng.internal.Utils" level="OFF" additivity="false"/>
         <Root level="INFO">
             <!--<AppenderRef ref="Console"/>-->
             <AppenderRef ref="File"/>

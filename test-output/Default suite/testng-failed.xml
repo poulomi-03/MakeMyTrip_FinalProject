@@ -5,11 +5,11 @@
     <classes>
       <class name="testCases.CabBookingPageTest">
         <methods>
+          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="DriverSetup"/>
           <include name="flushExtentReport"/>
-          <include name="TC_OCB_04" invocation-numbers="0"/>
           <include name="closingTestCase"/>
+          <include name="TC_OCB_01"/>
           <include name="goToHomePage"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
