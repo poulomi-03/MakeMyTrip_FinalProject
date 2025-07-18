@@ -8,8 +8,6 @@ import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Locale;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -21,7 +19,6 @@ import base.BaseTest;
 import utils.DataProviders;
  
 public class CabBookingPageTest extends BaseTest{
-	private static final Logger logger = LogManager.getLogger(CabBookingPageTest.class);
     private ExtentTest test;	
 		
 	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 1, description ="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.")
@@ -211,7 +208,6 @@ public class CabBookingPageTest extends BaseTest{
 	    test.pass("The displayed pickup time for the cabs is matching with the selected time.");
 	    logger.info("TC_OCB_06 completed.");
 	}
-
  
 	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 7, description ="To verify Clear All functionality of filters.")
 	public void TC_OCB_07(String fromLocation, String toLocation, String date, String time, String carType) {

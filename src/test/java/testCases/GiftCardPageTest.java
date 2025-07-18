@@ -3,14 +3,11 @@ package testCases;
 import base.BaseTest;
 import utils.DataProviders;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.*;
  
 public class GiftCardPageTest extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(GiftCardPageTest.class);
     private ExtentTest test;
     
     @Test(dataProvider = "GiftCardTest1", dataProviderClass = DataProviders.class, priority = 3, description = "TestCase 1: Invalid sender email")
