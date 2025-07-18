@@ -8,11 +8,8 @@ import java.util.stream.IntStream;
  
 import base.BaseTest;
 import com.aventstack.extentreports.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
  
 public class HotelBookingTest extends BaseTest{
-    private static final Logger logger = LogManager.getLogger(HotelBookingTest.class);
     private ExtentTest test;
 	/*
 	 * To check "Adult" dropdown from the "Rooms and Guests" field contains list of numbers.
