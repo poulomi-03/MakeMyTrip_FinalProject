@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="2" name="TestChrome">
+   <test thread-count="2" name="TestChrome">
   	<parameter name="os" value="windows"/>
 	<parameter name="browser" value="chrome"/>
     <classes>
@@ -9,9 +9,9 @@
        <class name="testCases.HotelBookingTest"/>
       <class name="testCases.GiftCardPageTest"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  <!-- Test -->
   
-  <!--  <test thread-count="2" name="TestEdge">
+   <test thread-count="2" name="TestEdge">
   	<parameter name="os" value="windows"/>
 	<parameter name="browser" value="edge"/>
     <classes>
@@ -19,6 +19,6 @@
        <class name="testCases.HotelBookingTest"/>
       <class name="testCases.GiftCardPageTest"/>
     </classes>
-  </test> --><!-- Test -->
+  </test>  <!-- Test -->
   
 </suite> <!-- Suite -->

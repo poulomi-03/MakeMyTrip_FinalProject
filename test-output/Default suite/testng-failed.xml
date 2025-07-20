@@ -9,7 +9,6 @@
           <include name="tearDown"/>
           <include name="flushExtentReport"/>
           <include name="closingTestCase"/>
-          <include name="TC_OCB_01"/>
           <include name="goToHomePage"/>
           <include name="TC_OCB_06" invocation-numbers="0"/>
         </methods>

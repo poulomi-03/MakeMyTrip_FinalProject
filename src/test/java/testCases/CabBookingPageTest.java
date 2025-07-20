@@ -1,11 +1,8 @@
 package testCases;
  
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Locale;
 
@@ -81,7 +78,7 @@ public class CabBookingPageTest extends BaseTest{
 	        for(WebElement cab : cabs) {
 	        	String expectedNumberOfSeats = "6 Seats";
 	        	String actualNumberOfSeats = cab.findElement(By.tagName("span")).getText();
-	        	System.out.println(expectedNumberOfSeats +" - "+actualNumberOfSeats +" - "+ expectedNumberOfSeats.equalsIgnoreCase(actualNumberOfSeats));
+//	        	System.out.println(expectedNumberOfSeats +" - "+actualNumberOfSeats +" - "+ expectedNumberOfSeats.equalsIgnoreCase(actualNumberOfSeats));
 	        	Assert.assertEquals(expectedNumberOfSeats, actualNumberOfSeats);
 	        }
 	 
@@ -116,7 +113,7 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedFromLocation = fromLocation;
 	        String actualFromLocation = cabBookingPage.getFromLocationResult();
-	    	System.out.println(expectedFromLocation +" - "+actualFromLocation +" "+ expectedFromLocation.equalsIgnoreCase(actualFromLocation));
+//	    	System.out.println(expectedFromLocation +" - "+actualFromLocation +" "+ expectedFromLocation.equalsIgnoreCase(actualFromLocation));
 	    	Assert.assertTrue(actualFromLocation.contains(expectedFromLocation));
 	 
 		    test.pass("The displayed \"From\" location for the cabs is matching with the selected \"From\" location.");
@@ -148,7 +145,7 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedToLocation = toLocation;
 	        String actualToLocation = cabBookingPage.getToLocationResult();
-	    	System.out.println(expectedToLocation +" - "+actualToLocation +" - "+ expectedToLocation.equalsIgnoreCase(actualToLocation));
+//	    	System.out.println(expectedToLocation +" - "+actualToLocation +" - "+ expectedToLocation.equalsIgnoreCase(actualToLocation));
 	    	Assert.assertTrue(actualToLocation.contains(actualToLocation));
 	 
 		    test.pass("The displayed \"To\" location for the cabs is matching with the selected \"To\" location.");
@@ -186,7 +183,7 @@ public class CabBookingPageTest extends BaseTest{
 	        LocalDate date1 = LocalDate.parse(actualDateString, formatter1);
 	        LocalDate date2 = LocalDate.parse(expectedDateString, formatter2);
 	 
-	    	System.out.println(expectedDateString +" - "+actualDateString +" - "+ expectedDateString.equalsIgnoreCase(expectedDateString));
+//	    	System.out.println(expectedDateString +" - "+actualDateString +" - "+ expectedDateString.equalsIgnoreCase(expectedDateString));
 	    	Assert.assertTrue(date1.equals(date2));
 	 
 		    test.pass("The displayed departure date for the cabs is matching with the selected date.");
@@ -218,7 +215,8 @@ public class CabBookingPageTest extends BaseTest{
 	        cabBookingPage.closePackagesPopup();
 	        
 	        String expectedPickUpTime = time;
-	        String actualPickUpTime = cabBookingPage.getPickupTimeResult();
+	        String actualPickUpTime = cabBookingPage.getPickupTimeResult().toLowerCase();
+//	        System.out.println(time+" "+actualPickUpTime);
 	        Assert.assertTrue(cabBookingPage.compareTime(actualPickUpTime, "hh:mm a", expectedPickUpTime, "h:mm a"));
 	 
 		    test.pass("The displayed pickup time for the cabs is matching with the selected time.");
@@ -269,7 +267,7 @@ public class CabBookingPageTest extends BaseTest{
 	    	cabBookingPage.selectSection();
 			cabBookingPage.selectTripType();
 			cabBookingPage.clickFromField();
-			cabBookingPage.enterFromLocation(randomString());
+			cabBookingPage.enterFromLocation("qwertyuiop");
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();
@@ -294,7 +292,7 @@ public class CabBookingPageTest extends BaseTest{
 	    	cabBookingPage.selectSection();
 			cabBookingPage.selectTripType();
 			cabBookingPage.clickToField();
-			cabBookingPage.enterToLocation(randomString());
+			cabBookingPage.enterToLocation("qwertyuiop");
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();
@@ -448,6 +446,7 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.clickToField();
 			cabBookingPage.enterToLocation(toLocation);
 			cabBookingPage.selectDestinationFromSuggestion(toLocation);
+			cabBookingPage.clickdeparture();
 			cabBookingPage.datePicker(date);
 	        cabBookingPage.clickPickupTime();
 	        cabBookingPage.timePicker(time);

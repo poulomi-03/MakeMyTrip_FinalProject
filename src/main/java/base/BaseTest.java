@@ -35,7 +35,7 @@ public class BaseTest {
 	public WebDriver driver;
 	public String baseUrl;
 	
-	public static WebDriverWait wait;
+//	public static WebDriverWait wait;
 	public static ActionUtil action;
 	public static JavascriptExecutorUtil jsUtil;
 	
@@ -44,7 +44,7 @@ public class BaseTest {
 	public HotelBookingPage hotelObj;
     public ExtentReports extent;
     public Logger logger;
-    public int impWait = 3;
+    public int impWait = 4;
     public int expWait = 2;
 	
 	
@@ -86,7 +86,7 @@ public class BaseTest {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(expWait));
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(expWait));
 		
         action = new ActionUtil(driver);
         extent = ExtentManager.getInstance();

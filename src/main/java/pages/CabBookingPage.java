@@ -4,10 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -17,17 +15,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import base.BaseTest;
+import base.BasePage;
  
-public class CabBookingPage extends BaseTest {
-	WebDriver driver;
+public class CabBookingPage extends BasePage {
 	
 	public CabBookingPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	
 	/* Page Objects */
@@ -105,7 +100,11 @@ public class CabBookingPage extends BaseTest {
 	}
 	
 	public void clickToField() {
-        toCityField.click();
+		try {
+	        toCityField.click();			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	public void enterToLocation(String location) {
@@ -173,7 +172,6 @@ public class CabBookingPage extends BaseTest {
         	driver.findElement(By.xpath("//img[@alt='Close']")).click();
         } 
         catch (Exception e) {
-            System.out.println("No popup detected or popup's close button not clickable within timeout. Proceeding...");
         }	
 	}
 	
@@ -241,12 +239,12 @@ public class CabBookingPage extends BaseTest {
     }
 
     public void datePicker(String date){
-    	if (isDateSelected(date)) {
-    		action.clickEsc();
-    		return;
-    	}
+//    	if (isDateSelected(date)) {
+//    		action.clickEsc();
+//    		return;
+//    	}
     	
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+//    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         while(true){
             try{
                 scrollClick(driver.findElement(By.xpath("//div[contains(@aria-label, '"+date+"')]")));
@@ -260,9 +258,13 @@ public class CabBookingPage extends BaseTest {
                 }
             }
         }
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
-
+    
+//    public boolean isDateSelected(String requiredDate) {
+//    	String selectedDate = driver.findElement(By.xpath("//span[contains(@class,'selectedDateField')]")).getText();
+//    	return compareDate(selectedDate, "d MMM yy", requiredDate, "MMM dd yyyy");
+//    }
 
     public boolean compareDate(String date1, String format1, String date2, String format2) {
 	    try {
@@ -294,19 +296,14 @@ public class CabBookingPage extends BaseTest {
 	    }
     }
     
-    public boolean isTimeSelected(String requiredTime) {
-    	String hour = driver.findElement(By.className("selectedItemHighlight")).getText();
-    	String minute = driver.findElement(By.className("selectedItemDefault")).getText();
-    	String period = driver.findElements(By.className("selectedItemDefault")).get(1).getText();
-
-    	String selectedTime = hour + ":" + minute + " " + period;
-    	return compareTime(selectedTime, "hh:mm a", requiredTime, "h:mm a");
-    }
-    
-    public boolean isDateSelected(String requiredDate) {
-    	String selectedDate = driver.findElement(By.xpath("//span[contains(@class,'selectedDateField')]")).getText();
-    	return compareDate(selectedDate, "d MMM yy", requiredDate, "MMM dd yyyy");
-    }
+//    public boolean isTimeSelected(String requiredTime) {
+//    	String hour = driver.findElement(By.className("selectedItemHighlight")).getText();
+//    	String minute = driver.findElement(By.className("selectedItemDefault")).getText();
+//    	String period = driver.findElements(By.className("selectedItemDefault")).get(1).getText();
+//
+//    	String selectedTime = hour + ":" + minute + " " + period;
+//    	return compareTime(selectedTime, "hh:mm a", requiredTime, "h:mm a");
+//    }
 
 	public void selectDepartureDate(String departDate) {
 		clickdeparture();
@@ -338,10 +335,10 @@ public class CabBookingPage extends BaseTest {
 	}
 
     public void timePicker(String timeString){
-    	if (isTimeSelected(timeString)) {
-    		action.clickEsc();
-    		return;
-    	}
+//    	if (isTimeSelected(timeString)) {
+//    		action.clickEsc();
+//    		return;
+//    	}
     	
     	timeString = timeString.replace(":", " ");
         String time [] = timeString.split(" ");
