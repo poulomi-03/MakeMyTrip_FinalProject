@@ -2,12 +2,12 @@ package pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -66,6 +66,7 @@ public class CabBookingPage extends BaseTest {
 	@FindBy(id="pickup_date") WebElement pickupDateResult;
 	@FindBy(id="pickup_time") WebElement pickupTimeResult;
 	@FindBy(xpath="//div[@role='gridcell']") List<WebElement> dates;
+	@FindBy(xpath="//p[contains(@class,'cabNotFound')]") WebElement cabNotFound;
 	
 	By errorMessageSameOrigin = By.xpath("//span[@class='redText errorMsgText']");
 	
@@ -175,7 +176,6 @@ public class CabBookingPage extends BaseTest {
         	driver.findElement(By.xpath("//img[@alt='Close']")).click();
         } 
         catch (Exception e) {
-            System.out.println("No popup detected or popup's close button not clickable within timeout. Proceeding...");
         }	
 	}
 	
@@ -198,7 +198,6 @@ public class CabBookingPage extends BaseTest {
         	driver.findElement(By.xpath("//div[contains(@class,'checkbox_checked')]"));
         	return false;
         } catch(Exception e) {
-        	System.out.println("Cleared all filters");
         	return true;
         }
 	}
@@ -231,6 +230,10 @@ public class CabBookingPage extends BaseTest {
 	public String getErrorMessageForSameOrigin() {
 		WebElement errorMsg = wait.until(ExpectedConditions.presenceOfElementLocated(errorMessageSameOrigin));
 		return errorMsg.getText();
+	}
+	
+	public String getCabNotFoundErrorMessage() {
+		return cabNotFound.getText();
 	}
 	
     public void scrollClick(WebElement ele){
@@ -395,17 +398,22 @@ public class CabBookingPage extends BaseTest {
         return cabs.get(idx);
     }
 
-    public void takeElementScreenshot(WebElement ele, String screenshotFileName) {
+	public String takeElementScreenshot(WebElement ele, String name) {
+		jsUtil.scrollToElement(ele);
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + name +"\\"+ timeStamp + ".png";
+		
         File sourceFile = ele.getScreenshotAs(OutputType.FILE);
-        File targetFile = new File("screenshots/" + screenshotFileName); // Use a variable for filename
+        File targetFile = new File(targetFilePath); // Use a variable for filename
 
         try {
             FileUtils.copyFile(sourceFile, targetFile);
-            System.out.println("Screenshot saved to: " + targetFile.getAbsolutePath());
 
         } catch (IOException e) {
             System.err.println("Failed to save screenshot: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+        	return targetFilePath;
         }
     }
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestEdge</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 18 16:44:44 IST 2025</td>
+<td>Started on:</td><td>Sun Jul 20 12:37:57 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>292 seconds (292982 ms)</td>
+<tr><td>Total time:</td><td>128 seconds (128527 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_08()'><b>TC_OCB_08</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify Suggestion when an invalid/unserviceable "From" location is entered.</td>
-<td><div><pre>java.lang.AssertionError: expected [sanvi optical, Kyolaria, Uttar Pradesh, India] but found [No Data Found]
-	at testCases.CabBookingPageTest.TC_OCB_08(CabBookingPageTest.java:278)
+<td title='testCases.CabBookingPageTest.TC_OCB_01()'><b>TC_OCB_01</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV, org.testng.TestRunner@4dec506a</td>
+<td><div><pre>java.lang.AssertionError: Lowest charged Cab search failed: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[text()=&apos;Outstation One-Way&apos;]&quot;}
+  (Session info: MicrosoftEdge=138.0.3351.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [455eb6b08469af3dfc6f3f13fbaabe37, findElement {value=//li[text()=&apos;Outstation One-Way&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.95, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53962}, msedge: {msedgedriverVersion: 138.0.3351.83 (16e2a7bef320..., userDataDir: C:\Users\2407474\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53962/devtoo..., se:cdpVersion: 138.0.3351.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 455eb6b08469af3dfc6f3f13fbaabe37
+	at testCases.CabBookingPageTest.TC_OCB_01(CabBookingPageTest.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1694568739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1694568739'><pre>java.lang.AssertionError: expected [sanvi optical, Kyolaria, Uttar Pradesh, India] but found [No Data Found]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1808147935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1808147935'><pre>java.lang.AssertionError: Lowest charged Cab search failed: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[text()=&apos;Outstation One-Way&apos;]&quot;}
+  (Session info: MicrosoftEdge=138.0.3351.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [455eb6b08469af3dfc6f3f13fbaabe37, findElement {value=//li[text()=&apos;Outstation One-Way&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.95, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53962}, msedge: {msedgedriverVersion: 138.0.3351.83 (16e2a7bef320..., userDataDir: C:\Users\2407474\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53962/devtoo..., se:cdpVersion: 138.0.3351.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 455eb6b08469af3dfc6f3f13fbaabe37
 	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at testCases.CabBookingPageTest.TC_OCB_08(CabBookingPageTest.java:278)
+	at testCases.CabBookingPageTest.TC_OCB_01(CabBookingPageTest.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -103,21 +118,51 @@ function toggleAllBoxes() {
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>5</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
+<td>7</td>
+<td>testCases.CabBookingPageTest@a4ca3f6</td></tr>
+<tr>
+<td title='testCases.CabBookingPageTest.TC_OCB_14()'><b>TC_OCB_14</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify behavior when no cabs are available for the selected criteria.<br>Parameters: Leh, Kargil, Jul 25 2025, 10:00 AM, org.testng.TestRunner@4dec506a</td>
+<td><div><pre>java.lang.AssertionError: Expected condition failed: waiting for text (&apos;Kargil&apos;) to be present in element found by By.xpath: //li[@role=&apos;option&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+	at testCases.CabBookingPageTest.TC_OCB_14(CabBookingPageTest.java:433)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace554632517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace554632517'><pre>java.lang.AssertionError: Expected condition failed: waiting for text (&apos;Kargil&apos;) to be present in element found by By.xpath: //li[@role=&apos;option&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+	at org.testng.Assert.fail(Assert.java:111)
+	at testCases.CabBookingPageTest.TC_OCB_14(CabBookingPageTest.java:433)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>14</td>
+<td>testCases.CabBookingPageTest@a4ca3f6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -128,115 +173,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_10()'><b>TC_OCB_10</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that previous dates are disabled in the departure date picker.</td>
+<td title='testCases.HotelBookingTest.TC_HB_01()'><b>TC_HB_01</b><br>Test class: testCases.HotelBookingTest<br>Test method: Verify adult dropdown count range<br>Parameters: org.testng.TestRunner@4dec506a</td>
 <td></td>
 <td>2</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
+<td>testCases.HotelBookingTest@72ea6193</td></tr>
 <tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_01()'><b>TC_OCB_01</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>15</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_05()'><b>TC_OCB_05</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that the selected "Departure Date" is reflected in search results.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.HotelBookingTest.TC_HB_02()'><b>TC_HB_02</b><br>Test class: testCases.HotelBookingTest</td>
-<td></td>
-<td>11</td>
-<td>testCases.HotelBookingTest@6a2f6f80</td></tr>
-<tr>
-<td title='testCases.HotelBookingTest.TC_HB_05()'><b>TC_HB_05</b><br>Test class: testCases.HotelBookingTest</td>
-<td></td>
-<td>2</td>
-<td>testCases.HotelBookingTest@6a2f6f80</td></tr>
-<tr>
-<td title='testCases.HotelBookingTest.TC_HB_04()'><b>TC_HB_04</b><br>Test class: testCases.HotelBookingTest</td>
+<td title='testCases.CabBookingPageTest.TC_OCB_10()'><b>TC_OCB_10</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that previous dates are disabled in the departure date picker.<br>Parameters: org.testng.TestRunner@4dec506a</td>
 <td></td>
 <td>1</td>
-<td>testCases.HotelBookingTest@6a2f6f80</td></tr>
+<td>testCases.CabBookingPageTest@a4ca3f6</td></tr>
 <tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_07()'><b>TC_OCB_07</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify Clear All functionality of filters.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>15</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.HotelBookingTest.TC_HB_03()'><b>TC_HB_03</b><br>Test class: testCases.HotelBookingTest</td>
-<td></td>
-<td>1</td>
-<td>testCases.HotelBookingTest@6a2f6f80</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_15()'><b>TC_OCB_15</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify behavior with same "From" and "To" locations.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>4</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_04()'><b>TC_OCB_04</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that the selected "To" location is reflected in search results.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_12()'><b>TC_OCB_12</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify the presence of SUV filter.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_03()'><b>TC_OCB_03</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that the selected "From" location is reflected in search results.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_09()'><b>TC_OCB_09</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify Suggestion when an invalid/unserviceable "To" location is entered.</td>
-<td></td>
-<td>4</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_11()'><b>TC_OCB_11</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that dates beyond  limit in the future are disabled in the departure date picker.</td>
-<td></td>
-<td>5</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.GiftCardPageTest.TC_GC_01()'><b>TC_GC_01</b><br>Test class: testCases.GiftCardPageTest<br>Test method: TestCase 1: Invalid sender email<br>Parameters: Sahil, 9876543210, invalid-email</td>
-<td></td>
-<td>5</td>
-<td>testCases.GiftCardPageTest@45b4c3a9</td></tr>
-<tr>
-<td title='testCases.GiftCardPageTest.TC_GC_03()'><b>TC_GC_03</b><br>Test class: testCases.GiftCardPageTest<br>Test method: TestCase 3: Fill recipient form and capture error<br>Parameters: Alice, 4567891230, 234QWE122@GMAIL.COM, Happy Birthday!</td>
+<td title='testCases.GiftCardPageTest.TC_GC_01()'><b>TC_GC_01</b><br>Test class: testCases.GiftCardPageTest<br>Test method: Invalid sender email<br>Parameters: Sahil, 9876543210, invalid-email, org.testng.TestRunner@4dec506a</td>
 <td></td>
 <td>8</td>
-<td>testCases.GiftCardPageTest@45b4c3a9</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_14()'><b>TC_OCB_14</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify behavior when no cabs are available for the selected criteria.<br>Parameters: Leh, Kargil, Jul 25 2025, 10:00 AM</td>
-<td></td>
-<td>17</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_13()'><b>TC_OCB_13</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that search results are displayed even if "SUV" filter is not applied initially.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>10</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_02()'><b>TC_OCB_02</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that only SUV cab type filter is applied and results are displayed accordingly.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
-<tr>
-<td title='testCases.HotelBookingTest.TC_HB_01()'><b>TC_HB_01</b><br>Test class: testCases.HotelBookingTest</td>
-<td></td>
-<td>2</td>
-<td>testCases.HotelBookingTest@6a2f6f80</td></tr>
-<tr>
-<td title='testCases.GiftCardPageTest.TC_GC_02()'><b>TC_GC_02</b><br>Test class: testCases.GiftCardPageTest<br>Test method: TestCase 2: Fill multiple recipients and capture error<br>Parameters: Recipient1, 1234567890, r1gmail.com, Recipient2, 2345678901, R2#gmail.com, Abhinav, 9502377742, abhinav@gm.com</td>
-<td></td>
-<td>12</td>
-<td>testCases.GiftCardPageTest@45b4c3a9</td></tr>
-<tr>
-<td title='testCases.CabBookingPageTest.TC_OCB_06()'><b>TC_OCB_06</b><br>Test class: testCases.CabBookingPageTest<br>Test method: To verify that the selected "Pickup Time" is reflected in search results.<br>Parameters: Delhi, Manali, Himachal Pradesh, Dec 09 2025, 8:30 AM, SUV</td>
-<td></td>
-<td>11</td>
-<td>testCases.CabBookingPageTest@1190200a</td></tr>
+<td>testCases.GiftCardPageTest@31aa3ca5</td></tr>
 </table><p>
 </body>
 </html>

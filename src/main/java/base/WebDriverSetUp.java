@@ -8,16 +8,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebDriverSetUp {
 public static WebDriver driver;
 	public static WebDriver setupDriver(String browser) {
-		System.out.println("STEP 1: Attempting to open the "+browser+" browser.");
     	try {
-            if (browser.equalsIgnoreCase("chrome")) {
-                driver = new ChromeDriver();
-            } else if (browser.equalsIgnoreCase("edge")) {
-                driver = new EdgeDriver();
-            } else if (browser.equalsIgnoreCase("firefox")) {
-	            driver = new FirefoxDriver();
-	        }
-    		System.out.println("Remarks: "+browser+" browser opened successfully");
+			switch(browser.toLowerCase()) {
+			case "chrome": 
+				driver = new ChromeDriver();
+				break;
+			case "edge":
+				driver = new EdgeDriver();
+				break;
+			case "firefox":
+				driver = new FirefoxDriver();
+				break;
+			default: System.out.println("Invalid browser name");
+			}
     	}
     	catch(Exception e){
     		System.out.println("Remarks: Faied to open "+browser+" browser.\n"+e);
