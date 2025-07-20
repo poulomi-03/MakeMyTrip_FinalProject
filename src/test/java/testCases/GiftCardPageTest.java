@@ -4,15 +4,13 @@ import base.BaseTest;
 import utils.DataProviders;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
-import com.aventstack.extentreports.*;
  
 public class GiftCardPageTest extends BaseTest {
-    private ExtentTest test;
     
-    @Test(dataProvider = "GiftCardTest1", dataProviderClass = DataProviders.class, priority = 3, description = "TestCase 1: Invalid sender email")
-    public void TC_GC_01(String senderName, String mobile, String email) throws InterruptedException {
-	    test = extent.createTest("TC_GC_01: Invalid sender email");
+    @Test(groups= {"Smoke"}, dataProvider = "GiftCardTest1", dataProviderClass = DataProviders.class, priority = 1, description = "Invalid sender email")
+    public void TC_GC_01(String senderName, String mobile, String email, ITestContext result) throws InterruptedException {
         logger.info("Executing TC_GC_01: Invalid sender email test.");
         try {
         	driver.get("https://www.makemytrip.com/gift-cards/");
@@ -23,20 +21,17 @@ public class GiftCardPageTest extends BaseTest {
      
             String error = giftCardPage.getErrorMessage();
             logger.error("Sender Email Error: {}", error);
-            test.info("Captured error message: " + error);
-     
             Assert.assertEquals(error.trim(), "Please enter a valid Email id.", "Expected sender email error not shown.");
-            test.pass("Validation message matched expected error.");
+            result.setAttribute("message", "Validation message matched expected error.");
+
         }catch(Exception e) {
         	Assert.fail(e.getMessage());
-        	test.fail("Validation message did not matched expected error.");
         }
         logger.info("TC_GC_01 completed.");
     }
 
-    @Test(dataProvider = "GiftCardTest2", dataProviderClass = DataProviders.class, priority = 1, description = "TestCase 2: Fill multiple recipients and capture error")
-    public void TC_GC_02(String sender1, String mob1, String email1, String sender2, String mob2, String email2, String sender3, String mob3, String email3) {
-		test = extent.createTest("TC_GC_02: Multiple recipients error");
+    @Test(groups= {"Regression"}, dataProvider = "GiftCardTest2", dataProviderClass = DataProviders.class, priority = 2, description = "Fill multiple recipients and capture error")
+    public void TC_GC_02(String sender1, String mob1, String email1, String sender2, String mob2, String email2, String sender3, String mob3, String email3, ITestContext result) {
         logger.info("Executing TC_GC_02: Multiple recipients error test.");
         try {
         	driver.get("https://www.makemytrip.com/gift-cards/");
@@ -54,17 +49,15 @@ public class GiftCardPageTest extends BaseTest {
      
             boolean formStillVisible = giftCardPage.isSenderFormVisible();
             Assert.assertTrue(formStillVisible, "Form should not submit with invalid/multiple recipient details.");
-            test.pass("Form did not submit with invalid/multiple recipient details.");
+            result.setAttribute("message", "Validation message matched expected error.");
         }catch(Exception e) {
         	Assert.fail(e.getMessage());
-        	test.fail("Form submitted with invalid/multiple recipient details.");
         }
         logger.info("TC_GC_02 completed.");
     }
 
-    @Test(dataProvider = "GiftCardTest3", dataProviderClass = DataProviders.class, priority = 2, description = "TestCase 3: Fill recipient form and capture error")
-    public void TC_GC_03(String sender, String mob, String email, String msg) {
-		test = extent.createTest("TC_GC_03: Recipient form error");
+    @Test(groups= {"Regression"}, dataProvider = "GiftCardTest3", dataProviderClass = DataProviders.class, priority = 3, description = "Fill recipient form and capture error")
+    public void TC_GC_03(String sender, String mob, String email, String msg, ITestContext result) {
         logger.info("Executing TC_GC_03: Recipient form error test.");
         try {
         	driver.get("https://www.makemytrip.com/gift-cards/");
@@ -77,10 +70,9 @@ public class GiftCardPageTest extends BaseTest {
      
             boolean formStillVisible = giftCardPage.isSenderFormVisible();
             Assert.assertTrue(formStillVisible, "Form should not submit with invalid recipient form.");
-            test.pass("Form did not submit with invalid recipient form.");
+            result.setAttribute("message", "Form did not submit with invalid recipient form.");
         }catch(Exception e) {
         	Assert.fail(e.getMessage());
-        	test.fail("Form got submitted with invalid recipient form.");
         }
         logger.info("TC_GC_03 completed.");
     }

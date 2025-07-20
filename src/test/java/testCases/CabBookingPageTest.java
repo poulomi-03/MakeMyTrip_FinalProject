@@ -1,30 +1,25 @@
 package testCases;
  
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentTest;
 
 import base.BaseTest;
 import utils.DataProviders;
  
 public class CabBookingPageTest extends BaseTest{
-    private ExtentTest test;	
 		
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 1, description ="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.")
-	public void TC_OCB_01(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_01: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 1, description ="To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.")
+	public void TC_OCB_01(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_01");
 	    
 	    try {
@@ -44,21 +39,19 @@ public class CabBookingPageTest extends BaseTest{
 		    cabBookingPage.selectCarType(carType);
 	 
 		    WebElement cab = cabBookingPage.findLowestCharges();
-		    cabBookingPage.takeElementScreenshot(cab, "cab.png");
+		    String path = cabBookingPage.takeElementScreenshot(cab, "cab");
 		    
-		    Assert.assertTrue(true);
-		    test.pass("Lowest charged Cab search completed successfully and screenshot captured.");
+		    result.setAttribute("message", "Lowest charged Cab search completed successfully and screenshot captured.");
+		    result.setAttribute("screenshot", path);
 		    
 	    }catch(Exception e){
-	    	Assert.fail(e.getMessage());
-	    	test.fail("Lowest charged Cab search failed");
+	    	Assert.fail("Lowest charged Cab search failed"+": "+e.getMessage());
 	    }
 	    logger.info("TC_OCB_01 completed");
 	}
 
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 2, description ="To verify that only SUV cab type filter is applied and results are displayed accordingly.")
-	public void TC_OCB_02(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_02: To verify that only SUV cab type filter is applied and results are displayed accordingly.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 2, description ="To verify that only SUV cab type filter is applied and results are displayed accordingly.")
+	public void TC_OCB_02(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_02");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -81,23 +74,19 @@ public class CabBookingPageTest extends BaseTest{
 	        for(WebElement cab : cabs) {
 	        	String expectedNumberOfSeats = "6 Seats";
 	        	String actualNumberOfSeats = cab.findElement(By.tagName("span")).getText();
-	        	System.out.println(expectedNumberOfSeats +" - "+actualNumberOfSeats +" - "+ expectedNumberOfSeats.equalsIgnoreCase(actualNumberOfSeats));
-	        	Assert.assertEquals(expectedNumberOfSeats, actualNumberOfSeats);
+	        	Assert.assertEquals(actualNumberOfSeats, expectedNumberOfSeats, "Other cab type are also present in the search results.");
 	        }
 	 
-		    test.pass("Only SUV cab type is displayed in the search results.");
+		    result.setAttribute("message", "Only SUV cab type are displayed in the search results.");
 		    
-
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("Only SUV cab type is not displayed in the search results.");
 	    }
 	    logger.info("TC_OCB_02 completed.");
 	}
 
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 3, description ="To verify that the selected \"From\" location is reflected in search results.")
-	public void TC_OCB_03(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_03: To verify that the selected \"From\" location is reflected in search results.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 3, description ="To verify that the selected \"From\" location is reflected in search results.")
+	public void TC_OCB_03(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_03");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -116,20 +105,18 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedFromLocation = fromLocation;
 	        String actualFromLocation = cabBookingPage.getFromLocationResult();
-	    	System.out.println(expectedFromLocation +" - "+actualFromLocation +" "+ expectedFromLocation.equalsIgnoreCase(actualFromLocation));
-	    	Assert.assertTrue(actualFromLocation.contains(expectedFromLocation));
-	 
-		    test.pass("The displayed \"From\" location for the cabs is matching with the selected \"From\" location.");
+	        
+	    	Assert.assertTrue(actualFromLocation.contains(expectedFromLocation), "The displayed \"From\" location for the cabs is not matching with the selected \"From\" location.");
+	
+		    result.setAttribute("message", "The displayed \"From\" location for the cabs is matching with the selected \"From\" location.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The displayed \\\"From\\\" location for the cabs is not matching with the selected \\\"From\\\" location.");
 	    }
 	    logger.info("TC_OCB_03 completed.");
 	}
  
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 4, description ="To verify that the selected \"To\" location is reflected in search results.")
-	public void TC_OCB_04(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_04: To verify that the selected \"To\" location is reflected in search results.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 4, description ="To verify that the selected \"To\" location is reflected in search results.")
+	public void TC_OCB_04(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_04");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -148,20 +135,17 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedToLocation = toLocation;
 	        String actualToLocation = cabBookingPage.getToLocationResult();
-	    	System.out.println(expectedToLocation +" - "+actualToLocation +" - "+ expectedToLocation.equalsIgnoreCase(actualToLocation));
-	    	Assert.assertTrue(actualToLocation.contains(actualToLocation));
+	    	Assert.assertTrue(actualToLocation.contains(expectedToLocation), "The displayed \"To\" location for the cabs is not matching with the selected \"To\" location.");
 	 
-		    test.pass("The displayed \"To\" location for the cabs is matching with the selected \"To\" location.");
+	    	result.setAttribute("message", "The displayed \"To\" location for the cabs is matching with the selected \"To\" location.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The displayed \"To\" location for the cabs is not matching with the selected \"To\" location.");
 	    }
 	    logger.info("TC_OCB_04 completed.");
 	}
  
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 5, description ="To verify that the selected \"Departure Date\" is reflected in search results.")
-	public void TC_OCB_05(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_05: To verify that the selected \"Departure Date\" is reflected in search results.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 5, description ="To verify that the selected \"Departure Date\" is reflected in search results.")
+	public void TC_OCB_05(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_05");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -185,22 +169,18 @@ public class CabBookingPageTest extends BaseTest{
 	 
 	        LocalDate date1 = LocalDate.parse(actualDateString, formatter1);
 	        LocalDate date2 = LocalDate.parse(expectedDateString, formatter2);
+	    	Assert.assertTrue(date1.equals(date2), "The displayed departure date for the cabs is not matching with the selected date.");
 	 
-	    	System.out.println(expectedDateString +" - "+actualDateString +" - "+ expectedDateString.equalsIgnoreCase(expectedDateString));
-	    	Assert.assertTrue(date1.equals(date2));
-	 
-		    test.pass("The displayed departure date for the cabs is matching with the selected date.");
+	    	result.setAttribute("message", "The displayed departure date for the cabs is matching with the selected date.");
 		    
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The displayed departure date for the cabs is not matching with the selected date.");
 	    }
 	    logger.info("TC_OCB_05 completed.");
 	}
 	 
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 6, description ="To verify that the selected \"Pickup Time\" is reflected in search results.")
-	public void TC_OCB_06(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_06: To verify that the selected \"Pickup Time\" is reflected in search results.");
+	@Test(groups= {"Smoke"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 6, description ="To verify that the selected \"Pickup Time\" is reflected in search results.")
+	public void TC_OCB_06(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_06");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -219,19 +199,17 @@ public class CabBookingPageTest extends BaseTest{
 	        
 	        String expectedPickUpTime = time;
 	        String actualPickUpTime = cabBookingPage.getPickupTimeResult();
-	        Assert.assertTrue(cabBookingPage.compareTime(actualPickUpTime, "hh:mm a", expectedPickUpTime, "h:mm a"));
+	        Assert.assertTrue(cabBookingPage.compareTime(actualPickUpTime, "hh:mm a", expectedPickUpTime, "h:mm a"), "The displayed pickup time for the cabs is not matching with the selected time.");
 	 
-		    test.pass("The displayed pickup time for the cabs is matching with the selected time.");
+	        result.setAttribute("message", "The displayed pickup time for the cabs is matching with the selected time.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The displayed pickup time for the cabs is not matching with the selected time.");
 	    }
 	    logger.info("TC_OCB_06 completed.");
 	}
  
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 7, description ="To verify Clear All functionality of filters.")
-	public void TC_OCB_07(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_07: To verify Clear All functionality of filters.");
+	@Test(groups= {"Regression"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 7, description ="To verify Clear All functionality of filters.")
+	public void TC_OCB_07(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_07");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -250,20 +228,18 @@ public class CabBookingPageTest extends BaseTest{
 	        cabBookingPage.selectCarType(carType);
 	        cabBookingPage.clearAll();
 	        
-	        Assert.assertTrue(cabBookingPage.checkClearAllFilters());
+	        Assert.assertTrue(cabBookingPage.checkClearAllFilters(), "All applied filters are not removed, so the search results are not updated.");
 
-		    test.pass("All applied filters is removed, and the search results are updated.");
+	        result.setAttribute("message", "All applied filters are removed, and the search results are updated.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("All applied filters is removed.");
 	    }
 		
 	    logger.info("TC_OCB_07 completed.");
 	}
 	
-	@Test(priority = 8, description ="To verify Suggestion when an invalid/unserviceable \"From\" location is entered.")
-	public void TC_OCB_08() {
-	    test = extent.createTest("TC_OCB_08: To verify Suggestion when an invalid/unserviceable \"From\" location is entered.");
+	@Test(groups= {"Regression"}, priority = 8, description ="To verify Suggestion when an invalid/unserviceable \"From\" location is entered.")
+	public void TC_OCB_08(ITestContext result) {
 	    logger.info("Executing TC_OCB_08");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -275,20 +251,18 @@ public class CabBookingPageTest extends BaseTest{
 	        String actualSuggestion = cabBookingPage.getSuggestion();
 	    	action.clickEsc();
 	    	
-	    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
+	    	Assert.assertEquals(actualSuggestion, expectedSuggestion, "The dropdown is not displaying \"No Data Found\" message in the suggestions for the \"From\" field.");
 	 
-		    test.pass("The dropdown is displaying \"No Data Found\" message in the suggestions for the \"From\" field.");
+	    	result.setAttribute("message", "The dropdown is displaying \"No Data Found\" message in the suggestions for the \"From\" field.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The dropdown is not displaying \"No Data Found\" message in the suggestions for the \"From\" field.");
 	    }
 		
 	    logger.info("TC_OCB_08 completed.");
 	}
  
-	@Test(priority = 9, description ="To verify Suggestion when an invalid/unserviceable \"To\" location is entered.")
-	public void TC_OCB_09() {
-	    test = extent.createTest("TC_OCB_09: To verify Suggestion when an invalid/unserviceable \"To\" location is entered.");
+	@Test(groups= {"Regression"}, priority = 9, description ="To verify Suggestion when an invalid/unserviceable \"To\" location is entered.")
+	public void TC_OCB_09(ITestContext result) {
 	    logger.info("Executing TC_OCB_09");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -300,20 +274,18 @@ public class CabBookingPageTest extends BaseTest{
 	        String actualSuggestion = cabBookingPage.getSuggestion();
 	    	action.clickEsc();
 	    	
-	    	Assert.assertEquals(expectedSuggestion, actualSuggestion);
+	    	Assert.assertEquals(actualSuggestion, expectedSuggestion, "The dropdown is not displaying \"No Data Found\" message in the suggestions for the \"To\" field.");
 	 
-		    test.pass("The dropdown is displaying \"No Data Found\" message in the suggestions for the \"To\" field.");
+	    	result.setAttribute("message", "The dropdown is displaying \"No Data Found\" message in the suggestions for the \"To\" field.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The dropdown is not displaying \"No Data Found\" message in the suggestions for the \"To\" field.");
 	    }
 		
 	    logger.info("TC_OCB_09 completed.");
 	}
 
-	@Test(priority = -1, description ="To verify that previous dates are disabled in the departure date picker.")
-	public void TC_OCB_10() {
-	    test = extent.createTest("TC_OCB_10: To verify that previous dates are disabled in the departure date picker.");
+	@Test(groups= {"Regression"}, priority = -1, description ="To verify that previous dates are disabled in the departure date picker.")
+	public void TC_OCB_10(ITestContext result) {
 	    logger.info("Executing TC_OCB_10");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -322,23 +294,21 @@ public class CabBookingPageTest extends BaseTest{
 	    	int today = LocalDate.now().getDayOfMonth();
 			List<WebElement> dates = cabBookingPage.getDates();
 			for(int i = 0; i < today-1; i++ ) {
-				Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true");
+				Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true", "The previous dates from today are not disabled. "+ dates.get(i).getText());
 				
 			}
 			action.clickEsc();
 	 
-		    test.pass("Only the dates from current date are enabled and the previous dates are disabled.");
+			result.setAttribute("message", "Only the dates from current date are enabled and the previous dates are disabled.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The previous dates are not disabled.");
 	    }
 		
 	    logger.info("TC_OCB_10 completed.");
 	}
 	
-	@Test(priority = 11, description ="To verify that dates beyond  limit in the future are disabled in the departure date picker.")
-	public void TC_OCB_11() {
-	    test = extent.createTest("TC_OCB_11: To verify that dates beyond  limit in the future are disabled in the departure date picker.");
+	@Test(groups= {"Regression"}, priority = 11, description ="To verify that dates beyond  limit in the future are disabled in the departure date picker.")
+	public void TC_OCB_11(ITestContext result) {
 	    logger.info("Executing TC_OCB_11");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -357,23 +327,21 @@ public class CabBookingPageTest extends BaseTest{
 			int disabledDate = Integer.parseInt(disabledDateString);
 			List<WebElement> dates = secondMonth.findElements(By.xpath(".//div[@role='gridcell']"));
 			for(int i = disabledDate-1; i < dates.size(); i++ ) {
-				Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true");
+				Assert.assertEquals(dates.get(i).getAttribute("aria-disabled"), "true", "The dates does not have limit for selection.");
 			}
 
 			action.clickEsc();
 	 
-		    test.pass("The dates only upto certain days are enabled in the datapicker.");
+			result.setAttribute("message", "The dates only upto certain days are enabled in the datapicker.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The dates does not have limit for selection.");
 	    }
 		
 	    logger.info("TC_OCB_11 completed.");
 	}
 	
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 12, description ="To verify the presence of SUV filter.")
-	public void TC_OCB_12(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_12: To verify the presence of SUV filter.");
+	@Test(groups= {"Regression"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 12, description ="To verify the presence of SUV filter.")
+	public void TC_OCB_12(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_12");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -394,20 +362,18 @@ public class CabBookingPageTest extends BaseTest{
 				isPresent = true;
 			}
 			
-			Assert.assertTrue(isPresent);
+			Assert.assertTrue(isPresent, "SUV filter is not present in the page.");
 	 
-		    test.pass("SUV filter is present in the page.");
+			result.setAttribute("message", "SUV filter is present in the page.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("SUV filter is not present in the page.");
 	    }
 		
 	    logger.info("TC_OCB_12 completed.");
 	}
 	
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 13, description ="To verify that search results are displayed even if \"SUV\" filter is not applied initially.")
-	public void TC_OCB_13(String fromLocation, String toLocation, String date, String time, String carType) throws Exception {
-	    test = extent.createTest("TC_OCB_13: To verify that search results are displayed even if \"SUV\" filter is not applied initially.");
+	@Test(groups= {"Regression"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 13, description ="To verify that search results are displayed even if \"SUV\" filter is not applied initially.")
+	public void TC_OCB_13(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) throws Exception {
 	    logger.info("Executing TC_OCB_13");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -424,20 +390,18 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.search();
 			cabBookingPage.closePackagesPopup();
 			
-			Assert.assertTrue(!cabBookingPage.getSearchResult().isEmpty());
+			Assert.assertTrue(!cabBookingPage.getSearchResult().isEmpty(), "The available cabs are not displayed in the search result.");
 	 
-		    test.pass("The available cabs are displayed in the search result.");
+			result.setAttribute("message", "The available cabs are displayed in the search result.");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The available cabs are not displayed in the search result.");
 	    }
 		
 	    logger.info("TC_OCB_13 completed.");
 	}
 	
-	@Test(dataProvider = "NoCabsData", dataProviderClass = DataProviders.class,priority = -1, description ="To verify behavior when no cabs are available for the selected criteria.")
-	public void TC_OCB_14(String fromLocation, String toLocation, String date, String time) {
-	    test = extent.createTest("TC_OCB_14: To verify behavior when no cabs are available for the selected criteria.");
+	@Test(groups= {"Regression"}, dataProvider = "NoCabsData", dataProviderClass = DataProviders.class,priority = -1, description ="To verify behavior when no cabs are available for the selected criteria.")
+	public void TC_OCB_14(String fromLocation, String toLocation, String date, String time, ITestContext result) {
 	    logger.info("Executing TC_OCB_14");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -454,21 +418,26 @@ public class CabBookingPageTest extends BaseTest{
 	        cabBookingPage.timePicker(time);
 			cabBookingPage.search();
 			cabBookingPage.closePackagesPopup();
+
+	        String expectedMessage = "Oops! No cabs found";
+	        String actualMessage = cabBookingPage.getCabNotFoundErrorMessage();
+	        
+	        Assert.assertEquals(actualMessage, expectedMessage, "A message is not displayed or Cabs found for given data");
 			
-			Assert.assertTrue(cabBookingPage.getSearchResult().isEmpty());
-	 
-		    test.pass("A message is displayed ");
+			jsUtil.scrollToBottom();
+			String path = captureScreen("CabNotFound", "");
+		    result.setAttribute("screenshot", path);
+			
+			result.setAttribute("message", "A message is displayed ");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("A message is not displayed ");
 	    }
 		
 	    logger.info("TC_OCB_14 completed.");
 	}
 	
-	@Test(dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 15, description ="To verify behavior with same \"From\" and \"To\" locations.")
-	public void TC_OCB_15(String fromLocation, String toLocation, String date, String time, String carType) {
-	    test = extent.createTest("TC_OCB_15: To verify behavior with same \"From\" and \"To\" locations.");
+	@Test(groups= {"Regression"}, dataProvider = "CabBookingValidData",dataProviderClass = DataProviders.class, priority = 15, description ="To verify behavior with same \"From\" and \"To\" locations.")
+	public void TC_OCB_15(String fromLocation, String toLocation, String date, String time, String carType, ITestContext result) {
 	    logger.info("Executing TC_OCB_15");
 	    try {
 	    	cabBookingPage.selectSection();
@@ -479,12 +448,11 @@ public class CabBookingPageTest extends BaseTest{
 			cabBookingPage.selectCityToPopularSuggestion(fromLocation);
 			
 			String msg = "The Origin City & Destination City cannot be the same.";
-			Assert.assertEquals(cabBookingPage.getErrorMessageForSameOrigin(), msg);
+			Assert.assertEquals(cabBookingPage.getErrorMessageForSameOrigin(), msg, "The error message is not displayed");
 	 
-		    test.pass("The error message is displayed");
+			result.setAttribute("message", "The error message is displayed");
 	    }catch(Exception e) {
 	    	Assert.fail(e.getMessage());
-	    	test.fail("The error message is not displayed");
 	    }
 		
 	    logger.info("TC_OCB_15 completed.");
