@@ -34,4 +34,10 @@ public class JavascriptExecutorUtil {
 	public void scrollBy(int pixels) {
 		js.executeScript("window.scrollBy(0, arguments[0]);", pixels);
 	}
+	
+	// Scroll to the bottom of the page
+	public void scrollToBottom() {
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+	}
 }

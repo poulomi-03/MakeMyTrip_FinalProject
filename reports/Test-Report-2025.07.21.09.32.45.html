@@ -1,0 +1,1800 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Hackathon Project Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Make My Trip Functional Testing</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 21, 2025 09:32:45 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Smoke</a><a class="dropdown-item" href="#">Regression</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="24"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_10: To verify that previous dates are disabled in the departure date picker.</p>
+            <p class="text-sm">
+              <span>9:32:54 am</span> / <span>00:00:02:917</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_10: To verify that previous dates are disabled in the departure date picker.</h5>
+<span class='badge badge-success'>07.21.2025 9:32:54 am</span>
+<span class='badge badge-danger'>07.21.2025 9:32:57 am</span>
+<span class='badge badge-default'>00:00:02:917</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:54 am</td>
+        <td>
+          Test Started: TC_OCB_10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:32:57 am</td>
+        <td>
+          Only the dates from current date are enabled and the previous dates are disabled.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:32:57 am</td>
+        <td>
+          TC_OCB_10 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_14: To verify behavior when no cabs are available for the selected criteria.</p>
+            <p class="text-sm">
+              <span>9:32:59 am</span> / <span>00:00:13:125</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_14: To verify behavior when no cabs are available for the selected criteria.</h5>
+<span class='badge badge-success'>07.21.2025 9:32:59 am</span>
+<span class='badge badge-danger'>07.21.2025 9:33:12 am</span>
+<span class='badge badge-default'>00:00:13:125</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\My workspace\MakeMyTrip_FinalProject\screenshots\CabNotFound\_20250721093312.png' src="C:\My workspace\MakeMyTrip_FinalProject\screenshots\CabNotFound\_20250721093312.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:59 am</td>
+        <td>
+          Test Started: TC_OCB_14
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:12 am</td>
+        <td>
+          A message is displayed 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:12 am</td>
+        <td>
+          TC_OCB_14 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_01: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.</p>
+            <p class="text-sm">
+              <span>9:33:13 am</span> / <span>00:00:34:099</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_01: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.</h5>
+<span class='badge badge-success'>07.21.2025 9:33:13 am</span>
+<span class='badge badge-danger'>07.21.2025 9:33:47 am</span>
+<span class='badge badge-default'>00:00:34:099</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\My workspace\MakeMyTrip_FinalProject\screenshots\cab\20250721093347.png' src="C:\My workspace\MakeMyTrip_FinalProject\screenshots\cab\20250721093347.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:13 am</td>
+        <td>
+          Test Started: TC_OCB_01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:47 am</td>
+        <td>
+          Lowest charged Cab search completed successfully and screenshot captured.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:47 am</td>
+        <td>
+          TC_OCB_01 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_02: To verify that only SUV cab type filter is applied and results are displayed accordingly.</p>
+            <p class="text-sm">
+              <span>9:33:48 am</span> / <span>00:00:10:953</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_02: To verify that only SUV cab type filter is applied and results are displayed accordingly.</h5>
+<span class='badge badge-success'>07.21.2025 9:33:48 am</span>
+<span class='badge badge-danger'>07.21.2025 9:33:59 am</span>
+<span class='badge badge-default'>00:00:10:953</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:48 am</td>
+        <td>
+          Test Started: TC_OCB_02
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:59 am</td>
+        <td>
+          Only SUV cab type are displayed in the search results.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:33:59 am</td>
+        <td>
+          TC_OCB_02 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_03: To verify that the selected "From" location is reflected in search results.</p>
+            <p class="text-sm">
+              <span>9:34:01 am</span> / <span>00:00:10:890</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_03: To verify that the selected "From" location is reflected in search results.</h5>
+<span class='badge badge-success'>07.21.2025 9:34:01 am</span>
+<span class='badge badge-danger'>07.21.2025 9:34:11 am</span>
+<span class='badge badge-default'>00:00:10:890</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:01 am</td>
+        <td>
+          Test Started: TC_OCB_03
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:11 am</td>
+        <td>
+          The displayed "From" location for the cabs is matching with the selected "From" location.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:11 am</td>
+        <td>
+          TC_OCB_03 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_04: To verify that the selected "To" location is reflected in search results.</p>
+            <p class="text-sm">
+              <span>9:34:12 am</span> / <span>00:00:09:817</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_04: To verify that the selected "To" location is reflected in search results.</h5>
+<span class='badge badge-success'>07.21.2025 9:34:12 am</span>
+<span class='badge badge-danger'>07.21.2025 9:34:22 am</span>
+<span class='badge badge-default'>00:00:09:817</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:12 am</td>
+        <td>
+          Test Started: TC_OCB_04
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:22 am</td>
+        <td>
+          The displayed "To" location for the cabs is matching with the selected "To" location.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:22 am</td>
+        <td>
+          TC_OCB_04 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_05: To verify that the selected "Departure Date" is reflected in search results.</p>
+            <p class="text-sm">
+              <span>9:34:24 am</span> / <span>00:00:10:616</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_05: To verify that the selected "Departure Date" is reflected in search results.</h5>
+<span class='badge badge-success'>07.21.2025 9:34:24 am</span>
+<span class='badge badge-danger'>07.21.2025 9:34:34 am</span>
+<span class='badge badge-default'>00:00:10:616</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:24 am</td>
+        <td>
+          Test Started: TC_OCB_05
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:34 am</td>
+        <td>
+          The displayed departure date for the cabs is matching with the selected date.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:34 am</td>
+        <td>
+          TC_OCB_05 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_06: To verify that the selected "Pickup Time" is reflected in search results.</p>
+            <p class="text-sm">
+              <span>9:34:35 am</span> / <span>00:00:10:284</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_06: To verify that the selected "Pickup Time" is reflected in search results.</h5>
+<span class='badge badge-success'>07.21.2025 9:34:35 am</span>
+<span class='badge badge-danger'>07.21.2025 9:34:45 am</span>
+<span class='badge badge-default'>00:00:10:284</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:35 am</td>
+        <td>
+          Test Started: TC_OCB_06
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:45 am</td>
+        <td>
+          The displayed pickup time for the cabs is matching with the selected time.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:45 am</td>
+        <td>
+          TC_OCB_06 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_07: To verify Clear All functionality of filters.</p>
+            <p class="text-sm">
+              <span>9:34:47 am</span> / <span>00:00:15:092</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_07: To verify Clear All functionality of filters.</h5>
+<span class='badge badge-success'>07.21.2025 9:34:47 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:02 am</span>
+<span class='badge badge-default'>00:00:15:092</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:47 am</td>
+        <td>
+          Test Started: TC_OCB_07
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:02 am</td>
+        <td>
+          All applied filters are removed, and the search results are updated.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:02 am</td>
+        <td>
+          TC_OCB_07 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_08: To verify Suggestion when an invalid/unserviceable "From" location is entered.</p>
+            <p class="text-sm">
+              <span>9:35:03 am</span> / <span>00:00:03:966</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_08: To verify Suggestion when an invalid/unserviceable "From" location is entered.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:03 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:07 am</span>
+<span class='badge badge-default'>00:00:03:966</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:03 am</td>
+        <td>
+          Test Started: TC_OCB_08
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:07 am</td>
+        <td>
+          The dropdown is displaying "No Data Found" message in the suggestions for the "From" field.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:07 am</td>
+        <td>
+          TC_OCB_08 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_09: To verify Suggestion when an invalid/unserviceable "To" location is entered.</p>
+            <p class="text-sm">
+              <span>9:35:08 am</span> / <span>00:00:03:857</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_09: To verify Suggestion when an invalid/unserviceable "To" location is entered.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:08 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:12 am</span>
+<span class='badge badge-default'>00:00:03:857</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:08 am</td>
+        <td>
+          Test Started: TC_OCB_09
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:12 am</td>
+        <td>
+          The dropdown is displaying "No Data Found" message in the suggestions for the "To" field.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:12 am</td>
+        <td>
+          TC_OCB_09 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_11: To verify that dates beyond  limit in the future are disabled in the departure date picker.</p>
+            <p class="text-sm">
+              <span>9:35:13 am</span> / <span>00:00:06:308</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_11: To verify that dates beyond limit in the future are disabled in the departure date picker.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:13 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:19 am</span>
+<span class='badge badge-default'>00:00:06:308</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:13 am</td>
+        <td>
+          Test Started: TC_OCB_11
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:19 am</td>
+        <td>
+          The dates only upto certain days are enabled in the datapicker.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:19 am</td>
+        <td>
+          TC_OCB_11 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_12: To verify the presence of SUV filter.</p>
+            <p class="text-sm">
+              <span>9:35:21 am</span> / <span>00:00:10:245</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_12: To verify the presence of SUV filter.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:21 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:31 am</span>
+<span class='badge badge-default'>00:00:10:245</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:21 am</td>
+        <td>
+          Test Started: TC_OCB_12
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:31 am</td>
+        <td>
+          SUV filter is present in the page.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:31 am</td>
+        <td>
+          TC_OCB_12 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="37"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_13: To verify that search results are displayed even if "SUV" filter is not applied initially.</p>
+            <p class="text-sm">
+              <span>9:35:32 am</span> / <span>00:00:09:780</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_13: To verify that search results are displayed even if "SUV" filter is not applied initially.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:32 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:42 am</span>
+<span class='badge badge-default'>00:00:09:780</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:32 am</td>
+        <td>
+          Test Started: TC_OCB_13
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:42 am</td>
+        <td>
+          The available cabs are displayed in the search result.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:42 am</td>
+        <td>
+          TC_OCB_13 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="38"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_OCB_15: To verify behavior with same "From" and "To" locations.</p>
+            <p class="text-sm">
+              <span>9:35:43 am</span> / <span>00:00:03:167</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_OCB_15: To verify behavior with same "From" and "To" locations.</h5>
+<span class='badge badge-success'>07.21.2025 9:35:43 am</span>
+<span class='badge badge-danger'>07.21.2025 9:35:46 am</span>
+<span class='badge badge-default'>00:00:03:167</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:43 am</td>
+        <td>
+          Test Started: TC_OCB_15
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:46 am</td>
+        <td>
+          The error message is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:46 am</td>
+        <td>
+          TC_OCB_15 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="39"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_HB_01: Verify adult dropdown count range</p>
+            <p class="text-sm">
+              <span>9:36:03 am</span> / <span>00:00:01:900</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_HB_01: Verify adult dropdown count range</h5>
+<span class='badge badge-success'>07.21.2025 9:36:03 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:05 am</span>
+<span class='badge badge-default'>00:00:01:900</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:03 am</td>
+        <td>
+          Test Started: TC_HB_01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:05 am</td>
+        <td>
+          Adult dropdown contains correct range from 1 to 40.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:05 am</td>
+        <td>
+          TC_HB_01 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="40"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_HB_02: Verify clicking on specific adult counts</p>
+            <p class="text-sm">
+              <span>9:36:06 am</span> / <span>00:00:04:851</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_HB_02: Verify clicking on specific adult counts</h5>
+<span class='badge badge-success'>07.21.2025 9:36:06 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:11 am</span>
+<span class='badge badge-default'>00:00:04:851</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:06 am</td>
+        <td>
+          Test Started: TC_HB_02
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:11 am</td>
+        <td>
+          Successfully clicked on adult counts: 03, 05, 40.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:11 am</td>
+        <td>
+          TC_HB_02 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="41"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_HB_03: Verify RoomsAndGuests selector is enabled</p>
+            <p class="text-sm">
+              <span>9:36:12 am</span> / <span>00:00:01:013</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_HB_03: Verify RoomsAndGuests selector is enabled</h5>
+<span class='badge badge-success'>07.21.2025 9:36:12 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:13 am</span>
+<span class='badge badge-default'>00:00:01:013</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:12 am</td>
+        <td>
+          Test Started: TC_HB_03
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:13 am</td>
+        <td>
+          RoomsAndGuests selector is enabled and visible.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:13 am</td>
+        <td>
+          TC_HB_03 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_HB_04: Verify default value of adult dropdown</p>
+            <p class="text-sm">
+              <span>9:36:15 am</span> / <span>00:00:01:099</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_HB_04: Verify default value of adult dropdown</h5>
+<span class='badge badge-success'>07.21.2025 9:36:15 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:16 am</span>
+<span class='badge badge-default'>00:00:01:099</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:15 am</td>
+        <td>
+          Test Started: TC_HB_04
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:16 am</td>
+        <td>
+          Default value of adult dropdown is 2.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:16 am</td>
+        <td>
+          TC_HB_04 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="43"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_HB_05: Verify selected value is reflected after applying</p>
+            <p class="text-sm">
+              <span>9:36:17 am</span> / <span>00:00:01:519</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_HB_05: Verify selected value is reflected after applying</h5>
+<span class='badge badge-success'>07.21.2025 9:36:17 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:18 am</span>
+<span class='badge badge-default'>00:00:01:519</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:17 am</td>
+        <td>
+          Test Started: TC_HB_05
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:18 am</td>
+        <td>
+          Displayed text after selection is correct: '1 Rooms 4Adults'.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:18 am</td>
+        <td>
+          TC_HB_05 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="44"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_GC_01: Invalid sender email</p>
+            <p class="text-sm">
+              <span>9:36:34 am</span> / <span>00:00:05:797</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_GC_01: Invalid sender email</h5>
+<span class='badge badge-success'>07.21.2025 9:36:34 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:39 am</span>
+<span class='badge badge-default'>00:00:05:797</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:34 am</td>
+        <td>
+          Test Started: TC_GC_01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:39 am</td>
+        <td>
+          Validation message matched expected error.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:39 am</td>
+        <td>
+          TC_GC_01 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="45"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_GC_02: Fill multiple recipients and capture error</p>
+            <p class="text-sm">
+              <span>9:36:41 am</span> / <span>00:00:07:828</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_GC_02: Fill multiple recipients and capture error</h5>
+<span class='badge badge-success'>07.21.2025 9:36:41 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:49 am</span>
+<span class='badge badge-default'>00:00:07:828</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:41 am</td>
+        <td>
+          Test Started: TC_GC_02
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:49 am</td>
+        <td>
+          Validation message matched expected error.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:49 am</td>
+        <td>
+          TC_GC_02 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="46"
+          author=""
+          tag="Regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">TC_GC_03: Fill recipient form and capture error</p>
+            <p class="text-sm">
+              <span>9:36:50 am</span> / <span>00:00:06:554</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_GC_03: Fill recipient form and capture error</h5>
+<span class='badge badge-success'>07.21.2025 9:36:50 am</span>
+<span class='badge badge-danger'>07.21.2025 9:36:57 am</span>
+<span class='badge badge-default'>00:00:06:554</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=46</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:50 am</td>
+        <td>
+          Test Started: TC_GC_03
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:57 am</td>
+        <td>
+          Form did not submit with invalid recipient form.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:36:57 am</td>
+        <td>
+          TC_GC_03 got successfully executed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>9</span>
+</span>
+<p class="name">Smoke</p>
+<p class="duration text-sm">9 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Smoke</h4>
+<span status="pass" class='badge log pass-bg'>9 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:33:13 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>TC_OCB_01: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:33:48 am</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>TC_OCB_02: To verify that only SUV cab type filter is applied and results are displayed accordingly.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:34:01 am</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>TC_OCB_03: To verify that the selected "From" location is reflected in search results.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:34:12 am</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>TC_OCB_04: To verify that the selected "To" location is reflected in search results.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:34:24 am</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>TC_OCB_05: To verify that the selected "Departure Date" is reflected in search results.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:34:35 am</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>TC_OCB_06: To verify that the selected "Pickup Time" is reflected in search results.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:03 am</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>TC_HB_01: Verify adult dropdown count range</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:12 am</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>TC_HB_03: Verify RoomsAndGuests selector is enabled</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:34 am</td>
+<td>
+<a href="#" class="linked" test-id='44' id='44'>TC_GC_01: Invalid sender email</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>14</span>
+</span>
+<p class="name">Regression</p>
+<p class="duration text-sm">14 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Regression</h4>
+<span status="pass" class='badge log pass-bg'>14 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:32:54 am</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>TC_OCB_10: To verify that previous dates are disabled in the departure date picker.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:32:59 am</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>TC_OCB_14: To verify behavior when no cabs are available for the selected criteria.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:34:47 am</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>TC_OCB_07: To verify Clear All functionality of filters.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:03 am</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>TC_OCB_08: To verify Suggestion when an invalid/unserviceable "From" location is entered.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:08 am</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>TC_OCB_09: To verify Suggestion when an invalid/unserviceable "To" location is entered.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:13 am</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>TC_OCB_11: To verify that dates beyond limit in the future are disabled in the departure date picker.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:21 am</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>TC_OCB_12: To verify the presence of SUV filter.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:32 am</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>TC_OCB_13: To verify that search results are displayed even if "SUV" filter is not applied initially.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:35:43 am</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>TC_OCB_15: To verify behavior with same "From" and "To" locations.</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:06 am</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>TC_HB_02: Verify clicking on specific adult counts</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:15 am</td>
+<td>
+<a href="#" class="linked" test-id='42' id='42'>TC_HB_04: Verify default value of adult dropdown</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:17 am</td>
+<td>
+<a href="#" class="linked" test-id='43' id='43'>TC_HB_05: Verify selected value is reflected after applying</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:41 am</td>
+<td>
+<a href="#" class="linked" test-id='45' id='45'>TC_GC_02: Fill multiple recipients and capture error</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:36:50 am</td>
+<td>
+<a href="#" class="linked" test-id='46' id='46'>TC_GC_03: Fill recipient form and capture error</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 21, 2025 09:32:45 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 21, 2025 09:37:02 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>23</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>23</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'><b>46</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>23</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC_OCB_10: To verify that previous dates are disabled in the departure date picker.":2.917,"TC_OCB_14: To verify behavior when no cabs are available for the selected criteria.":13.125,"TC_OCB_01: To verify successful One-Way SUV cab search from Delhi to Manali with valid future date and time.":34.099,"TC_OCB_02: To verify that only SUV cab type filter is applied and results are displayed accordingly.":10.953,"TC_OCB_03: To verify that the selected "From" location is reflected in search results.":10.89,"TC_OCB_04: To verify that the selected "To" location is reflected in search results.":9.817,"TC_OCB_05: To verify that the selected "Departure Date" is reflected in search results.":10.616,"TC_OCB_06: To verify that the selected "Pickup Time" is reflected in search results.":10.284,"TC_OCB_07: To verify Clear All functionality of filters.":15.092,"TC_OCB_08: To verify Suggestion when an invalid/unserviceable "From" location is entered.":3.966,"TC_OCB_09: To verify Suggestion when an invalid/unserviceable "To" location is entered.":3.857,"TC_OCB_11: To verify that dates beyond limit in the future are disabled in the departure date picker.":6.308,"TC_OCB_12: To verify the presence of SUV filter.":10.245,"TC_OCB_13: To verify that search results are displayed even if "SUV" filter is not applied initially.":9.78,"TC_OCB_15: To verify behavior with same "From" and "To" locations.":3.167,"TC_HB_01: Verify adult dropdown count range":1.9,"TC_HB_02: Verify clicking on specific adult counts":4.851,"TC_HB_03: Verify RoomsAndGuests selector is enabled":1.013,"TC_HB_04: Verify default value of adult dropdown":1.099,"TC_HB_05: Verify selected value is reflected after applying":1.519,"TC_GC_01: Invalid sender email":5.797,"TC_GC_02: Fill multiple recipients and capture error":7.828,"TC_GC_03: Fill recipient form and capture error":6.554
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Smoke</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Regression</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>Make My Trip</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>Admin</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>2406654</td>
+</tr>
+<tr>
+<td>Environemnt</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>windows</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 23,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 46,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 23
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

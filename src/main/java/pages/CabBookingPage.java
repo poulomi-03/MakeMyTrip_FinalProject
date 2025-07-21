@@ -2,10 +2,12 @@ package pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -61,6 +63,7 @@ public class CabBookingPage extends BasePage {
 	@FindBy(id="pickup_date") WebElement pickupDateResult;
 	@FindBy(id="pickup_time") WebElement pickupTimeResult;
 	@FindBy(xpath="//div[@role='gridcell']") List<WebElement> dates;
+	@FindBy(xpath="//p[contains(@class,'cabNotFound')]") WebElement cabNotFound;
 	
 	By errorMessageSameOrigin = By.xpath("//span[@class='redText errorMsgText']");
 	
@@ -102,9 +105,7 @@ public class CabBookingPage extends BasePage {
 	public void clickToField() {
 		try {
 	        toCityField.click();			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+		} catch(Exception e) {}
 	}
 	
 	public void enterToLocation(String location) {
@@ -142,7 +143,7 @@ public class CabBookingPage extends BasePage {
         driver.findElement(manaliSuggestionLocator).click();
 	}
 	
-	public void clickdeparture(){	
+	public void clickDepartureDate(){	
         // departure date field
         scrollClick(departureDateField);;
 	}
@@ -194,7 +195,6 @@ public class CabBookingPage extends BasePage {
         	driver.findElement(By.xpath("//div[contains(@class,'checkbox_checked')]"));
         	return false;
         } catch(Exception e) {
-        	System.out.println("Cleared all filters");
         	return true;
         }
 	}
@@ -227,6 +227,10 @@ public class CabBookingPage extends BasePage {
 	public String getErrorMessageForSameOrigin() {
 		WebElement errorMsg = wait.until(ExpectedConditions.presenceOfElementLocated(errorMessageSameOrigin));
 		return errorMsg.getText();
+	}
+	
+	public String getCabNotFoundErrorMessage() {
+		return cabNotFound.getText();
 	}
 	
     public void scrollClick(WebElement ele){
@@ -286,8 +290,8 @@ public class CabBookingPage extends BasePage {
 	        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern(format1);
 	        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern(format2);
 
-            LocalTime t1 = LocalTime.parse(time1, formatter1);
-            LocalTime t2 = LocalTime.parse(time2, formatter2);
+            LocalTime t1 = LocalTime.parse(time1.toLowerCase(), formatter1);
+            LocalTime t2 = LocalTime.parse(time2.toLowerCase(), formatter2);
             return t1.equals(t2);
 
 	    } catch (Exception e) {
@@ -306,7 +310,7 @@ public class CabBookingPage extends BasePage {
 //    }
 
 	public void selectDepartureDate(String departDate) {
-		clickdeparture();
+		clickDepartureDate();
 		
 		String month = departDate.split(" ")[0];
 		boolean dateSelected = false;
@@ -390,17 +394,22 @@ public class CabBookingPage extends BasePage {
         return cabs.get(idx);
     }
 
-    public void takeElementScreenshot(WebElement ele, String screenshotFileName) {
+	public String takeElementScreenshot(WebElement ele, String name) {
+		jsUtil.scrollToElement(ele);
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + name +"\\"+ timeStamp + ".png";
+		
         File sourceFile = ele.getScreenshotAs(OutputType.FILE);
-        File targetFile = new File("screenshots/" + screenshotFileName); // Use a variable for filename
+        File targetFile = new File(targetFilePath); // Use a variable for filename
 
         try {
             FileUtils.copyFile(sourceFile, targetFile);
-            System.out.println("Screenshot saved to: " + targetFile.getAbsolutePath());
 
         } catch (IOException e) {
             System.err.println("Failed to save screenshot: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+        	return targetFilePath;
         }
     }
 }

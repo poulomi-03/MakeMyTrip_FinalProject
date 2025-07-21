@@ -1,22 +1,20 @@
 package testCases;
  
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
  
 import java.util.stream.IntStream;
  
 import base.BaseTest;
-import com.aventstack.extentreports.*;
  
 public class HotelBookingTest extends BaseTest{
-    private ExtentTest test;
 	/*
 	 * To check "Adult" dropdown from the "Rooms and Guests" field contains list of numbers.
 	 */
-	@Test(priority = 1)
-	public void TC_HB_01() {
-        test = extent.createTest("TC_HB_01: Verify adult dropdown count range");
+	@Test(groups= {"Smoke"}, priority = 1, description = "Verify adult dropdown count range")
+	public void TC_HB_01(ITestContext result) {
         logger.info("Executing TC_HB_01");
         
 		try {
@@ -35,11 +33,10 @@ public class HotelBookingTest extends BaseTest{
 				i++;
 			}
 			action.clickEsc();
-			Assert.assertTrue(correctCount, "Incorrect count of numbers in dropdown");
-	        test.pass("Adult dropdown contains correct range from 1 to 40.");
+			Assert.assertTrue(correctCount, "Adult dropdown does not contain correct range from 1 to 40.");
+			result.setAttribute("message", "Adult dropdown contains correct range from 1 to 40.");
 		}catch(Exception e) {
 			Assert.fail(e.getMessage());
-	        test.fail("Adult dropdown does not contain correct range from 1 to 40.");
 		}
 		logger.info("TC_HB_01 Completed");
 	}
@@ -47,9 +44,8 @@ public class HotelBookingTest extends BaseTest{
 	/*
 	 * To check the ability to select different adult numbers from the dropdown.
 	 */
-	@Test(priority = 2)
-	public void TC_HB_02() {
-        test = extent.createTest("TC_HB_02: Verify clicking on specific adult counts");
+	@Test(groups= {"Regression"}, priority = 2, description = "Verify clicking on specific adult counts")
+	public void TC_HB_02(ITestContext result) {
         logger.info("Executing TC_HB_02");
         
 		try {
@@ -78,11 +74,10 @@ public class HotelBookingTest extends BaseTest{
 				}
 			}
 			action.clickEsc();
-			Assert.assertTrue(clicked);
-	        test.pass("Successfully clicked on adult counts: 03, 05, 40.");
+			Assert.assertTrue(clicked,"Can't click on adult counts: 03, 05, 40.");
+			result.setAttribute("message", "Successfully clicked on adult counts: 03, 05, 40.");
 		}catch(Exception e) {
 			Assert.fail(e.getMessage());
-	        test.fail("Can't click on adult counts: 03, 05, 40.");
 		}
 		logger.info("TC_HB_02 Completed");
 	}
@@ -90,9 +85,8 @@ public class HotelBookingTest extends BaseTest{
 	/*
 	 * To check that "Rooms and Guests" selector is present on the Hotel booking page.
 	 */
-	@Test(priority = 3)
-	public void TC_HB_03() {
-        test = extent.createTest("TC_HB_03: Verify RoomsAndGuests selector is enabled");
+	@Test(groups= {"Smoke"}, priority = 3, description = "Verify RoomsAndGuests selector is enabled")
+	public void TC_HB_03(ITestContext result) {
         logger.info("Executing TC_HB_03");
         
 		try {
@@ -104,10 +98,9 @@ public class HotelBookingTest extends BaseTest{
 			}
 			action.clickEsc();
 			Assert.assertTrue(isPresent, "RoomsAndGuests selector option is not present");
-	        test.pass("RoomsAndGuests selector is enabled and visible.");
+			result.setAttribute("message", "RoomsAndGuests selector is enabled and visible.");
 		}catch(Exception e) {
 			Assert.fail(e.getMessage());
-	        test.fail("RoomsAndGuests selector is dissabled and not visible.");
 		}
 		logger.info("TC_HB_03 Completed");
 	}
@@ -115,9 +108,8 @@ public class HotelBookingTest extends BaseTest{
 	/*
 	 * To verify initial default value of adult numbers in the dropdown.
 	 */
-	@Test(priority = 4)
-	public void TC_HB_04() {
-        test = extent.createTest("TC_HB_04: Verify default value of adult dropdown");
+	@Test(groups= {"Regression"}, priority = 4, description = "Verify default value of adult dropdown")
+	public void TC_HB_04(ITestContext result) { 
         logger.info("Executing TC_HB_04");
         
 		try {
@@ -125,11 +117,10 @@ public class HotelBookingTest extends BaseTest{
 			hotelObj.clickOnRoomsAndGuestsOption();
 			String value = hotelObj.getDefaultValueOfAdultDropdown();
 			action.clickEsc();
-			Assert.assertEquals(value, "2");
-	        test.pass("Default value of adult dropdown is 2.");
+			Assert.assertEquals(value, "2", "Default value of adult dropdown is not 2.");
+			result.setAttribute("message", "Default value of adult dropdown is 2.");
 		}catch(Exception e) {
 			Assert.fail(e.getMessage());
-	        test.fail("Default value of adult dropdown is not 2.");
 		}
 		logger.info("TC_HB_04 Completed");
 	}
@@ -137,9 +128,8 @@ public class HotelBookingTest extends BaseTest{
 	/*
 	 * To check that the selected number of Adults are displayed in the "Rooms and Guests" selector field.
 	 */
-	@Test(priority = 5)
-	public void TC_HB_05() {
-        test = extent.createTest("TC_HB_05: Verify selected value is reflected after applying");
+	@Test(groups= {"Regression"}, priority = 5, description = "Verify selected value is reflected after applying")
+	public void TC_HB_05(ITestContext result) {
         logger.info("Executing TC_HB_05");
         
 		try {
@@ -157,11 +147,10 @@ public class HotelBookingTest extends BaseTest{
 			hotelObj.clickApplyButton();
 			String text = hotelObj.getRoomsAndGuestsDispalyedText();
 			action.clickEsc();
-			Assert.assertEquals(text, "1 Rooms 4Adults");
-	        test.pass("Displayed text after selection is correct: '1 Rooms 4Adults'.");
+			Assert.assertEquals(text, "1 Rooms 4Adults", "Displayed text after selection is incorrect.");
+			result.setAttribute("message", "Displayed text after selection is correct: '1 Rooms 4Adults'.");
 		}catch(Exception e) {
 			Assert.fail(e.getMessage());
-	        test.fail("Displayed text after selection is incorrect.");
 		}
 		logger.info("TC_HB_05 Completed");
 	}

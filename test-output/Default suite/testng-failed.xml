@@ -9,8 +9,11 @@
           <include name="tearDown"/>
           <include name="flushExtentReport"/>
           <include name="closingTestCase"/>
+<<<<<<< HEAD
+=======
+          <include name="TC_OCB_14" invocation-numbers="0"/>
+>>>>>>> main
           <include name="goToHomePage"/>
-          <include name="TC_OCB_06" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.CabBookingPageTest -->
     </classes>
