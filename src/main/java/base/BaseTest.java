@@ -38,7 +38,6 @@ public class BaseTest {
 	public static WebDriver driver;
 	public String baseUrl;
 	
-//	public static WebDriverWait wait;
 	public static ActionUtil action;
 	public static JavascriptExecutorUtil jsUtil;
 	
