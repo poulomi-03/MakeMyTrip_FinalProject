@@ -3,15 +3,13 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
- 
-import base.BaseTest;
+
+import base.BasePage;
  
 import java.time.Duration;
  
-public class GiftCardPage extends BaseTest{
+public class GiftCardPage extends BasePage{
  
-    private WebDriver driver;
-    private WebDriverWait wait;
  
     /* Locators */
     @FindBy(xpath = "//span[normalize-space()='Gift Cards']")
@@ -63,9 +61,10 @@ public class GiftCardPage extends BaseTest{
     private WebElement errorMessage;
  
     public GiftCardPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver, this);
+//        this.driver = driver;
+//        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        PageFactory.initElements(driver, this);
+    	super(driver);
     }
  
     /* Actions */

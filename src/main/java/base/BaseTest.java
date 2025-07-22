@@ -17,11 +17,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -40,7 +38,6 @@ public class BaseTest {
 	public static WebDriver driver;
 	public String baseUrl;
 	
-	public static WebDriverWait wait;
 	public static ActionUtil action;
 	public static JavascriptExecutorUtil jsUtil;
 	
@@ -90,7 +87,7 @@ public class BaseTest {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(expWait));
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(expWait));
 		
         action = new ActionUtil(driver);
         jsUtil = new JavascriptExecutorUtil(driver);

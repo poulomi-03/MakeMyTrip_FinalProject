@@ -4,6 +4,23 @@
   <listeners>
     <listener class-name="utils.ExtentReportManager"/>
   </listeners>
+<<<<<<< HEAD
+  <test thread-count="5" name="TestChrome(failed)">
+    <parameter name="os" value="windows"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.CabBookingPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="closingTestCase"/>
+          <include name="goToHomePage"/>
+          <include name="TC_OCB_06" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testCases.CabBookingPageTest -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+=======
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
@@ -23,4 +40,5 @@
       </class> <!-- testCases.HotelBookingTest -->
     </classes>
   </test> <!-- Test(failed) -->
+>>>>>>> main
 </suite> <!-- Failed suite [Suite] -->

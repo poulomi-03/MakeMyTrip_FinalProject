@@ -10,7 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestContext;
-import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -245,7 +244,7 @@ public class CabBookingPageTest extends BaseTest{
 	    	cabBookingPage.selectSection();
 			cabBookingPage.selectTripType();
 			cabBookingPage.clickFromField();
-			cabBookingPage.enterFromLocation(randomString());
+			cabBookingPage.enterFromLocation("qwertyuiop");
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();
@@ -268,7 +267,7 @@ public class CabBookingPageTest extends BaseTest{
 	    	cabBookingPage.selectSection();
 			cabBookingPage.selectTripType();
 			cabBookingPage.clickToField();
-			cabBookingPage.enterToLocation(randomString());
+			cabBookingPage.enterToLocation("qwertyuiop");
 			
 	        String expectedSuggestion = "No Data Found";
 	        String actualSuggestion = cabBookingPage.getSuggestion();

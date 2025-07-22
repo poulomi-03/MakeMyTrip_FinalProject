@@ -7,9 +7,11 @@
   <test thread-count="5" name="Test">
 	  <groups>
 		<run>
-		  <include name="regression"></include>
+		  <include name="Regression"></include>
 		</run>
 	  </groups>
+	 <parameter name="os" value="windows"/>
+	<parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.CabBookingPageTest"/>
       <class name="testCases.HotelBookingTest"/>

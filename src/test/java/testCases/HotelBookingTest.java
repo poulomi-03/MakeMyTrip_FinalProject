@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import java.util.stream.IntStream;
  
 import base.BaseTest;
-import com.aventstack.extentreports.*;
  
 public class HotelBookingTest extends BaseTest{
 	/*
